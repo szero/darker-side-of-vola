@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
         font-family: "Terminus (TTF)";
         src: local("Terminus"),
              local("xos4 Terminus"),
@@ -6,7 +6,7 @@
 
     }
 
-@-moz-document domain("volafile.io") {
+@-moz-document domain("volafile.io") {*/
 
     * {font-family: "Terminus (TTF)" !important; }
 
@@ -976,4 +976,4 @@
         content: "✔";
     }
 
-}
+/*}*/
