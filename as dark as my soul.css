@@ -1,10 +1,16 @@
 @-moz-document domain("volafile.io") {
-/*[[420]]*/
-*  {font-family: "Terminus (TTF)" !important; }
-    
+    @font-face {
+        font-family: "Terminus (TTF)";
+        src: local("Terminus");
+             local("xos4 Terminus");
+        url("https://rawgit.com/Szero/darker-side-of-vola/master/fonts/TerminusTTF-4.40.1.ttf");
 
-/* Main Page */
-   
+    }
+    * {font-family: "Terminus (TTF)" !important; }
+
+
+    /* Main Page */
+
 
     .howitworks_point {
         text-decoration: underline;
@@ -14,13 +20,13 @@
         background-color: rgb(0,0,0);
     }
 
-/* Rules */
-    
+    /* Rules */
+
     .main.text.left em,i {
         font-style: italic
     }
     .icon-refresh:before {
-    content: "CV";
+        content: "CV";
     }
 
 
@@ -36,16 +42,16 @@
     #radio_play_progress {
         background-color: #008D8D;
     }
-#radio_progress {
-background-color: #000000;
-}
-    
+    #radio_progress {
+        background-color: #000000;
+    }
+
     /*Radio Volume*/
     .icon-volume-down:before {
         color: #008D8D;
     }
 
-/* Chromium need this for the maximum volume icon to be green, dunno why. firefox works without it*/
+    /* Chromium need this for the maximum volume icon to be green, dunno why. firefox works without it*/
     .icon-volume-up:before {
         color: #008D8D;
     }
@@ -60,19 +66,19 @@ background-color: #000000;
     #radio_volume_slider {
         background-color: #008D8D;
     }
-    
+
     div#radio_volume_wrapper {
         display:inline-block;
-   }
+    }
 
-    
+
     /* Header 1*/
     .header_row_element, .header_row_element:visited {
         color: rgb(0,25,0);
     }
-    
+
     /*Top List*/
-   
+
     /* room */
     .chat_message.message_self {
         font-style: italic
@@ -133,9 +139,9 @@ background-color: #000000;
     #header_row1.header_row {
         background: rgb(0,0,0);
     }
-#chat_frame {
-border-color: #008D8D;
-}
+    #chat_frame {
+        border-color: #008D8D;
+    }
     .chat_message {
         margin-left: 0 !important;
         padding: 0px 1em 0px 0.5em !important;
@@ -145,12 +151,12 @@ border-color: #008D8D;
         border-left-width: 6px;
         border-color: rgb(0,0,0);
     }
-#room_name_container {
-border-right-color: #008D8D;
-}
-#files_frame {
-border-top-color: #008D8D;
-}
+    #room_name_container {
+        border-right-color: #008D8D;
+    }
+    #files_frame {
+        border-top-color: #008D8D;
+    }
     #chat_messages .chat_message.user a.username {
         color: rgb(7,255,7);
     }
@@ -222,7 +228,7 @@ border-top-color: #008D8D;
     .chat_file:visited {
         color: rgb(200,120,140)!important;
     }
-    
+
     .chat_file_play {
         float: none !important;
     }
@@ -388,7 +394,7 @@ border-top-color: #008D8D;
         background: rgb(40,45,55)!important;
         ;
 
-    color: #008D8D!important;
+        color: #008D8D!important;
     }
 
     #filter_reminder {
@@ -474,29 +480,29 @@ border-top-color: #008D8D;
     }
 
     .file_tag.tag_key_user {
-       background: rgb(0,0,0);
-color: #008D8D;
-border-radius: 1px;
-border-width: 0px 0px 0px 0px !important;
-}
+        background: rgb(0,0,0);
+        color: #008D8D;
+        border-radius: 1px;
+        border-width: 0px 0px 0px 0px !important;
+    }
 
     .file_tag.tag_key_user:hover {
         color: #008D8D;
         background: rgb(0,0,0);
-		
+
     }
 
-   .file_tag {
-background: rgb(0,0,0);
-border-radius: 0px;
-color: #008D8D;
-border-style: dashed;
-border-width: 0px 0px 0px 1px;
-padding-left: 5px;
-}
-.file_control_icon.clickable {
-color: #008D8D !important;
-}
+    .file_tag {
+        background: rgb(0,0,0);
+        border-radius: 0px;
+        color: #008D8D;
+        border-style: dashed;
+        border-width: 0px 0px 0px 1px;
+        padding-left: 5px;
+    }
+    .file_control_icon.clickable {
+        color: #008D8D !important;
+    }
     .file_tag:hover {
         color: #008D8D;
         background: rgb(0,0,0);
@@ -651,7 +657,7 @@ color: #008D8D !important;
 
     .icon-volume-high:before, .icon-volume-medium:before, .icon-volume-low:before, .icon-volume-mute:before  {
         content: "Vol";
-		color: #008D8D;
+        color: #008D8D;
     }
 
     #radio_volume_icon {
@@ -690,9 +696,9 @@ color: #008D8D !important;
         content: "";
     }
 
-.icon-image:before {
-    content: "I";
-}
+    .icon-image:before {
+        content: "I";
+    }
 
     a#radio_upwards.toggle.radio_toggle span.icon-reverse.radio_icon.toggle_icon:before {
         content: "⮁";
@@ -701,7 +707,7 @@ color: #008D8D !important;
 
     a#radio_upwards.toggle.radio_toggle.enabled span.icon-reverse.radio_icon.toggle_icon:before {
         content: "⮁";
-		color: #F1EDED;
+        color: #F1EDED;
     }
 
     a#radio_shuffle.toggle.radio_toggle span.icon-random.radio_icon.icon-random:before {
@@ -727,239 +733,245 @@ color: #008D8D !important;
     #radio_play_progress {
         background-color: #008D8D;
     }
-	#clearsearch:hover {
-color: #008D8D;
-}
-#filter_reminder, #filter_reminder:hover {
-background: rgb(0, 0, 0);
-}
-#uploadButton:active {
-background: rgb(0, 0, 0)!important;
-}
-I#clearsearch.fa.icon-times.clickable.on_small_header.icon-times:before {
-Content: "Clear"
-}
-I.file_icon.file_control_icon.fa.abort-upload.icon-times.clickable:before{
-content: "Cancel";
-}
-I.file_icon.file_control_icon.fa.abort-upload.icon-times.clickable{
-padding-right: 34px
-}
-I.file_icon.file_control_icon.fa.filetype.icon-cloud-upload.file_icon_pulsing:before{
-content: "UP";
-}
-I.file_icon.file_control_icon.fa.filetype.icon-cloud-upload.file_icon_pulsing{
-padding-right: 8px
-}
-#chat_notifier{
-    color: #008D8D
-}
-.file_tag.tag_key_user:hover {
-background-color: #000000
-}
-.ui_frame_tooltip.has_thumb .ui_frame_content {
-border-left: solid 1px;
-border-color: #008D8D
+    #clearsearch:hover {
+        color: #008D8D;
+    }
+    #filter_reminder, #filter_reminder:hover {
+        background: rgb(0, 0, 0);
+    }
+    #uploadButton:active {
+        background: rgb(0, 0, 0)!important;
+    }
+    I#clearsearch.fa.icon-times.clickable.on_small_header.icon-times:before {
+        Content: "Clear"
+    }
+    I.file_icon.file_control_icon.fa.abort-upload.icon-times.clickable:before{
+        content: "Cancel";
+    }
+    I.file_icon.file_control_icon.fa.abort-upload.icon-times.clickable{
+        padding-right: 34px
+    }
+    I.file_icon.file_control_icon.fa.filetype.icon-cloud-upload.file_icon_pulsing:before{
+        content: "UP";
+    }
+    I.file_icon.file_control_icon.fa.filetype.icon-cloud-upload.file_icon_pulsing{
+        padding-right: 8px
+    }
+    #chat_notifier{
+        color: #008D8D
+    }
+    .file_tag.tag_key_user:hover {
+        background-color: #000000
+    }
+    .ui_frame_tooltip.has_thumb .ui_frame_content {
+        border-left: solid 1px;
+        border-color: #008D8D
 
-}
-#main_new_room_button:hover {
-background: rgb(0,0,0)!important;
-}
-#radio_load_progress {
-    background-color: #000000;
-}
-.icon-cog:before {
-    content: "";
-}
-.icon-minus-circle:before {
-content: "";
-}
+    }
+    #main_new_room_button:hover {
+        background: rgb(0,0,0)!important;
+    }
+    #radio_load_progress {
+        background-color: #000000;
+    }
+    .icon-cog:before {
+        content: "";
+    }
+    .icon-minus-circle:before {
+        content: "";
+    }
 
-.icon-exclamation-circle:before {
-content: "";
-}
-.icon-magic:before {
-content: "";
-}
-.ui_frame_body_bar {
-border-top: 3px solid #008D8D;
-}
-.dropdown_list {
-border-color: #008D8D!important;
-color: rgb(255,255,255);
-}
-.icon-folder-open:before {
-    content: "";
-}
-.icon-report:before {
-content: "";
-}
-.icon-exit:before {
-content: "";
-}
-.file_status:before {
-border-left: 0px solid #4a6885;
-}
-.icon-stopwatch:before {
-content: "y";
-font-size: 0px
-}
-.icon-upload-button:before {
-    content: "";
-}
-span#radio_close.icon-cross.clickable.radio_icon:before {
-content: "✖"
-}
-span#clearsearch.icon-cross.clickable.on_small_header:before {
-content: "Clear"
-}
- span#chat_notifier.icon-arrow-down.clickable:before {
+    .icon-exclamation-circle:before {
+        content: "";
+    }
+    .icon-magic:before {
+        content: "";
+    }
+    .ui_frame_body_bar {
+        border-top: 3px solid #008D8D;
+    }
+    .dropdown_list {
+        border-color: #008D8D!important;
+        color: rgb(255,255,255);
+    }
+    .icon-folder-open:before {
+        content: "";
+    }
+    .icon-report:before {
+        content: "";
+    }
+    .icon-exit:before {
+        content: "";
+    }
+    .file_status:before {
+        border-left: 0px solid #4a6885;
+    }
+    .icon-stopwatch:before {
+        content: "y";
+        font-size: 0px
+    }
+    .icon-upload-button:before {
+        content: "";
+    }
+    span#radio_close.icon-cross.clickable.radio_icon:before {
+        content: "✖"
+    }
+    span#clearsearch.icon-cross.clickable.on_small_header:before {
+        content: "Clear"
+    }
+    span#chat_notifier.icon-arrow-down.clickable:before {
         content: "New Messages Posted";
     }
-a.header_row_element_disabled, a.header_row_element_disabled:active, a.header_row_element_disabled:hover, a.header_row_element_disabled:visited {
-    cursor: default;
-    color: #579;
-    background-color: #000;
-}
-.icon-filter:before {
-    content: "";
-}
+    a.header_row_element_disabled, a.header_row_element_disabled:active, a.header_row_element_disabled:hover, a.header_row_element_disabled:visited {
+        cursor: default;
+        color: #579;
+        background-color: #000;
+    }
+    .icon-filter:before {
+        content: "";
+    }
     .icon-angle-double-right:before {
-    content: ">>";
-}
+        content: ">>";
+    }
     .icon-angle-double-left:before {
-    content: "<<";
-}
-.icon-arrow-up:before {
-  content: "^";
-}
-.icon-arrow-down:before {
-  content: "v";
-}
-i.file_icon.file_control_icon.abort-upload.icon-cross.clickable:before {
-content: "Abort"
-}
-.icon-uploading:before {
-    content: "UP";
-}
-.icon-twitter:before {
-  content: "Twitter";
-}
-.icon-facebook:before {
-  content: "FaceBook";
-}
-hr {
-  border: 1px solid #008D8D;
-}
-.icon-angle-right:before {
-  content: "";
-}
-.loading_indicator > .outer_indicator > .inner_indicator {
-  background-color: #008D8D
-}
+        content: "<<";
+    }
+    .icon-arrow-up:before {
+        content: "^";
+    }
+    .icon-arrow-down:before {
+        content: "v";
+    }
+    i.file_icon.file_control_icon.abort-upload.icon-cross.clickable:before {
+        content: "Abort"
+    }
+    .icon-uploading:before {
+        content: "UP";
+    }
+    .icon-twitter:before {
+        content: "Twitter";
+    }
+    .icon-facebook:before {
+        content: "FaceBook";
+    }
+    hr {
+        border: 1px solid #008D8D;
+    }
+    .icon-angle-right:before {
+        content: "";
+    }
+    .loading_indicator > .outer_indicator > .inner_indicator {
+        background-color: #008D8D
+    }
 
-  /*mod stuff*/
-  .icon-wrench::before {
-    content: "Settings";
-}
-  
-.icon-hammer::before, .icon-list::before, .icon-lock::before, .icon-unlock::before, .icon-plus::before, .icon-minus::before, .icon-trash::before, .icon-log::before{
-    content: "";
-}
+    /*mod stuff*/
+    .icon-wrench::before {
+        content: "Settings";
+    }
+
+    .icon-hammer::before, .icon-list::before, .icon-lock::before, .icon-unlock::before, .icon-plus::before, .icon-minus::before, .icon-trash::before, .icon-log::before{
+        content: "";
+    }
 
 
-.file_tag.tag_key_ip {
-    background-color: rgba(111, 137, 162, 0);
-}
+    .file_tag.tag_key_ip {
+        background-color: rgba(111, 137, 162, 0);
+    }
 
-.file_tag.tag_key_ip:hover {
-    background-color: rgba(111, 137, 162, 0);
-}
+    .file_tag.tag_key_ip:hover {
+        background-color: rgba(111, 137, 162, 0);
+    }
 
-.ui_frame_content {
-    border: 1px solid #008D8D;
-}
+    .ui_frame_content {
+        border: 1px solid #008D8D;
+    }
 
-.formtable tr > td, .formtable tr > th {
-    border-left: 1px solid #008D8D;
-    border-right: 1px solid #008D8D;
-}
+    .formtable tr > td, .formtable tr > th {
+        border-left: 1px solid #008D8D;
+        border-right: 1px solid #008D8D;
+    }
 
-input[type="checkbox"] + span._icon::before {
-    content: "NO";
-}
+    input[type="checkbox"] + span._icon::before {
+        content: "NO";
+    }
 
-input[type="checkbox"]:checked + span._icon::before {
-    content: "YES";
-}
+    input[type="checkbox"]:checked + span._icon::before {
+        content: "YES";
+    }
 
-input[type="text"], input[type="password"] {
-    border: 1px solid #008D8D;
-}
-button, input, optgroup, select, textarea {
-    border: 1px solid #008D8D;
-}
+    input[type="text"], input[type="password"] {
+        border: 1px solid #008D8D;
+    }
+    button, input, optgroup, select, textarea {
+        border: 1px solid #008D8D;
+    }
 
-select {
-    background-color: #181818;
-}
-  .file_selected {
-    background-color: #181818 !important;
-}
-  .file_tag.tag_key_user {
-    background-color: rgba(24, 24, 24, 0) !important;
-}
-  .ui_frame {
-border: 1px solid #008D8D
-}
-  
-  .icon-group::before {
-    content: "Users Online";
-}
-  
-  #chat_hbar {
-    border-left: 0px solid;
-    border-top: 1px solid #008D8D;
-    line-height: 1
-}
-  .file_tags {
-    line-height: 2em;
-    vertical-align: middle;
-}
-#file_notifier, #filter_reminder {
-    background-color: black;
-    border: #008D8D solid 1px;
-}
+    select {
+        background-color: #181818;
+    }
+    .file_selected {
+        background-color: #181818 !important;
+    }
+    .file_tag.tag_key_user {
+        background-color: rgba(24, 24, 24, 0) !important;
+    }
+    .ui_frame {
+        border: 1px solid #008D8D
+    }
 
-#file_notifier:hover, #filter_reminder:hover {
-    background-color: black;
-}
-   span.icon-folder-open, span.icon-heart, span.icon-hammer, span.icon-user, span.icon-exit, span.icon-magic-wand, span.icon-cog {
+    .icon-group::before {
+        content: "Users Online";
+    }
+
+    #chat_hbar {
+        border-left: 0px solid;
+        border-top: 1px solid #008D8D;
+        line-height: 1
+    }
+    .file_tags {
+        line-height: 2em;
+        vertical-align: middle;
+    }
+    #file_notifier, #filter_reminder {
+        background-color: black;
+        border: #008D8D solid 1px;
+    }
+
+    #file_notifier:hover, #filter_reminder:hover {
+        background-color: black;
+    }
+
+    span.icon-folder-open, span.icon-heart, span.icon-hammer, span.icon-user, span.icon-exit, span.icon-magic-wand, span.icon-cog {
         display: none!important;
     }
-  .filelist_file:hover>.file_left_part>.file_control>.filetype_download:before {
-    content: "DL";
-}
+
+    .filelist_file:hover>.file_left_part>.file_control>.filetype_download:before {
+        content: "DL";
+    }
+
+    /*
 
     ._icon, [class*=" icon-"], [class^="icon-"] {
-        font-family: "Terminus (TTF)" , "xos4 Terminus" !important;
+    font-family: "Terminus (TTF)" , "xos4 Terminus" !important;
     }
+     */
     .chat_message.admin .username, .chat_message.staff .username {
-    color: #ff0;
-}
-#chat_input_container {
-    border-left: 0em solid #69849e;
-}
-
-#chat_hbar_container {
-    padding-top: 0 !important;
-    border-top: none !important;
-    border-left: none !important;
-    box-shadow: none !important;
-}
-
-i.icon-checkmark:before {
-    content: "✔";
+        color: #ff0;
     }
-    
+
+    #chat_input_container {
+        border-left: 0em solid #69849e;
+    }
+
+    #chat_hbar_container {
+        padding-top: 0 !important;
+        border-top: none !important;
+        border-left: none !important;
+        box-shadow: none !important;
+    }
+
+    i.icon-checkmark:before {
+        content: "✔";
+    }
+
 }
