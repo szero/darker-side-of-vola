@@ -1,11 +1,13 @@
-@-moz-document domain("volafile.io") {
-    @font-face {
+@font-face {
         font-family: "Terminus (TTF)";
         src: local("Terminus"),
              local("xos4 Terminus"),
              url("https://rawgit.com/Szero/darker-side-of-vola/master/fonts/TerminusTTF-4.40.1.ttf");
 
     }
+
+@-moz-document domain("volafile.io") {
+
     * {font-family: "Terminus (TTF)" !important; }
 
 
@@ -920,7 +922,7 @@
     }
 
     .icon-group::before {
-        content: "Users Online";
+        content: "Users Online" !important;
     }
 
     #chat_hbar {
