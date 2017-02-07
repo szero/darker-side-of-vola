@@ -6,7 +6,7 @@
 // @author       Your mom
 // @grant        GM_addStyle
 // @grant        GM_getResourceText
-// @resource style https://rawgit.com/Szero/darker-side-of-vola/ac4d6d97d45793d1a6adc3ff1518215fa6b705f6/as%20dark%20as%20my%20soul.css
+// @resource style https://rawgit.com/Szero/darker-side-of-vola/master/as%20dark%20as%20my%20soul.css
 // @match        https://*.volafile.io/r/*
 // @run-at       document-idle
 // ==/UserScript==
