@@ -1,15 +1,11 @@
-/*@font-face {
-        font-family: "Terminus (TTF)";
-        src: local("Terminus"),
-             local("xos4 Terminus"),
-             url("https://rawgit.com/Szero/darker-side-of-vola/master/fonts/TerminusTTF-4.40.1.ttf");
-
-    }
-
 @-moz-document domain("volafile.io") {
 
-    html, body {font-family: "Terminus (TTF)" !important; } */
+    * {font-family: "Terminus (TTF)" !important; }
 
+
+    ._icon, [class*=" icon-"], [class^="icon-"] {
+    font-family: "Terminus (TTF)" !important;
+    }
 
     /* Main Page */
 
@@ -104,11 +100,11 @@
     }
 
     #file_list {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     #top_navigation {
-        font-size: 14px;
+        font-size: 15px;
         background: rgb(0,0,0);
         border-bottom-style: solid!important;
         border-bottom-color: rgb(0,0,0);
@@ -951,12 +947,6 @@
         content: "DL";
     }
 
-    /*
-
-    ._icon, [class*=" icon-"], [class^="icon-"] {
-    font-family: "Terminus (TTF)" , "xos4 Terminus" !important;
-    }
-     */
     .chat_message.admin .username, .chat_message.staff .username {
         color: #ff0;
     }
@@ -976,4 +966,4 @@
         content: "✔";
     }
 
-/*}*/
+}
