@@ -4,11 +4,11 @@
         -webkit-font-smoothing: none;
         -moz-osx-font-smoothing: unset;
         font-smoothing: unset ;
-        font-family: "Coder's Crux" !important;
+        font-family: "Coder\'s Crux" !important;
     }
 
     ._icon, [class*=" icon-"], [class^="icon-"] {
-        font-family: "Coder's Crux" !important;
+        font-family: "Coder\'s Crux" !important;
     }
 
     /* Main Page */
@@ -104,7 +104,7 @@
     }
 
     #file_list {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     #top_navigation {
