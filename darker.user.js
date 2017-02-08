@@ -24,9 +24,6 @@
         "@font-face {" +
             "font-family:\"" + font + "\";" +
             "src: local(" + "disable that for second" + ")," + fontURL + ";" +
-        "}" +
-        "* {" +
-            "font-family: \"" + font + "\" !important;" +
         "}"
     );
     GM_addStyle(GM_getResourceText("style"));
