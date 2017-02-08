@@ -1,4 +1,4 @@
-@-moz-document domain("volafile.io") {
+/*@-moz-document domain("volafile.io") {*/
 
     * {
         -webkit-font-smoothing: none;
@@ -970,4 +970,4 @@
         content: "✔";
     }
 
-}
+/*} */
