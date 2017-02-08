@@ -6,10 +6,7 @@
 // @author       Your mom
 // @grant        GM_addStyle
 // @grant        GM_getResourceText
-// @grant        GM_getResourceURL
 // @resource style https://rawgit.com/Szero/darker-side-of-vola/master/as%20dark%20as%20my%20soul.css
-// @resource font https://rawgit.com/Szero/darker-side-of-vola/master/fonts/TerminusTTF-4.40.1.ttf
-// @resource bitfont https://rawgit.com/Szero/darker-side-of-vola/master/fonts/8-bit%20pusab.ttf
 // @match        https://*.volafile.io/*
 // @run-at       document-idle
 // ==/UserScript==
@@ -20,15 +17,16 @@
     var bottomBar = document.getElementById("header_row2");
     var holdUI = bottomBar.removeChild(UI);
     topBar.appendChild(holdUI);
-    var font = "8-bit pusab";
+    //GM will do this: http://unixpapa.com/js/dyna.html
+    var font = "Terminus (TTF)"
+    var fontURL = "url(https://rawgit.com/Szero/darker-side-of-vola/master/fonts/TerminusTTF-4.40.1.ttf)";
     GM_addStyle(
         "@font-face {" +
-            "font-family: \""+ font +"\" !important;" +
-            "src: local( \"" + font + "\") ," +
-                  GM_getResourceURL("font") + ";" +
+            "font-family:\"" + font + "\";" +
+            "src: local(" + "disable that for second" + ")," + fontURL + ";" +
         "}" +
-        "html, body {" +
-            "font-family: \"" + font + "\" !important; " +
+        "* {" +
+            "font-family: \"" + font + "\" !important;" +
         "}"
     );
     GM_addStyle(GM_getResourceText("style"));
