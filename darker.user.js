@@ -18,12 +18,15 @@
     var holdUI = bottomBar.removeChild(UI);
     topBar.appendChild(holdUI);
     //GM will do this: http://unixpapa.com/js/dyna.html
-    var font = "Coder\'s Crux"
+    var font = "Coder's Crux";
     var fontURL = "url(https://rawgit.com/Szero/darker-side-of-vola/master/fonts/coders_crux.ttf)";
     GM_addStyle(
         "@font-face {" +
             "font-family:\"" + font + "\";" +
             "src: local(" + "disable that for second" + ")," + fontURL + ";" +
+        "}"
+        "* {" +
+            "font-family:" + font + ";" +
         "}"
     );
     GM_addStyle(GM_getResourceText("style"));

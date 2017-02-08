@@ -1,14 +1,14 @@
-/*@-moz-document domain("volafile.io") {*/
+/*@-moz-document domain("volafile.io") {
 
     * {
         -webkit-font-smoothing: none;
         -moz-osx-font-smoothing: unset;
         font-smoothing: unset ;
-        font-family: "Coder\'s Crux" !important;
-    }
+        font-family: "Coder's Crux" !important;
+    } */
 
     ._icon, [class*=" icon-"], [class^="icon-"] {
-        font-family: "Coder\'s Crux" !important;
+        font-family: "Coder's Crux" !important;
     }
 
     /* Main Page */
@@ -223,7 +223,7 @@
 
     .chat_file:hover {
         background: #000000 !important;
-        //color: rgba(140,160,220,1) !imprtant;
+        color: #008D8D !important;
         border-color: rgb(35,40,50)!important;
     }
 
