@@ -1,10 +1,14 @@
 @-moz-document domain("volafile.io") {
 
-    * {font-family: "Terminus (TTF)" !important; }
-
+    * {
+        -webkit-font-smoothing: none;
+        -moz-osx-font-smoothing: unset;
+        font-smoothing: unset ;
+        font-family: "Coder's Crux" !important;
+    }
 
     ._icon, [class*=" icon-"], [class^="icon-"] {
-    font-family: "Terminus (TTF)" !important;
+        font-family: "Coder's Crux" !important;
     }
 
     /* Main Page */

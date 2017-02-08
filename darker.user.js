@@ -18,8 +18,8 @@
     var holdUI = bottomBar.removeChild(UI);
     topBar.appendChild(holdUI);
     //GM will do this: http://unixpapa.com/js/dyna.html
-    var font = "Terminus (TTF)"
-    var fontURL = "url(https://rawgit.com/Szero/darker-side-of-vola/master/fonts/TerminusTTF-4.40.1.ttf)";
+    var font = "Coder's Crux"
+    var fontURL = "url(https://rawgit.com/Szero/darker-side-of-vola/master/fonts/coders_crux.ttf)";
     GM_addStyle(
         "@font-face {" +
             "font-family:\"" + font + "\";" +
