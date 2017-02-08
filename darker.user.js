@@ -22,7 +22,7 @@
     topBar.appendChild(holdUI);
     var font = "8-bit pusab";
     GM_addStyle(
-        "@fontface {" +
+        "@font-face {" +
             "font-family: \""+ font +"\" !important;" +
             "src: local( \"" + font + "\") ," +
                   GM_getResourceURL("font") + ";" +
