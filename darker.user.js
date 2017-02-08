@@ -20,12 +20,12 @@
     var bottomBar = document.getElementById("header_row2");
     var holdUI = bottomBar.removeChild(UI);
     topBar.appendChild(holdUI);
-    var font = "8-bit pusab"
+    var font = "8-bit pusab";
     GM_addStyle(
         "@fontface {" +
             "font-family: \""+ font +"\" !important;" +
             "src: local( \"" + font + "\") ," +
-            "src:" + GM_getResourceURL("font") + ";" +
+                  GM_getResourceURL("font") + ";" +
         "}" +
         "html, body {" +
             "font-family: \"" + font + "\" !important; " +
