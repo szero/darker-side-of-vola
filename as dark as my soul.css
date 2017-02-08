@@ -6,9 +6,9 @@
 
     }
 
-@-moz-document domain("volafile.io") {*/
+@-moz-document domain("volafile.io") {
 
-    * {font-family: "Terminus (TTF)" !important; }
+    html, body {font-family: "Terminus (TTF)" !important; } */
 
 
     /* Main Page */

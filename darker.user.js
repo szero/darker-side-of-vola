@@ -9,7 +9,8 @@
 // @grant        GM_getResourceURL
 // @resource style https://rawgit.com/Szero/darker-side-of-vola/master/as%20dark%20as%20my%20soul.css
 // @resource font https://rawgit.com/Szero/darker-side-of-vola/master/fonts/TerminusTTF-4.40.1.ttf
-// @match        https://*.volafile.io/r/*
+// @resource bitfont https://rawgit.com/Szero/darker-side-of-vola/master/fonts/8-bit%20pusab.ttf
+// @match        https://*.volafile.io/*
 // @run-at       document-idle
 // ==/UserScript==
 
@@ -19,11 +20,16 @@
     var bottomBar = document.getElementById("header_row2");
     var holdUI = bottomBar.removeChild(UI);
     topBar.appendChild(holdUI);
+    var font = "8-bit pusab"
     GM_addStyle(
-            "@fontface {" +
-                "font-family: \"Terminus (TTF)\" !important;" +
-                "src:" + GM_getResourceURL("font") + ";" +
-            "}"
-            )
+        "@fontface {" +
+            "font-family: \""+ font +"\" !important;" +
+            "src: local( \"" + font + "\") ," +
+            "src:" + GM_getResourceURL("font") + ";" +
+        "}" +
+        "html, body {" +
+            "font-family: \"" + font + "\" !important; " +
+        "}"
+    );
     GM_addStyle(GM_getResourceText("style"));
 })();
