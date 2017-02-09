@@ -114,11 +114,15 @@
     }
 
     #file_list {
-        font-size: 12px;
+        font-size: 16px;
+    }
+
+    #chat_messages_frame {
+        font-size: 32px;
     }
 
     #top_navigation {
-        font-size: 14px;
+        font-size: 16px;
         background: rgb(0,0,0);
         border-bottom-style: solid!important;
         border-bottom-color: rgb(0,0,0);
@@ -229,16 +233,19 @@
         text-align: center;
         border-style: dashed;
         border-color: #008D8D;
+        font-size: 16px;
     }
 
     .chat_file:hover {
         background: #000000 !important;
         color: #008D8D !important;
         border-color: rgb(35,40,50)!important;
+        font-size: 16px;
     }
 
     .chat_file:visited {
         color: rgb(200,120,140)!important;
+        font-size: 16px;
     }
 
     .chat_file_play {
@@ -436,12 +443,17 @@
         color: rgb(255,255,255);
     }
 
+    .filelist_resize_bar {
+        z-index: 1 !important;
+    }
+
     .file_icon.filetype.music_playing {
         color: rgb(255,255,255)!important;
     }
 
     #gallery_title {
         color: rgb(255,255,255);
+        font-size: 28px;
     }
 
     .gallery_button {
