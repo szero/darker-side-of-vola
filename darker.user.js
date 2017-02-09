@@ -17,12 +17,11 @@
     let holdUI = bottomBar.removeChild(UI);
     topBar.appendChild(holdUI);
     //GM will do this: http://unixpapa.com/js/dyna.html
-    let cssURL = "https://rawgit.com/Szero/darker-side-of-vola/master/as%20dark%20as%20my%20soul.css";
     let style = document.getElementsByTagName("style")[0];
     let parentTag = style.parentNode;
     let newLink = document.createElement("link");
     newLink.rel = "stylesheet";
     newLink.type = "text/css";
-    newLink.href = cssURL;
+    newLink.href = "https://rawgit.com/Szero/darker-side-of-vola/master/as%20dark%20as%20my%20soul.css";
     parentTag.insertBefore(newLink,style.nextSibling);
 }) ();

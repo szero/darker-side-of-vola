@@ -396,12 +396,11 @@ textarea.defaultValue {
 }
 
 #uploadButton:active {
-    background: rgb(40,45,55)!important;
-    ;
-
+    background: rgb(40,45,55) !important;
     color: #008D8D!important;
 }
 
+#uploadIcon.icon-upload
 #filter_reminder {
     background: rgb(40,45,65);
 }
@@ -799,24 +798,16 @@ I.file_icon.file_control_icon.fa.filetype.icon-cloud-upload.file_icon_pulsing{
     border-color: #008D8D!important;
     color: rgb(255,255,255);
 }
-.icon-folder-open:before {
-    content: "";
+.icon-folder-open, .icon-report, .icon-exit, .icon-upload-button, .icon-filter{
+    display: none !important;
 }
-.icon-report:before {
-    content: "";
-}
-.icon-exit:before {
-    content: "";
-}
+
 .file_status:before {
     border-left: 0px solid #4a6885;
 }
 .icon-stopwatch:before {
     content: "y";
     font-size: 0px
-}
-.icon-upload-button:before {
-    content: "";
 }
 span#radio_close.icon-cross.clickable.radio_icon:before {
     content: "✖"
@@ -832,9 +823,7 @@ a.header_row_element_disabled, a.header_row_element_disabled:active, a.header_ro
     color: #579;
     background-color: #000;
 }
-.icon-filter:before {
-    content: "";
-}
+
 .icon-angle-double-right:before {
     content: ">>";
 }
@@ -874,8 +863,8 @@ hr {
     content: "Settings";
 }
 
-.icon-hammer::before, .icon-list::before, .icon-lock::before, .icon-unlock::before, .icon-plus::before, .icon-minus::before, .icon-trash::before, .icon-log::before{
-    content: "";
+.icon-hammer, .icon-list, .icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-trash, .icon-log{
+    display: none !important;
 }
 
 
@@ -947,7 +936,7 @@ select {
 }
 
 span.icon-folder-open, span.icon-heart, span.icon-hammer, span.icon-user, span.icon-exit, span.icon-magic-wand, span.icon-cog {
-    display: none!important;
+    display: none !important;
 }
 
 .filelist_file:hover>.file_left_part>.file_control>.filetype_download:before {
