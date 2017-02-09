@@ -1,18 +1,24 @@
 @-moz-document domain("volafile.io") {
     @font-face {
         font-family: "Pixeltype" ;
-        font-family:  "Terminus (TTF)";
-        src: local("pixelmix"), local("Terminus TTF"),
+        font-family: "pixelmix" ;
+        font-family: "Terminus (TTF)";
+        src: local("Pixeltype"), local("pixelmix"), local("Terminus TTF"),
              url("https://rawgit.com/Szero/darker-side-of-vola/master/fonts/Pixeltype.ttf") format("truetype"),
+             url("https://rawgit.com/Szero/darker-side-of-vola/master/fonts/pixelmix.ttf") format("truetype"),
              url("https://rawgit.com/Szero/darker-side-of-vola/master/fonts/TerminusTTF-4.40.1.ttf") format("truetype");
     }
 
     * {
         font-family: "Pixeltype" !important;
+        font-family: "pixelmix" !important;
+        font-family: "Terminus (TTF)" !important;
     }
 
     ._icon, [class*=" icon-"], [class^="icon-"] {
         font-family: "Pixeltype" !important;
+        font-family: "pixelmix" !important;
+        font-family: "Terminus (TTF)" !important;
     }
 
     /* Main Page */
