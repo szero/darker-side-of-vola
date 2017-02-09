@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      0.1
+// @version      0.2
 // @description  change of volafile experience
 // @author       Your mom
 // @match        https://*.volafile.io/*
@@ -26,6 +26,7 @@
     bottomBar.style.display = "none";
     header.style.height = "1.5em";
     frame.style.top = "1.8em";
+    frame.style.z-index = "1";
     /*function close() {
         frame.style.top = "1.8em";
         header.style.height = "1.5em";
