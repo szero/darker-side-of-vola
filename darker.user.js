@@ -26,7 +26,7 @@
     bottomBar.style.display = "none";
     header.style.height = "1.5em";
     frame.style.top = "1.8em";
-    frame.style.zindex = "1";
+    frame.style.zIndex = "1";
     /*function close() {
         frame.style.top = "1.8em";
         header.style.height = "1.5em";
