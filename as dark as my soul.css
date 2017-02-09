@@ -1,6 +1,6 @@
 @font-face {
     font-family:  "Terminus (TTF)" !important ;
-    src:   url("https://rawgit.com/Szero/darker-side-of-vola/master/fonts/TerminusTTF-4.40.1.ttf") ;
+    src: url("https://rawgit.com/Szero/darker-side-of-vola/master/fonts/TerminusTTF-4.40.1.ttf") format("truetype");
 }
 
 * {
