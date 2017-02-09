@@ -10,15 +10,15 @@
     }
 
     * {
-        font-family: "Pixeltype" !important;
-        font-family: "pixelmix" !important;
-        font-family: "Terminus (TTF)" !important;
+        font-family: "Pixeltype", "pixelmix", "Terminus (TTF)";
+       /* font-family: "pixelmix" !important;
+        font-family: "Terminus (TTF)" !important; */
     }
 
     ._icon, [class*=" icon-"], [class^="icon-"] {
-        font-family: "Pixeltype" !important;
-        font-family: "pixelmix" !important;
-        font-family: "Terminus (TTF)" !important;
+        font-family: "Pixeltype", "pixelmix", "Terminus (TTF)";
+        /*font-family: "pixelmix" !important;
+        font-family: "Terminus (TTF)" !important; */
     }
 
     /* Main Page */
