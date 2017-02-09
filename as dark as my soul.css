@@ -1,964 +1,963 @@
-@font-face {
-    font-family:  "Terminus (TTF)";
-    src: url("https://rawgit.com/Szero/darker-side-of-vola/master/fonts/TerminusTTF-4.40.1.ttf") format("truetype");
+@-moz-document domain("volafile.io") {
+    @font-face {
+        font-family:  "Terminus (TTF)";
+        src: local("Terminus TTF"),
+             url("https://rawgit.com/Szero/darker-side-of-vola/master/fonts/TerminusTTF-4.40.1.ttf") format("truetype");
+    }
+
+    * {
+        font-family: "Terminus (TTF)" !important;
+    }
+
+    ._icon, [class*=" icon-"], [class^="icon-"] {
+        font-family: "Terminus (TTF)" !important;
+    }
+
+    /* Main Page */
+
+
+    .howitworks_point {
+        text-decoration: underline;
+    }
+
+    #main_small_links {
+        background-color: rgb(0,0,0);
+    }
+
+    /* Rules */
+
+    .main.text.left em,i {
+        font-style: italic
+    }
+    .icon-refresh:before {
+        content: "CV";
+    }
+
+
+    .chat_room_url {
+        background-color: rgb(24, 24, 24);
+    }
+
+    /* Radio Seekbar*/
+    #radio_load_progress {
+        background-color: rgb(0,0,0);
+    }
+
+    #radio_play_progress {
+        background-color: #008D8D;
+    }
+    #radio_progress {
+        background-color: #000000;
+    }
+
+    /*Radio Volume*/
+    .icon-volume-down:before {
+        color: #008D8D;
+    }
+
+    /* Chromium need this for the maximum volume icon to be green, dunno why. firefox works without it*/
+    .icon-volume-up:before {
+        color: #008D8D;
+    }
+
+    #radio_volume_bar {
+        background-color: rgb(0,0,0);
+        border-style: solid;
+        border-width: 1px;
+        border-color: #008D8D;
+    }
+
+    #radio_volume_slider {
+        background-color: #008D8D;
+    }
+
+    div#radio_volume_wrapper {
+        display:inline-block;
+    }
+
+
+    /* Header 1*/
+    .header_row_element, .header_row_element:visited {
+        color: rgb(0,25,0);
+    }
+
+    /*Top List*/
+
+    /* room */
+    .chat_message.message_self {
+        font-style: italic
+    }
+
+    .chat_message.message_self.highlight {
+        font-style: italic
+    }
+
+    .file_control {
+        color: #008D8D;
+        padding-right: 0 !important;
+    }
+
+    #files_scroller {
+        background: rgb(0,0,0);
+    }
+
+    #filter_reminder {
+        background-color: rgb(0,0,0);
+    }
+
+    #file_list {
+        font-size: 12px;
+    }
+
+    #top_navigation {
+        font-size: 14px;
+        background: rgb(0,0,0);
+        border-bottom-style: solid!important;
+        border-bottom-color: rgb(0,0,0);
+        border-bottom-width: 2px!important;
+    }
+
+    .top_nav_item:hover {
+        background-color: rgb(0,0,0)!important;
+    }
+
+    .top_nav_item, #top_navigation_contents, .top_nav_item[href='/donate'] {
+        border-color: rgb(0,0,0);
+    }
+
+    div#chat_messages_frame:before {
+        border-left: none !important;
+        background: rgb(0,0,0);
+    }
+
+    #overlay.visible {
+        background: rgb(0,0,0);
+    }
+
+    #room_name, #room_name_container {
+        text-align: center;
+        background: rgb(0,0,0);
+        color: rgb(255,255,255);
+    }
+
+    #header_row1.header_row {
+        background: rgb(0,0,0);
+    }
+    #chat_frame {
+        border-color: #008D8D;
+    }
+    .chat_message {
+        margin-left: 0 !important;
+        padding: 0px 1em 0px 0.5em !important;
+        background: rgb(0,0,0);
+        color: rgb(255,255,255);
+        border-left-style: solid;
+        border-left-width: 6px;
+        border-color: rgb(0,0,0);
+    }
+    #room_name_container {
+        border-right-color: #008D8D;
+    }
+    #files_frame {
+        border-top-color: #008D8D;
+    }
+    #chat_messages .chat_message.user a.username {
+        color: rgb(7,255,7);
+    }
+
+    #chat_messages .chat_message a.username {
+        color: rgb(54,54,54);
+    }
+
+    #chat_messages .chat_message.donator a.username {
+        color: #90EE90 !important;
+    }
+
+    #chat_messages .chat_message.staff a.username, #chat_messages .chat_message staff admin user profile {
+        color: rgb(255,255,0) !important;
+    }
+    #chat_messages .chat_message.rank a.username {
+        color: rgb(80,100,170);
+    }
+
+    #chat_messages .chat_message a.username {
+        color: rgb(170,190,210);
+    }
+
+
+    .chat_message.highlight.admin {
+        background: rgb(24,24,24);
+        border-color: rgb(0,0,0)!important;
+        border-left-width: 6px!important;
+        color: rgb(255,255,255);
+        border-left-style: solid!important;
+    }
+
+    .chat_message.highlight {
+        background: rgb(24,24,24);
+        border-color: rgb(0,0,0)!important;
+        color: rgb(255,255,255);
+        border-left-width: 6px!important;
+        border-left-style: solid!important;
+    }
+
+    .chat_message.highlight.user {
+        border-color: rgb(0,0,0)!important;
+        border-left-width: 6px!important;
+        border-left-style: solid!important;
+    }
+
+    .chat_message.highlight.rank {
+        border-color: rgb(80,100,170)!important;
+        border-left-width: 4px!important;
+        border-left-style: solid!important;
+    }
+
+    .chat_file {
+        border-radius: 1px;
+        background: rgb(0,0,0) !important;;
+        border-color: #008D8D !important;
+        color: rgb(255,255,255) !important;
+        text-align: center;
+        border-style: dashed;
+        border-color: #008D8D;
+    }
+
+    .chat_file:hover {
+        background: #000000 !important;
+        color: #008D8D !important;
+        border-color: rgb(35,40,50)!important;
+    }
+
+    .chat_file:visited {
+        color: rgb(200,120,140)!important;
+    }
+
+    .chat_file_play {
+        float: none !important;
+    }
+
+    #chat_frame a:visited {
+        color: rgb(142,140,140);
+    }
+
+    .nano > .pane > .slider {
+        border-radius: 1px;
+        background: #008D8D;
+    }
+
+    .nano > .pane > .slider:hover {
+        background: #008D8D;
+    }
+
+    .nano:hover > .pane, .pane.active, .pane.flashed {
+        background: rgb(0,0,0);
+        opacity: 1;
+    }
+
+    .nano > .pane.active > .slider {
+        background: #008D8D;
+    }
+
+    .nano>.pane {
+        opacity: 0 !important;
+    }
+
+    .nano:hover>.pane,.pane.active,.pane.flashed {
+        opacity: 1 !important;
+    }
+
+    a.header_row_element:hover {
+        background: rgb(0,0,0);
+    }
+
+    #chat_hbar, #header_row2.header_row {
+        background: rgb(0,0,0);
+        color: rgb(255,255,255);
+    }
+
+    .dropdown_item {
+        background: rgb(0,0,0);
+        color: rgb(255,255,255)!important;
+    }
+
+    .dropdown:hover {
+        background: rgb(0,0,0);
+    }
+
+    .dropdown_item:hover {
+        background: rgb(0,0,0);
+        color: rgb(0,0,255);
+    }
+
+    a.dropdown_hover.dropdown_option {
+        border-color: rgb(0,10,18)!important;
+        color: rgb(255,255,255);
+    }
+
+    .dropdown:hover:after {
+        border-color: #008D8D;
+        background: rgb(10,20,30);
+        border-width: 1px!important;
+    }
+
+    .dropdown_list {
+        border-color: rgb(60,70,100);
+    }
+
+    textarea, input[type="text"], input[type="password"] {
+        background: rgb(0,0,0);
+    }
+
+    .button, input[type="submit"] {
+        border-radius: 0px;
+        color: rgb(0,0,0);
+    }
+
+    #chat_name, #chat_input {
+        background: rgb(0,0,0);
+        color: rgb(255,255,255);
+        border-color: rgb(28,32,50);
+        border-width: 0px;
+    }
+    .file_right_part {
+        line-height: 1em !important;
+    }
+    .file_right_part>.hover_show {
+        display: inline !important;
+    }
+
+    .file_right_part>.hover_show:after {
+        content: ' - ';
+    }
+
+    .file_right_part:hover>.hover_hide {
+        display: inline !important;
+    }
+
+    a:hover {
+        color: #008D8D;
+    }
+
+    .header_row_element, #header_row1, #header_row2 {
+        border-color: transparent;
+    }
+
+    textarea.defaultValue {
+        color: rgb(255,255,255);
+    }
+
+    #header_row_container a i.green-icon {
+        color: rgb(255,255,255)!important;
+    }
+
+    #header_row_container a:hover i.green-icon {
+        color: rgb(255,255,255)!important;
+    }
+
+    #header_row_container a:active i.green-icon {
+        color: #008D8D!important;
+    }
+
+    #search_input.defaultValue {
+        background: rgb(0,0,0)!important;
+        color: rgb(255,255,255);
+    }
+
+    #search_input {
+        background: rgb(0,0,0)!important;
+    }
+
+    #toggles > .toggle:hover {
+        border-color: #008D8D;
+        background: none !important;
+    }
+
+    .header_row_element, header_row_element.nodecoration, A.nodecoration.header_row_element, SPAN.on_large_screen {
+        color: rgb(255,255,255);
+    }
+
+    .button, input[type="submit"] {
+        background: rgb(0,0,0);
+        color: #008D8D;
+        margin-right: 10px;
+    }
+
+    #uploadButton {
+        border-radius: 0px;
+        color: rgb(255,255,255);
+        background: rgb(0,0,0);
+    }
+
+    #uploadButton:hover {
+        color: #008D8D;
+        background: rgb(0,0,0)!important;
+    }
+
+    #uploadButton:active {
+        background: rgb(40,45,55) !important;
+        color: #008D8D!important;
+    }
+
+    #uploadIcon.icon-upload
+    #filter_reminder {
+        background: rgb(40,45,65);
+    }
+
+    #filter_reminder:hover {
+        background: rgb(50,55,75);
+    }
+
+    .file_uploading {
+        background: rgb(28,32,50)!important;
+    }
+
+    #file_list.uneven .filelist_file:nth-child(2n+1) {
+        background: rgb(0,0,0);
+        color: rgb(255,255,255);
+    }
+
+    #file_list.even .filelist_file:nth-child(2n) {
+        background: rgb(0,0,0);
+        color: rgb(255,255,255);
+    }
+
+    .filelist_file {
+        height: 1em !important;
+        background: rgb(0,0,0);
+        color: rgb(255,255,255);
+    }
+
+    .file_icon.filetype.music_playing {
+        color: rgb(255,255,255)!important;
+    }
+
+    #gallery_title {
+        color: rgb(255,255,255);
+    }
+
+    .gallery_button {
+        border-radius: 1px;
+        border-style: none;
+        color: rgb(255,255,255);
+        background-color: rgb(0,0,0)!important;
+    }
+
+    .gallery_button:hover {
+        background-color: rgb(0,0,0);
+        color: #008D8D;
+    }
+
+    .ui_frame {
+        background: rgb(0,0,0);
+        border-color: rgb(0,0,0);
+        border-radius: 1px;
+    }
+
+    a.file_name {
+        color: rgb(255,255,255);
+    }
+
+    a.file_name:visited {
+        color: rgb(142,140,140);
+    }
+
+    a.file_name:visited:hover {
+        color: rgb(100,120,170);
+    }
+
+    a:hover {
+        color: rgb(100,120,170);
+    }
+
+    .file_control_icon.clickable {
+        color: rgb(180,180,180);
+    }
+
+    .file_control_icon.clickable:hover {
+        color: rgb(142,140,140);
+    }
+
+    .file_icon {
+        color: rgb(170,190,210)!important;
+    }
+
+    .file_tag.tag_key_user {
+        background: rgb(0,0,0);
+        color: #008D8D;
+        border-radius: 1px;
+        border-width: 0px 0px 0px 0px !important;
+    }
+
+    .file_tag.tag_key_user:hover {
+        color: #008D8D;
+        background: rgb(0,0,0);
+
+    }
+
+    .file_tag {
+        background: rgb(0,0,0);
+        border-radius: 0px;
+        color: #008D8D;
+        border-style: dashed;
+        border-width: 0px 0px 0px 1px;
+        padding-left: 5px;
+    }
+    .file_control_icon.clickable {
+        color: #008D8D !important;
+    }
+    .file_tag:hover {
+        color: #008D8D;
+        background: rgb(0,0,0);
+    }
+
+    html {
+        background: rgb(0,0,0);
+    }
+
+    #main_logo {
+        color: #008D8D;
+    }
+
+    #main_logo_suffix {
+        color: rgb(255,255,255);
+    }
+
+
+    #main_new_room_button:hover {
+        background: rgb(38,42,62)!important;
+        color: rgb(140,160,220);
+    }
+
+    #main_discover_button {
+        background: rgb(0,10,18);
+        color: rgb(255,255,255);
+    }
+
+    pre {
+        color: rgb(180,180,180);
+    }
+
+    table th {
+        background: rgb(0,0,0);
+        border-color: #008D8D;
+    }
+
+    table td {
+        border-color: #008D8D;
+    }
+
+    #radio_container {
+        background: rgb(0,0,0);
+        border-color: #008D8D;
+        border-width: 1px!important;
+        border-top-style: dashed;
+    }
+
+    #radio_current_song {
+        background: rgb(0,0,0);
+        border-color: rgb(120,140,200)!important;
+        border-radius: 0px!important;
+    }
+
+    #radio_current_time, #radio_left {
+        background: rgb(0,0,0);
+        border-color: rgb(0,0,0);
+        border-left-width: 1px!important;
+    }
+
+    .radio_icon {
+        color: #008D8D;
+    }
+
+    .toggle>span.toggle_icon {
+        color: rgb(144,144,144);
+    }
+
+    .toggle.enabled>span.toggle_icon {
+        color: #008D8D!important;
+    }
+
+    #radio_current {
+        border-color: rgb(0,0,0)!important;
+        border-radius: 0px;
+        border-top-color: rgb(0,0,0) !important;
+        border-width: 2px!important;
+        border-bottom: none!important;
+    }
+
+    #radio_prev:hover,#radio_stop:hover,#radio_next:hover,#radio_play:hover {
+        color: #008D8D!important;
+    }
+
+    ui_frame_buttons > .button, .button.light {
+        background: rgb(0,0,0)!important;
+    }
+
+    .button:hover {
+        background: rgb(0,0,0)!important;
+        color: #008D8D!important;
+    }
+
+    .chat_message.message_self .username {
+        font-style: italic;
+    }
+
+    .icon-picture-o:before {
+        content: "P";
+    }
+
+    .filelist_file:hover .filetype_download:before {
+        content: "DL";
+        color: #d8d8d8;
+        padding-right: 4px !important;
+    }
+
+    .icon-film:before {
+        content: "V";
+    }
+
+    .icon-book:before {
+        content: "D";
+    }
+
+    .icon-music:before {
+        content: "M";
+    }
+
+    .icon-archive:before {
+        content: "A";
+    }
+
+    .icon-file:before {
+        content: "O";
+    }
+
+    .icon-play, .icon-stop {
+        width: 0px;
+        height: 0px;
+    }
+    .icon-play:before {
+        content: "⏵";
+        color: #008D8D;
+    }
+
+    .file_icon {
+        padding-right: 30px;
+    }
+
+    .icon-pause:before {
+        content: "⏸";
+    }
+
+    .icon-stop:before {
+        content: "⏹";
+    }
+
+    .file_control_icon.filetype {
+        padding-right: 1em;
+    }
+
+    .icon-volume-high:before, .icon-volume-medium:before, .icon-volume-low:before, .icon-volume-mute:before  {
+        content: "Vol";
+        color: #008D8D;
+    }
+
+    #radio_volume_icon {
+        width: 1.5em;
+    }
+
+    .icon-previous:before {
+        content: "⏮";
+    }
+
+    .icon-next:before {
+        content: "⏭";
+    }
+
+    i#chat_notifier.fa.icon-arrow-down:before {
+        content: "New Messages Posted";
+    }
+
+    .icon-upload:before {
+        content: "";
+    }
+
+    .icon-heart:before {
+        content: "";
+    }
+
+    .icon-user:before {
+        content: "";
+    }
+
+    .icon-edit:before {
+        content: "";
+    }
+
+    .icon-home:before {
+        content: "";
+    }
+
+    .icon-image:before {
+        content: "I";
+    }
+
+    a#radio_upwards.toggle.radio_toggle span.icon-reverse.radio_icon.toggle_icon:before {
+        content: "⮁";
+        color: #008D8D;
+    }
+
+    a#radio_upwards.toggle.radio_toggle.enabled span.icon-reverse.radio_icon.toggle_icon:before {
+        content: "⮁";
+        color: #F1EDED;
+    }
+
+    a#radio_shuffle.toggle.radio_toggle span.icon-random.radio_icon.icon-random:before {
+        content: "⭾";
+        color: #008D8D;
+    }
+
+    a#radio_shuffle.toggle.radio_toggle.enabled span.icon-random.radio_icon.icon-random:before {
+        content: "⭾";
+        color: #F1EDED;
+    }
+
+    .icon-times:before {
+        content: "Close";
+    }
+
+    #radio_container {
+        background-color: #000000;
+        border-top-style: solid;
+        border-width: 1px;
+    }
+
+    #radio_play_progress {
+        background-color: #008D8D;
+    }
+    #clearsearch:hover {
+        color: #008D8D;
+    }
+    #filter_reminder, #filter_reminder:hover {
+        background: rgb(0, 0, 0);
+    }
+    #uploadButton:active {
+        background: rgb(0, 0, 0)!important;
+    }
+    I#clearsearch.fa.icon-times.clickable.on_small_header.icon-times:before {
+        Content: "Clear"
+    }
+    I.file_icon.file_control_icon.fa.abort-upload.icon-times.clickable:before{
+        content: "Cancel";
+    }
+    I.file_icon.file_control_icon.fa.abort-upload.icon-times.clickable{
+        padding-right: 34px
+    }
+    I.file_icon.file_control_icon.fa.filetype.icon-cloud-upload.file_icon_pulsing:before{
+        content: "UP";
+    }
+    I.file_icon.file_control_icon.fa.filetype.icon-cloud-upload.file_icon_pulsing{
+        padding-right: 8px
+    }
+    #chat_notifier{
+        color: #008D8D
+    }
+    .file_tag.tag_key_user:hover {
+        background-color: #000000
+    }
+    .ui_frame_tooltip.has_thumb .ui_frame_content {
+        border-left: solid 1px;
+        border-color: #008D8D
+
+    }
+    #main_new_room_button:hover {
+        background: rgb(0,0,0)!important;
+    }
+    #radio_load_progress {
+        background-color: #000000;
+    }
+    .icon-cog:before {
+        content: "";
+    }
+    .icon-minus-circle:before {
+        content: "";
+    }
+
+    .icon-exclamation-circle:before {
+        content: "";
+    }
+    .icon-magic:before {
+        content: "";
+    }
+    .ui_frame_body_bar {
+        border-top: 3px solid #008D8D;
+    }
+    .dropdown_list {
+        border-color: #008D8D!important;
+        color: rgb(255,255,255);
+    }
+    .icon-folder-open, .icon-report, .icon-exit, .icon-upload-button, .icon-filter{
+        display: none !important;
+    }
+
+    .file_status:before {
+        border-left: 0px solid #4a6885;
+    }
+    .icon-stopwatch:before {
+        content: "y";
+        font-size: 0px
+    }
+    span#radio_close.icon-cross.clickable.radio_icon:before {
+        content: "✖"
+    }
+    span#clearsearch.icon-cross.clickable.on_small_header:before {
+        content: "Clear"
+    }
+    span#chat_notifier.icon-arrow-down.clickable:before {
+        content: "New Messages Posted";
+    }
+    a.header_row_element_disabled, a.header_row_element_disabled:active, a.header_row_element_disabled:hover, a.header_row_element_disabled:visited {
+        cursor: default;
+        color: #579;
+        background-color: #000;
+    }
+
+    .icon-angle-double-right:before {
+        content: ">>";
+    }
+    .icon-angle-double-left:before {
+        content: "<<";
+    }
+    .icon-arrow-up:before {
+        content: "^";
+    }
+    .icon-arrow-down:before {
+        content: "v";
+    }
+    i.file_icon.file_control_icon.abort-upload.icon-cross.clickable:before {
+        content: "Abort"
+    }
+    .icon-uploading:before {
+        content: "UP";
+    }
+    .icon-twitter:before {
+        content: "Twitter";
+    }
+    .icon-facebook:before {
+        content: "FaceBook";
+    }
+    hr {
+        border: 1px solid #008D8D;
+    }
+    .icon-angle-right:before {
+        content: "";
+    }
+    .loading_indicator > .outer_indicator > .inner_indicator {
+        background-color: #008D8D
+    }
+
+    /*mod stuff*/
+    .icon-wrench::before {
+        content: "Settings";
+    }
+
+    .icon-hammer, .icon-list, .icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-trash, .icon-log{
+        display: none !important;
+    }
+
+
+    .file_tag.tag_key_ip {
+        background-color: rgba(111, 137, 162, 0);
+    }
+
+    .file_tag.tag_key_ip:hover {
+        background-color: rgba(111, 137, 162, 0);
+    }
+
+    .ui_frame_content {
+        border: 1px solid #008D8D;
+    }
+
+    .formtable tr > td, .formtable tr > th {
+        border-left: 1px solid #008D8D;
+        border-right: 1px solid #008D8D;
+    }
+
+    input[type="checkbox"] + span._icon::before {
+        content: "NO";
+    }
+
+    input[type="checkbox"]:checked + span._icon::before {
+        content: "YES";
+    }
+
+    input[type="text"], input[type="password"] {
+        border: 1px solid #008D8D;
+    }
+    button, input, optgroup, select, textarea {
+        border: 1px solid #008D8D;
+    }
+
+    select {
+        background-color: #181818;
+    }
+    .file_selected {
+        background-color: #181818 !important;
+    }
+    .file_tag.tag_key_user {
+        background-color: rgba(24, 24, 24, 0) !important;
+    }
+    .ui_frame {
+        border: 1px solid #008D8D
+    }
+
+    .icon-group::before {
+        content: "Users Online" !important;
+    }
+
+    #chat_hbar {
+        border-left: 0px solid;
+        border-top: 1px solid #008D8D;
+        line-height: 1
+    }
+    .file_tags {
+        line-height: 2em;
+        vertical-align: middle;
+    }
+    #file_notifier, #filter_reminder {
+        background-color: black;
+        border: #008D8D solid 1px;
+    }
+
+    #file_notifier:hover, #filter_reminder:hover {
+        background-color: black;
+    }
+
+    span.icon-folder-open, span.icon-heart, span.icon-hammer, span.icon-user, span.icon-exit, span.icon-magic-wand, span.icon-cog {
+        display: none !important;
+    }
+
+    .filelist_file:hover>.file_left_part>.file_control>.filetype_download:before {
+        content: "DL";
+    }
+
+    .chat_message.admin .username, .chat_message.staff .username {
+        color: #ff0;
+    }
+
+    #chat_input_container {
+        border-left: 0em solid #69849e;
+    }
+
+    #chat_hbar_container {
+        padding-top: 0 !important;
+        border-top: none !important;
+        border-left: none !important;
+        box-shadow: none !important;
+    }
+
+    i.icon-checkmark:before {
+        content: "✔";
+    }
 }
-
-* {
-    -webkit-font-smoothing: none;
-    -moz-osx-font-smoothing: unset;
-    font-smoothing: unset ;
-    font-family: "Terminus (TTF)" !important;
-}
-
-._icon, [class*=" icon-"], [class^="icon-"] {
-    font-family: "Terminus (TTF)" !important;
-}
-
-/* Main Page */
-
-
-.howitworks_point {
-    text-decoration: underline;
-}
-
-#main_small_links {
-    background-color: rgb(0,0,0);
-}
-
-/* Rules */
-
-.main.text.left em,i {
-    font-style: italic
-}
-.icon-refresh:before {
-    content: "CV";
-}
-
-
-.chat_room_url {
-    background-color: rgb(24, 24, 24);
-}
-
-/* Radio Seekbar*/
-#radio_load_progress {
-    background-color: rgb(0,0,0);
-}
-
-#radio_play_progress {
-    background-color: #008D8D;
-}
-#radio_progress {
-    background-color: #000000;
-}
-
-/*Radio Volume*/
-.icon-volume-down:before {
-    color: #008D8D;
-}
-
-/* Chromium need this for the maximum volume icon to be green, dunno why. firefox works without it*/
-.icon-volume-up:before {
-    color: #008D8D;
-}
-
-#radio_volume_bar {
-    background-color: rgb(0,0,0);
-    border-style: solid;
-    border-width: 1px;
-    border-color: #008D8D;
-}
-
-#radio_volume_slider {
-    background-color: #008D8D;
-}
-
-div#radio_volume_wrapper {
-    display:inline-block;
-}
-
-
-/* Header 1*/
-.header_row_element, .header_row_element:visited {
-    color: rgb(0,25,0);
-}
-
-/*Top List*/
-
-/* room */
-.chat_message.message_self {
-    font-style: italic
-}
-
-.chat_message.message_self.highlight {
-    font-style: italic
-}
-
-.file_control {
-    color: #008D8D;
-    padding-right: 0 !important;
-}
-
-#files_scroller {
-    background: rgb(0,0,0);
-}
-
-#filter_reminder {
-    background-color: rgb(0,0,0);
-}
-
-#file_list {
-    font-size: 12px;
-}
-
-#top_navigation {
-    font-size: 14px;
-    background: rgb(0,0,0);
-    border-bottom-style: solid!important;
-    border-bottom-color: rgb(0,0,0);
-    border-bottom-width: 2px!important;
-}
-
-.top_nav_item:hover {
-    background-color: rgb(0,0,0)!important;
-}
-
-.top_nav_item, #top_navigation_contents, .top_nav_item[href='/donate'] {
-    border-color: rgb(0,0,0);
-}
-
-div#chat_messages_frame:before {
-    border-left: none !important;
-    background: rgb(0,0,0);
-}
-
-#overlay.visible {
-    background: rgb(0,0,0);
-}
-
-#room_name, #room_name_container {
-    text-align: center;
-    background: rgb(0,0,0);
-    color: rgb(255,255,255);
-}
-
-#header_row1.header_row {
-    background: rgb(0,0,0);
-}
-#chat_frame {
-    border-color: #008D8D;
-}
-.chat_message {
-    margin-left: 0 !important;
-    padding: 0px 1em 0px 0.5em !important;
-    background: rgb(0,0,0);
-    color: rgb(255,255,255);
-    border-left-style: solid;
-    border-left-width: 6px;
-    border-color: rgb(0,0,0);
-}
-#room_name_container {
-    border-right-color: #008D8D;
-}
-#files_frame {
-    border-top-color: #008D8D;
-}
-#chat_messages .chat_message.user a.username {
-    color: rgb(7,255,7);
-}
-
-#chat_messages .chat_message a.username {
-    color: rgb(54,54,54);
-}
-
-#chat_messages .chat_message.donator a.username {
-    color: #90EE90 !important;
-}
-
-#chat_messages .chat_message.staff a.username, #chat_messages .chat_message staff admin user profile {
-    color: rgb(255,255,0) !important;
-}
-#chat_messages .chat_message.rank a.username {
-    color: rgb(80,100,170);
-}
-
-#chat_messages .chat_message a.username {
-    color: rgb(170,190,210);
-}
-
-
-.chat_message.highlight.admin {
-    background: rgb(24,24,24);
-    border-color: rgb(0,0,0)!important;
-    border-left-width: 6px!important;
-    color: rgb(255,255,255);
-    border-left-style: solid!important;
-}
-
-.chat_message.highlight {
-    background: rgb(24,24,24);
-    border-color: rgb(0,0,0)!important;
-    color: rgb(255,255,255);
-    border-left-width: 6px!important;
-    border-left-style: solid!important;
-}
-
-.chat_message.highlight.user {
-    border-color: rgb(0,0,0)!important;
-    border-left-width: 6px!important;
-    border-left-style: solid!important;
-}
-
-.chat_message.highlight.rank {
-    border-color: rgb(80,100,170)!important;
-    border-left-width: 4px!important;
-    border-left-style: solid!important;
-}
-
-.chat_file {
-    border-radius: 1px;
-    background: rgb(0,0,0) !important;;
-    border-color: #008D8D !important;
-    color: rgb(255,255,255) !important;
-    text-align: center;
-    border-style: dashed;
-    border-color: #008D8D;
-}
-
-.chat_file:hover {
-    background: #000000 !important;
-    color: #008D8D !important;
-    border-color: rgb(35,40,50)!important;
-}
-
-.chat_file:visited {
-    color: rgb(200,120,140)!important;
-}
-
-.chat_file_play {
-    float: none !important;
-}
-
-#chat_frame a:visited {
-    color: rgb(142,140,140);
-}
-
-.nano > .pane > .slider {
-    border-radius: 1px;
-    background: #008D8D;
-}
-
-.nano > .pane > .slider:hover {
-    background: #008D8D;
-}
-
-.nano:hover > .pane, .pane.active, .pane.flashed {
-    background: rgb(0,0,0);
-    opacity: 1;
-}
-
-.nano > .pane.active > .slider {
-    background: #008D8D;
-}
-
-.nano>.pane {
-    opacity: 0 !important;
-}
-
-.nano:hover>.pane,.pane.active,.pane.flashed {
-    opacity: 1 !important;
-}
-
-a.header_row_element:hover {
-    background: rgb(0,0,0);
-}
-
-#chat_hbar, #header_row2.header_row {
-    background: rgb(0,0,0);
-    color: rgb(255,255,255);
-}
-
-.dropdown_item {
-    background: rgb(0,0,0);
-    color: rgb(255,255,255)!important;
-}
-
-.dropdown:hover {
-    background: rgb(0,0,0);
-}
-
-.dropdown_item:hover {
-    background: rgb(0,0,0);
-    color: rgb(0,0,255);
-}
-
-a.dropdown_hover.dropdown_option {
-    border-color: rgb(0,10,18)!important;
-    color: rgb(255,255,255);
-}
-
-.dropdown:hover:after {
-    border-color: #008D8D;
-    background: rgb(10,20,30);
-    border-width: 1px!important;
-}
-
-.dropdown_list {
-    border-color: rgb(60,70,100);
-}
-
-textarea, input[type="text"], input[type="password"] {
-    background: rgb(0,0,0);
-}
-
-.button, input[type="submit"] {
-    border-radius: 0px;
-    color: rgb(0,0,0);
-}
-
-#chat_name, #chat_input {
-    background: rgb(0,0,0);
-    color: rgb(255,255,255);
-    border-color: rgb(28,32,50);
-    border-width: 0px;
-}
-.file_right_part {
-    line-height: 1em !important;
-}
-.file_right_part>.hover_show {
-    display: inline !important;
-}
-
-.file_right_part>.hover_show:after {
-    content: ' - ';
-}
-
-.file_right_part:hover>.hover_hide {
-    display: inline !important;
-}
-
-a:hover {
-    color: #008D8D;
-}
-
-.header_row_element, #header_row1, #header_row2 {
-    border-color: transparent;
-}
-
-textarea.defaultValue {
-    color: rgb(255,255,255);
-}
-
-#header_row_container a i.green-icon {
-    color: rgb(255,255,255)!important;
-}
-
-#header_row_container a:hover i.green-icon {
-    color: rgb(255,255,255)!important;
-}
-
-#header_row_container a:active i.green-icon {
-    color: #008D8D!important;
-}
-
-#search_input.defaultValue {
-    background: rgb(0,0,0)!important;
-    color: rgb(255,255,255);
-}
-
-#search_input {
-    background: rgb(0,0,0)!important;
-}
-
-#toggles > .toggle:hover {
-    border-color: #008D8D;
-    background: none !important;
-}
-
-.header_row_element, header_row_element.nodecoration, A.nodecoration.header_row_element, SPAN.on_large_screen {
-    color: rgb(255,255,255);
-}
-
-.button, input[type="submit"] {
-    background: rgb(0,0,0);
-    color: #008D8D;
-    margin-right: 10px;
-}
-
-#uploadButton {
-    border-radius: 0px;
-    color: rgb(255,255,255);
-    background: rgb(0,0,0);
-}
-
-#uploadButton:hover {
-    color: #008D8D;
-    background: rgb(0,0,0)!important;
-}
-
-#uploadButton:active {
-    background: rgb(40,45,55) !important;
-    color: #008D8D!important;
-}
-
-#uploadIcon.icon-upload
-#filter_reminder {
-    background: rgb(40,45,65);
-}
-
-#filter_reminder:hover {
-    background: rgb(50,55,75);
-}
-
-.file_uploading {
-    background: rgb(28,32,50)!important;
-}
-
-#file_list.uneven .filelist_file:nth-child(2n+1) {
-    background: rgb(0,0,0);
-    color: rgb(255,255,255);
-}
-
-#file_list.even .filelist_file:nth-child(2n) {
-    background: rgb(0,0,0);
-    color: rgb(255,255,255);
-}
-
-.filelist_file {
-    height: 1em !important;
-    background: rgb(0,0,0);
-    color: rgb(255,255,255);
-}
-
-.file_icon.filetype.music_playing {
-    color: rgb(255,255,255)!important;
-}
-
-#gallery_title {
-    color: rgb(255,255,255);
-}
-
-.gallery_button {
-    border-radius: 1px;
-    border-style: none;
-    color: rgb(255,255,255);
-    background-color: rgb(0,0,0)!important;
-}
-
-.gallery_button:hover {
-    background-color: rgb(0,0,0);
-    color: #008D8D;
-}
-
-.ui_frame {
-    background: rgb(0,0,0);
-    border-color: rgb(0,0,0);
-    border-radius: 1px;
-}
-
-a.file_name {
-    color: rgb(255,255,255);
-}
-
-a.file_name:visited {
-    color: rgb(142,140,140);
-}
-
-a.file_name:visited:hover {
-    color: rgb(100,120,170);
-}
-
-a:hover {
-    color: rgb(100,120,170);
-}
-
-.file_control_icon.clickable {
-    color: rgb(180,180,180);
-}
-
-.file_control_icon.clickable:hover {
-    color: rgb(142,140,140);
-}
-
-.file_icon {
-    color: rgb(170,190,210)!important;
-}
-
-.file_tag.tag_key_user {
-    background: rgb(0,0,0);
-    color: #008D8D;
-    border-radius: 1px;
-    border-width: 0px 0px 0px 0px !important;
-}
-
-.file_tag.tag_key_user:hover {
-    color: #008D8D;
-    background: rgb(0,0,0);
-
-}
-
-.file_tag {
-    background: rgb(0,0,0);
-    border-radius: 0px;
-    color: #008D8D;
-    border-style: dashed;
-    border-width: 0px 0px 0px 1px;
-    padding-left: 5px;
-}
-.file_control_icon.clickable {
-    color: #008D8D !important;
-}
-.file_tag:hover {
-    color: #008D8D;
-    background: rgb(0,0,0);
-}
-
-html {
-    background: rgb(0,0,0);
-}
-
-#main_logo {
-    color: #008D8D;
-}
-
-#main_logo_suffix {
-    color: rgb(255,255,255);
-}
-
-
-#main_new_room_button:hover {
-    background: rgb(38,42,62)!important;
-    color: rgb(140,160,220);
-}
-
-#main_discover_button {
-    background: rgb(0,10,18);
-    color: rgb(255,255,255);
-}
-
-pre {
-    color: rgb(180,180,180);
-}
-
-table th {
-    background: rgb(0,0,0);
-    border-color: #008D8D;
-}
-
-table td {
-    border-color: #008D8D;
-}
-
-#radio_container {
-    background: rgb(0,0,0);
-    border-color: #008D8D;
-    border-width: 1px!important;
-    border-top-style: dashed;
-}
-
-#radio_current_song {
-    background: rgb(0,0,0);
-    border-color: rgb(120,140,200)!important;
-    border-radius: 0px!important;
-}
-
-#radio_current_time, #radio_left {
-    background: rgb(0,0,0);
-    border-color: rgb(0,0,0);
-    border-left-width: 1px!important;
-}
-
-.radio_icon {
-    color: #008D8D;
-}
-
-.toggle>span.toggle_icon {
-    color: rgb(144,144,144);
-}
-
-.toggle.enabled>span.toggle_icon {
-    color: #008D8D!important;
-}
-
-#radio_current {
-    border-color: rgb(0,0,0)!important;
-    border-radius: 0px;
-    border-top-color: rgb(0,0,0) !important;
-    border-width: 2px!important;
-    border-bottom: none!important;
-}
-
-#radio_prev:hover,#radio_stop:hover,#radio_next:hover,#radio_play:hover {
-    color: #008D8D!important;
-}
-
-ui_frame_buttons > .button, .button.light {
-    background: rgb(0,0,0)!important;
-}
-
-.button:hover {
-    background: rgb(0,0,0)!important;
-    color: #008D8D!important;
-}
-
-.chat_message.message_self .username {
-    font-style: italic;
-}
-
-.icon-picture-o:before {
-    content: "P";
-}
-
-.filelist_file:hover .filetype_download:before {
-    content: "DL";
-    color: #d8d8d8;
-    padding-right: 4px !important;
-}
-
-.icon-film:before {
-    content: "V";
-}
-
-.icon-book:before {
-    content: "D";
-}
-
-.icon-music:before {
-    content: "M";
-}
-
-.icon-archive:before {
-    content: "A";
-}
-
-.icon-file:before {
-    content: "O";
-}
-
-.icon-play, .icon-stop {
-    width: 0px;
-    height: 0px;
-}
-.icon-play:before {
-    content: "⏵";
-    color: #008D8D;
-}
-
-.file_icon {
-    padding-right: 30px;
-}
-
-.icon-pause:before {
-    content: "⏸";
-}
-
-.icon-stop:before {
-    content: "⏹";
-}
-
-.file_control_icon.filetype {
-    padding-right: 1em;
-}
-
-.icon-volume-high:before, .icon-volume-medium:before, .icon-volume-low:before, .icon-volume-mute:before  {
-    content: "Vol";
-    color: #008D8D;
-}
-
-#radio_volume_icon {
-    width: 1.5em;
-}
-
-.icon-previous:before {
-    content: "⏮";
-}
-
-.icon-next:before {
-    content: "⏭";
-}
-
-i#chat_notifier.fa.icon-arrow-down:before {
-    content: "New Messages Posted";
-}
-
-.icon-upload:before {
-    content: "";
-}
-
-.icon-heart:before {
-    content: "";
-}
-
-.icon-user:before {
-    content: "";
-}
-
-.icon-edit:before {
-    content: "";
-}
-
-.icon-home:before {
-    content: "";
-}
-
-.icon-image:before {
-    content: "I";
-}
-
-a#radio_upwards.toggle.radio_toggle span.icon-reverse.radio_icon.toggle_icon:before {
-    content: "⮁";
-    color: #008D8D;
-}
-
-a#radio_upwards.toggle.radio_toggle.enabled span.icon-reverse.radio_icon.toggle_icon:before {
-    content: "⮁";
-    color: #F1EDED;
-}
-
-a#radio_shuffle.toggle.radio_toggle span.icon-random.radio_icon.icon-random:before {
-    content: "⭾";
-    color: #008D8D;
-}
-
-a#radio_shuffle.toggle.radio_toggle.enabled span.icon-random.radio_icon.icon-random:before {
-    content: "⭾";
-    color: #F1EDED;
-}
-
-.icon-times:before {
-    content: "Close";
-}
-
-#radio_container {
-    background-color: #000000;
-    border-top-style: solid;
-    border-width: 1px;
-}
-
-#radio_play_progress {
-    background-color: #008D8D;
-}
-#clearsearch:hover {
-    color: #008D8D;
-}
-#filter_reminder, #filter_reminder:hover {
-    background: rgb(0, 0, 0);
-}
-#uploadButton:active {
-    background: rgb(0, 0, 0)!important;
-}
-I#clearsearch.fa.icon-times.clickable.on_small_header.icon-times:before {
-    Content: "Clear"
-}
-I.file_icon.file_control_icon.fa.abort-upload.icon-times.clickable:before{
-    content: "Cancel";
-}
-I.file_icon.file_control_icon.fa.abort-upload.icon-times.clickable{
-    padding-right: 34px
-}
-I.file_icon.file_control_icon.fa.filetype.icon-cloud-upload.file_icon_pulsing:before{
-    content: "UP";
-}
-I.file_icon.file_control_icon.fa.filetype.icon-cloud-upload.file_icon_pulsing{
-    padding-right: 8px
-}
-#chat_notifier{
-    color: #008D8D
-}
-.file_tag.tag_key_user:hover {
-    background-color: #000000
-}
-.ui_frame_tooltip.has_thumb .ui_frame_content {
-    border-left: solid 1px;
-    border-color: #008D8D
-
-}
-#main_new_room_button:hover {
-    background: rgb(0,0,0)!important;
-}
-#radio_load_progress {
-    background-color: #000000;
-}
-.icon-cog:before {
-    content: "";
-}
-.icon-minus-circle:before {
-    content: "";
-}
-
-.icon-exclamation-circle:before {
-    content: "";
-}
-.icon-magic:before {
-    content: "";
-}
-.ui_frame_body_bar {
-    border-top: 3px solid #008D8D;
-}
-.dropdown_list {
-    border-color: #008D8D!important;
-    color: rgb(255,255,255);
-}
-.icon-folder-open, .icon-report, .icon-exit, .icon-upload-button, .icon-filter{
-    display: none !important;
-}
-
-.file_status:before {
-    border-left: 0px solid #4a6885;
-}
-.icon-stopwatch:before {
-    content: "y";
-    font-size: 0px
-}
-span#radio_close.icon-cross.clickable.radio_icon:before {
-    content: "✖"
-}
-span#clearsearch.icon-cross.clickable.on_small_header:before {
-    content: "Clear"
-}
-span#chat_notifier.icon-arrow-down.clickable:before {
-    content: "New Messages Posted";
-}
-a.header_row_element_disabled, a.header_row_element_disabled:active, a.header_row_element_disabled:hover, a.header_row_element_disabled:visited {
-    cursor: default;
-    color: #579;
-    background-color: #000;
-}
-
-.icon-angle-double-right:before {
-    content: ">>";
-}
-.icon-angle-double-left:before {
-    content: "<<";
-}
-.icon-arrow-up:before {
-    content: "^";
-}
-.icon-arrow-down:before {
-    content: "v";
-}
-i.file_icon.file_control_icon.abort-upload.icon-cross.clickable:before {
-    content: "Abort"
-}
-.icon-uploading:before {
-    content: "UP";
-}
-.icon-twitter:before {
-    content: "Twitter";
-}
-.icon-facebook:before {
-    content: "FaceBook";
-}
-hr {
-    border: 1px solid #008D8D;
-}
-.icon-angle-right:before {
-    content: "";
-}
-.loading_indicator > .outer_indicator > .inner_indicator {
-    background-color: #008D8D
-}
-
-/*mod stuff*/
-.icon-wrench::before {
-    content: "Settings";
-}
-
-.icon-hammer, .icon-list, .icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-trash, .icon-log{
-    display: none !important;
-}
-
-
-.file_tag.tag_key_ip {
-    background-color: rgba(111, 137, 162, 0);
-}
-
-.file_tag.tag_key_ip:hover {
-    background-color: rgba(111, 137, 162, 0);
-}
-
-.ui_frame_content {
-    border: 1px solid #008D8D;
-}
-
-.formtable tr > td, .formtable tr > th {
-    border-left: 1px solid #008D8D;
-    border-right: 1px solid #008D8D;
-}
-
-input[type="checkbox"] + span._icon::before {
-    content: "NO";
-}
-
-input[type="checkbox"]:checked + span._icon::before {
-    content: "YES";
-}
-
-input[type="text"], input[type="password"] {
-    border: 1px solid #008D8D;
-}
-button, input, optgroup, select, textarea {
-    border: 1px solid #008D8D;
-}
-
-select {
-    background-color: #181818;
-}
-.file_selected {
-    background-color: #181818 !important;
-}
-.file_tag.tag_key_user {
-    background-color: rgba(24, 24, 24, 0) !important;
-}
-.ui_frame {
-    border: 1px solid #008D8D
-}
-
-.icon-group::before {
-    content: "Users Online" !important;
-}
-
-#chat_hbar {
-    border-left: 0px solid;
-    border-top: 1px solid #008D8D;
-    line-height: 1
-}
-.file_tags {
-    line-height: 2em;
-    vertical-align: middle;
-}
-#file_notifier, #filter_reminder {
-    background-color: black;
-    border: #008D8D solid 1px;
-}
-
-#file_notifier:hover, #filter_reminder:hover {
-    background-color: black;
-}
-
-span.icon-folder-open, span.icon-heart, span.icon-hammer, span.icon-user, span.icon-exit, span.icon-magic-wand, span.icon-cog {
-    display: none !important;
-}
-
-.filelist_file:hover>.file_left_part>.file_control>.filetype_download:before {
-    content: "DL";
-}
-
-.chat_message.admin .username, .chat_message.staff .username {
-    color: #ff0;
-}
-
-#chat_input_container {
-    border-left: 0em solid #69849e;
-}
-
-#chat_hbar_container {
-    padding-top: 0 !important;
-    border-top: none !important;
-    border-left: none !important;
-    box-shadow: none !important;
-}
-
-i.icon-checkmark:before {
-    content: "✔";
-}
-
