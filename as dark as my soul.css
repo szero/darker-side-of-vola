@@ -1,5 +1,5 @@
 @-moz-document domain("volafile.io") {
-    @font-face {
+    /*@font-face {
         font-family: "Pixeltype" ;
         font-family: "pixelmix" ;
         font-family: "Terminus (TTF)";
@@ -8,19 +8,19 @@
              url("https://rawgit.com/Szero/darker-side-of-vola/master/fonts/pixelmix.ttf") format("truetype"),
              url("https://rawgit.com/Szero/darker-side-of-vola/master/fonts/TerminusTTF-4.40.1.ttf") format("truetype");
     }
-
+    */
     * {
-        /*font-family: "Pixeltype", "pixelmix", "Terminus (TTF)";*/
-        font-family: "Pixeltype" !important;
+        font-family: "Open Sans", sans-serif !important;
+        /*font-family: "Pixeltype", "pixelmix", "Terminus (TTF)";
         font-family: "pixelmix" !important;
-        font-family: "Terminus (TTF)" !important;
+        font-family: "Terminus (TTF)" !important;*/
     }
 
     ._icon, [class*=" icon-"], [class^="icon-"] {
-        /*font-family: "Pixeltype", "pixelmix", "Terminus (TTF)";*/
-        font-family: "Pixeltype" !important;
+        font-family: "Open Sans", sans-serif !important;
+        /*font-family: "Pixeltype" !important;
         font-family: "pixelmix" !important;
-        font-family: "Terminus (TTF)" !important;
+        font-family: "Terminus (TTF)" !important;*/
     }
 
     /* Main Page */
@@ -116,11 +116,7 @@
     }
 
     #file_list {
-        font-size: 16px;
-    }
-
-    #chat_messages_frame {
-        font-size: 32px;
+        font-size: 14px;
     }
 
     #top_navigation {
@@ -235,19 +231,16 @@
         text-align: center;
         border-style: dashed;
         border-color: #008D8D;
-        font-size: 16px;
     }
 
     .chat_file:hover {
         background: #000000 !important;
         color: #008D8D !important;
         border-color: rgb(35,40,50)!important;
-        font-size: 16px;
     }
 
     .chat_file:visited {
         color: rgb(200,120,140)!important;
-        font-size: 16px;
     }
 
     .chat_file_play {
@@ -455,7 +448,6 @@
 
     #gallery_title {
         color: rgb(255,255,255);
-        font-size: 28px;
     }
 
     .gallery_button {
@@ -484,12 +476,8 @@
         color: rgb(142,140,140);
     }
 
-    a.file_name:visited:hover {
-        color: rgb(100,120,170);
-    }
-
-    a:hover {
-        color: rgb(100,120,170);
+    a.file_name:hover {
+        color: #008D8D;
     }
 
     .file_control_icon.clickable {
