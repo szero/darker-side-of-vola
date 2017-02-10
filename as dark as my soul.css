@@ -433,7 +433,7 @@
     }
 
     .filelist_file {
-        height: 1em !important;
+        height: 1.4em !important;
         background: rgb(0,0,0);
         color: rgb(255,255,255);
     }
