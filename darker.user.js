@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      0.2
+// @version      0.3
 // @description  change of volafile experience
 // @author       Your mom
 // @match        https://*.volafile.io/*
@@ -27,7 +27,6 @@
         bottomBar.style.display = "none";
         header.style.height = "1.5em";
         frame.style.top = "1.8em";
-        frame.style.zIndex = "1";
     } catch (err) { console.log("this is just for pages other than vola rooms") }
     /*function close() {
       frame.style.top = "1.8em";
