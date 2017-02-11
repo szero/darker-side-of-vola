@@ -4,7 +4,7 @@
 // @version      0.3
 // @description  change of volafile experience
 // @author       Your mom
-// @match        https://*.volafile.io/*
+// @match        https://volafile.io/*
 // @grant        none
 // @run-at       document-idle
 // ==/UserScript==
