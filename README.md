@@ -7,3 +7,8 @@ High contrast theme for [Volafile](https://volafile.io).
 I tried few bitsized True Type fonts but such fonts are
 shit when antialiasing comes into play so I decided to leave it with default font.
 Only layout change for now is making top bar smaller and fitting all the buttons in it.
+
+Thanks
+------
+
+- To dad for crating [css](https://userstyles.org/styles/103946/as-dark-as-my-soul) as a base for it.
