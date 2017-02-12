@@ -11,4 +11,4 @@ Only layout change for now is making top bar smaller and fitting all the buttons
 Thanks
 ------
 
-- To dad for crating [css](https://userstyles.org/styles/103946/as-dark-as-my-soul) as a base for it.
+- To dad for creating [css](https://userstyles.org/styles/103946/as-dark-as-my-soul) as a base for it.

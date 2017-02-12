@@ -304,11 +304,6 @@
         background: rgb(0,0,0);
     }
 
-    .button, input[type="submit"] {
-        border-radius: 0px;
-        color: rgb(0,0,0);
-    }
-
     #chat_name, #chat_input {
         background: rgb(0,0,0);
         color: rgb(255,255,255);
@@ -374,8 +369,7 @@
 
     .button, input[type="submit"] {
         background: rgb(0,0,0);
-        color: #008D8D;
-        margin-right: 10px;
+        margin-bottom: -10px;
     }
 
     #uploadButton {
