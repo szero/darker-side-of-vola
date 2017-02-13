@@ -367,9 +367,15 @@
         color: rgb(255,255,255);
     }
 
-    .button, input[type="submit"] {
+    .button, input[type="submit"], input[type="button"] {
+        color: #FFFFFF;
         background: rgb(0,0,0);
         margin-bottom: -10px;
+    }
+
+    .button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+        background: rgb(0,0,0)!important;
+        color: #008D8D!important;
     }
 
     #uploadButton {
@@ -527,6 +533,10 @@
         color: rgb(180,180,180);
     }
 
+    table {
+        border: 1px solid #008D8D;
+    }
+
     table th {
         background: rgb(0,0,0);
         border-color: #008D8D;
@@ -579,8 +589,25 @@
         color: #008D8D!important;
     }
 
-    ui_frame_buttons > .button, .button.light {
+    .ui_frame_buttons > .button, .button.light {
         background: rgb(0,0,0)!important;
+    }
+
+    .formtable tr:last-child > td, .formtable tr:last-child > th {
+            border: 0;
+            padding-bottom: 10px;
+    }
+
+    #rename_input, #rename_room {
+        color: #FFFFFF;
+    }
+
+    input[type="text"]::placeholder, input[type="password"]::placeholder, textarea::placeholder {
+        color: #008D8D;
+    }
+
+    input[type="text"]::-moz-placeholder, input[type="password"]::-moz-placeholder, textarea::-moz-placeholder {
+        color: #008D8D;
     }
 
     .button:hover {
@@ -868,11 +895,6 @@
         border: 1px solid #008D8D;
     }
 
-    .formtable tr > td, .formtable tr > th {
-        border-left: 1px solid #008D8D;
-        border-right: 1px solid #008D8D;
-    }
-
     input[type="checkbox"] + span._icon::before {
         content: "NO";
     }
@@ -884,7 +906,7 @@
     input[type="text"], input[type="password"] {
         border: 1px solid #008D8D;
     }
-    button, input, optgroup, select, textarea {
+    button, input, optgroup, select {
         border: 1px solid #008D8D;
     }
 
