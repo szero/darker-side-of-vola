@@ -4,6 +4,7 @@
         --background-color: #000000;
         --text-color: #FFFFFF;
         --visited: #8C8C8C;
+        --hilight: #181818;
         --whitenames: #A9BDD0;
         --namefags: #00FF00;
         --donators: #90EE90;
@@ -35,9 +36,9 @@
         content: "CV";
     }
 
-    /*.chat_room_url {
-        background-color: rgb(24, 24, 24);
-    }*/
+    .chat_room_url {
+        background-color: var(--hilight);
+    }
     .new_room_icon {
         background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDguNDA4IiBoZWlnaHQ9IjkwLjA4OCI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoLjA1MTgyIDAgMCAuMDMxMTcgMTguMDE2IDY1Ljk4KSIgc3Ryb2tlLXdpZHRoPSI5OS41MzUiIHN0cm9rZT0iIzAwOGQ4ZCIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjI3NjQuNTg0IiBoZWlnaHQ9IjI3OTAuODgzIiB4PSItMjk3LjkwNyIgeT0iLTIwNjcuMTQ3IiByeT0iMCIvPjxwYXRoIGQ9Ik0tMjk3LjkwNy0xMjM1LjA1OWgyNzY0LjU4NW0tMTg2Ny44MTctNi4yNDhWNzMzLjA3NiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvZz48L3N2Zz4=");
     }
@@ -170,6 +171,7 @@
 
     #chat_messages .chat_message a.username {
         color: var(--whitenames);
+        font-family: inherit !important;
     }
 
     #chat_messages .chat_message.user a.username {
@@ -185,7 +187,7 @@
     }
 
     .chat_message.highlight.admin {
-        background: rgb(24,24,24);
+        background: var(--hilight);
         border-color: var(--background-color)!important;
         border-left-width: 6px!important;
         color: var(--text-color);
@@ -193,7 +195,7 @@
     }
 
     .chat_message.highlight {
-        background: rgb(24,24,24);
+        background: var(--hilight);
         border-color: var(--background-color)!important;
         color: var(--text-color);
         border-left-width: 6px!important;
@@ -207,7 +209,7 @@
     }
 
     .chat_message.highlight.rank {
-        border-color: rgb(80,100,170)!important;
+        border-color: var(--background-color)!important;
         border-left-width: 4px!important;
         border-left-style: solid!important;
     }
@@ -225,7 +227,6 @@
     .chat_file:hover {
         background: var(--background-color) !important;
         color: var(--main-color) !important;
-        border-color: rgb(35,40,50)!important;
     }
 
     .chat_file:visited {
