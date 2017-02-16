@@ -56,7 +56,7 @@
         background-image: url("data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="300" width="300"><path fill="#008d8d" d="M22 .005c-12.188 0-22 9.812-22 22v53h7v-53c0-8.31 6.69-15 15-15h53v-7H22zm203 0v7h53c8.31 0 15 6.69 15 15v53h7v-53c0-12.188-9.812-22-22-22h-53zm-225 225v53c0 12.188 9.812 22 22 22h53v-7H22c-8.31 0-15-6.69-15-15v-53H0zm293 0v53c0 8.31-6.69 15-15 15h-53v7h53c12.188 0 22-9.812 22-22v-53h-7z"/></svg>");
     }
 
-    .ui_frame.thumb_loading {
+    .ui_frame_left.thumb_loading {
         background-image: url("data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="210" width="210"><g transform="translate(-20.254 -9.936)"><path stroke-linejoin="round" d="M81.19 14.936h31m29 0h31m29 0h24.064v25.5m0 29v31m0 29v31m0 29v25.5H201.19m-29 0h-31m-29 0h-31m-29.003 0H25.25v-25.5m0-29v-31m0-29v-31m0-29v-25.5h26.937" stroke-dashoffset="64" stroke="#008d8d" stroke-miterlimit="0" stroke-width="10" fill="none"/><rect ry="3" height="15" width="15" y="124.94" x="80.254" fill="#008d8d"/><rect ry="3" height="15" width="15" y="124.94" x="120.25" fill="#008d8d"/><rect ry="3" height="15" width="15" y="124.94" x="160.25" fill="#008d8d"/></g></svg>");
     }
 
