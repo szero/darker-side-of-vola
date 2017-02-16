@@ -35,9 +35,9 @@
     .icon-refresh:before {
         content: "CV";
     }
-
+    /* those svgs are only for teal theme */
     .chat_room_url {
-        background-color: var(--hilight);
+        background-color: var(--hilight) !important;
     }
     .new_room_icon {
         background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDguNDA4IiBoZWlnaHQ9IjkwLjA4OCI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoLjA1MTgyIDAgMCAuMDMxMTcgMTguMDE2IDY1Ljk4KSIgc3Ryb2tlLXdpZHRoPSI5OS41MzUiIHN0cm9rZT0iIzAwOGQ4ZCIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjI3NjQuNTg0IiBoZWlnaHQ9IjI3OTAuODgzIiB4PSItMjk3LjkwNyIgeT0iLTIwNjcuMTQ3IiByeT0iMCIvPjxwYXRoIGQ9Ik0tMjk3LjkwNy0xMjM1LjA1OWgyNzY0LjU4NW0tMTg2Ny44MTctNi4yNDhWNzMzLjA3NiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvZz48L3N2Zz4=");
@@ -49,6 +49,15 @@
 
     .url_bar_icon {
         background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjE0NCIgaGVpZ2h0PSIzMyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KIDxnIGRpc3BsYXk9ImlubGluZSI+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxnIGlkPSJzdmdfMSI+CiAgIDxyZWN0IGlkPSJzdmdfMiIgZmlsbD0iIzAwOGQ4ZCIgeD0iLTAuMDAxIiB5PSIwLjAwMzAwNCIgd2lkdGg9IjE0NCIgaGVpZ2h0PSIzMyIgcnk9IjMiIHJ4PSIzIi8+CiAgIDxwYXRoIHN0cm9rZT0iI2ZmZmZmZiIgaWQ9InN2Z180IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9IiMwMDhkOGQiIGQ9Im05LjM4NDE2OSwxNS4wNjM1MzhsMCwtNi4xMjI0NzFsOC4yNTU4MDIsMGwwLDYuMTIyNDcxIi8+CiAgIDxwYXRoIGlkPSJzdmdfMyIgZD0ibTYuNzY0NCwxNy41NzQyYzAsLTEuNTUyNyAwLC0yLjg1NzQgMCwtMi44NTc0bDEzLjQ5MzEsMGMwLDAgMCwxLjMwNDcgMCwyLjg1NzRsMCw0LjM5MDljMCwxLjU1MjYwMSAwLDIuODU3MyAwLDIuODU3M2wtMTMuNDkzMSwwYzAsMCAwLC0xLjMwNDY5OSAwLC0yLjg1NzNsMCwtNC4zOTA5eiIgc3Ryb2tlLWxpbmVjYXA9Im51bGwiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1kYXNoYXJyYXk9Im51bGwiIHN0cm9rZS13aWR0aD0iMC44NjYiIHN0cm9rZT0iI0ZBRjhGOCIgZmlsbD0iI2ZmZmZmZiIvPgogIDwvZz4KIDwvZz4KCjwvc3ZnPg==");
+    }
+
+    #call_to_action {
+        color: var(--main-color) !important;
+        background-image: url("data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="300" width="300"><path fill="#008d8d" d="M22 .005c-12.188 0-22 9.812-22 22v53h7v-53c0-8.31 6.69-15 15-15h53v-7H22zm203 0v7h53c8.31 0 15 6.69 15 15v53h7v-53c0-12.188-9.812-22-22-22h-53zm-225 225v53c0 12.188 9.812 22 22 22h53v-7H22c-8.31 0-15-6.69-15-15v-53H0zm293 0v53c0 8.31-6.69 15-15 15h-53v7h53c12.188 0 22-9.812 22-22v-53h-7z"/></svg>");
+    }
+
+    .ui_frame.thumb_loading {
+        url("data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="210" width="210"><g transform="translate(-20.254 -9.936)"><path stroke-linejoin="round" d="M81.19 14.936h31m29 0h31m29 0h24.064v25.5m0 29v31m0 29v31m0 29v25.5H201.19m-29 0h-31m-29 0h-31m-29.003 0H25.25v-25.5m0-29v-31m0-29v-31m0-29v-25.5h26.937" stroke-dashoffset="64" stroke="#008d8d" stroke-miterlimit="0" stroke-width="10" fill="none"/><rect ry="3" height="15" width="15" y="124.94" x="80.254" fill="#008d8d"/><rect ry="3" height="15" width="15" y="124.94" x="120.25" fill="#008d8d"/><rect ry="3" height="15" width="15" y="124.94" x="160.25" fill="#008d8d"/></g></svg>")
     }
 
     /* Radio Seekbar*/
@@ -231,6 +240,7 @@
 
     .chat_file:visited {
         color: var(--visited)!important;
+        border-color: var(--visited) !important;
     }
 
     .chat_file_play {
@@ -541,15 +551,15 @@
     }
 
     .radio_icon {
-        color: var(--main-color);
+        color: var(--main-color) !important;
     }
 
     .toggle>span.toggle_icon {
-        color: var(--visited);
+        color: var(--main-color) !important;
     }
 
     .toggle.enabled>span.toggle_icon {
-        color: var(--main-color)!important;
+        color: var(--text-color)!important;
     }
 
     #radio_current {
@@ -877,13 +887,13 @@
     }
 
     select {
-        background-color: #181818;
+        background-color: var(--hilight);
     }
     .file_selected {
-        background-color: #181818 !important;
+        background-color: var(--hilight) !important;
     }
     .file_tag.tag_key_user {
-        background-color: rgba(24, 24, 24, 0) !important;
+        background-color: var(--hilight) !important;
     }
     .ui_frame {
         border: 1px solid var(--main-color)
