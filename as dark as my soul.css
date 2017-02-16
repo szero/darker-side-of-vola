@@ -1,22 +1,28 @@
 @-moz-document domain("volafile.io") {
-    * {
-        font-family: "Open Sans", sans-serif !important;
-    }
+    html {
+        --main-color: teal;
+        --background-color: #000000;
+        --text-color: #FFFFFF;
+        --visited: #8C8C8C;
+        --whitenames: #A9BDD0;
+        --namefags: #00FF00;
+        --donators: #90EE90;
+        --mods: #FFFF00;
 
+    }
     ._icon, [class*=" icon-"], [class^="icon-"] {
-        font-family: "Open Sans", sans-serif !important;
+        font-family: inherit !important;
     }
 
     /* Main Page */
-
 
     .howitworks_point {
         text-decoration: underline;
     }
 
     #main_small_links {
-        background-color: rgb(0,0,0);
-        border-top: 1px solid #008D8D;
+        background-color: var(--background-color);
+        border-top: 1px solid var(--main-color);
     }
 
     /* Rules */
@@ -24,15 +30,14 @@
     .main.text.left em,i {
         font-style: italic
     }
+
     .icon-refresh:before {
         content: "CV";
     }
 
-
-    .chat_room_url {
+    /*.chat_room_url {
         background-color: rgb(24, 24, 24);
-    }
-
+    }*/
     .new_room_icon {
         background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNDguNDA4IiBoZWlnaHQ9IjkwLjA4OCI+PGcgdHJhbnNmb3JtPSJtYXRyaXgoLjA1MTgyIDAgMCAuMDMxMTcgMTguMDE2IDY1Ljk4KSIgc3Ryb2tlLXdpZHRoPSI5OS41MzUiIHN0cm9rZT0iIzAwOGQ4ZCIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjI3NjQuNTg0IiBoZWlnaHQ9IjI3OTAuODgzIiB4PSItMjk3LjkwNyIgeT0iLTIwNjcuMTQ3IiByeT0iMCIvPjxwYXRoIGQ9Ik0tMjk3LjkwNy0xMjM1LjA1OWgyNzY0LjU4NW0tMTg2Ny44MTctNi4yNDhWNzMzLjA3NiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvZz48L3N2Zz4=");
     }
@@ -47,48 +52,40 @@
 
     /* Radio Seekbar*/
     #radio_load_progress {
-        background-color: rgb(0,0,0);
+        background-color: var(--background-color);
     }
 
     #radio_play_progress {
-        background-color: #008D8D;
+        background-color: var(--main-color);
     }
     #radio_progress {
-        background-color: #000000;
+        background-color: var(--background-color);
     }
 
     /*Radio Volume*/
     .icon-volume-down:before {
-        color: #008D8D;
+        color: var(--main-color);
     }
 
     /* Chromium need this for the maximum volume icon to be green, dunno why. firefox works without it*/
     .icon-volume-up:before {
-        color: #008D8D;
+        color: var(--main-color);
     }
 
     #radio_volume_bar {
-        background-color: rgb(0,0,0);
+        background-color: var(--background-color);
         border-style: solid;
         border-width: 1px;
-        border-color: #008D8D;
+        border-color: var(--main-color);
     }
 
     #radio_volume_slider {
-        background-color: #008D8D;
+        background-color: var(--main-color);
     }
 
     div#radio_volume_wrapper {
         display:inline-block;
     }
-
-
-    /* Header 1*/
-    .header_row_element, .header_row_element:visited {
-        color: rgb(0,25,0);
-    }
-
-    /*Top List*/
 
     /* room */
     .chat_message.message_self {
@@ -100,16 +97,16 @@
     }
 
     .file_control {
-        color: #008D8D;
+        color: var(--main-color);
         padding-right: 0 !important;
     }
 
     #files_scroller {
-        background: rgb(0,0,0);
+        background: var(--background-color);
     }
 
     #filter_reminder {
-        background-color: rgb(0,0,0);
+        background-color: var(--background-color);
     }
 
     #file_list {
@@ -118,100 +115,93 @@
 
     #top_navigation {
         font-size: 16px;
-        background: rgb(0,0,0);
+        background: var(--background-color);
         border-bottom-style: solid!important;
-        border-bottom-color: rgb(0,0,0);
+        border-bottom-color: var(--background-color);
         border-bottom-width: 2px!important;
     }
 
     .top_nav_item:hover {
-        background-color: rgb(0,0,0)!important;
-        color: #008D8D;
+        background-color: var(--background-color)!important;
+        color: var(--main-color);
     }
 
     .top_nav_item, #top_navigation_contents, .top_nav_item[href='/donate'] {
-        border-color: rgb(0,0,0);
+        border-color: var(--background-color);
     }
 
     div#chat_messages_frame:before {
         border-left: none !important;
-        background: rgb(0,0,0);
+        background: var(--background-color);
     }
 
     #overlay.visible {
-        background: rgb(0,0,0);
+        background: var(--background-color);
     }
 
     #room_name, #room_name_container {
         text-align: center;
-        background: rgb(0,0,0);
-        color: rgb(255,255,255);
+        background: var(--background-color);
+        color: var(--text-color);
     }
 
     #header_row1.header_row {
-        background: rgb(0,0,0);
+        background: var(--background-color);
     }
     #chat_frame {
-        border-color: #008D8D;
+        border-color: var(--main-color);
     }
     .chat_message {
         margin-left: 0 !important;
         padding: 0px 1em 0px 0.5em !important;
-        background: rgb(0,0,0);
-        color: rgb(255,255,255);
+        background: var(--background-color);
+        color: var(--text-color);
         border-left-style: solid;
         border-left-width: 6px;
-        border-color: rgb(0,0,0);
+        border-color: var(--background-color);
     }
     #room_name_container {
-        border-right-color: #008D8D;
+        border-right-color: var(--main-color);
     }
     #files_frame {
         z-index: 1 !important;
-        border-top-color: #008D8D;
-    }
-    #chat_messages .chat_message.user a.username {
-        color: rgb(7,255,7);
+        border-top-color: var(--main-color);
     }
 
     #chat_messages .chat_message a.username {
-        color: rgb(54,54,54);
+        color: var(--whitenames);
+    }
+
+    #chat_messages .chat_message.user a.username {
+        color: var(--namefags);
     }
 
     #chat_messages .chat_message.donator a.username {
-        color: #90EE90 !important;
+        color: var(--donators);
     }
 
     #chat_messages .chat_message.staff a.username, #chat_messages .chat_message staff admin user profile {
-        color: rgb(255,255,0) !important;
+        color: var(--mods);
     }
-    #chat_messages .chat_message.rank a.username {
-        color: rgb(80,100,170);
-    }
-
-    #chat_messages .chat_message a.username {
-        color: rgb(170,190,210);
-    }
-
 
     .chat_message.highlight.admin {
         background: rgb(24,24,24);
-        border-color: rgb(0,0,0)!important;
+        border-color: var(--background-color)!important;
         border-left-width: 6px!important;
-        color: rgb(255,255,255);
+        color: var(--text-color);
         border-left-style: solid!important;
     }
 
     .chat_message.highlight {
         background: rgb(24,24,24);
-        border-color: rgb(0,0,0)!important;
-        color: rgb(255,255,255);
+        border-color: var(--background-color)!important;
+        color: var(--text-color);
         border-left-width: 6px!important;
         border-left-style: solid!important;
     }
 
     .chat_message.highlight.user {
-        border-color: rgb(0,0,0)!important;
+        border-color: var(--background-color)!important;
         border-left-width: 6px!important;
         border-left-style: solid!important;
     }
@@ -224,22 +214,22 @@
 
     .chat_file {
         border-radius: 1px;
-        background: rgb(0,0,0) !important;;
-        border-color: #008D8D !important;
-        color: rgb(255,255,255) !important;
+        background: var(--background-color) !important;;
+        border-color: var(--main-color) !important;
+        color: var(--text-color) !important;
         text-align: center;
         border-style: dashed;
-        border-color: #008D8D;
+        border-color: var(--main-color);
     }
 
     .chat_file:hover {
-        background: #000000 !important;
-        color: #008D8D !important;
+        background: var(--background-color) !important;
+        color: var(--main-color) !important;
         border-color: rgb(35,40,50)!important;
     }
 
     .chat_file:visited {
-        color: rgb(200,120,140)!important;
+        color: var(--visited)!important;
     }
 
     .chat_file_play {
@@ -247,25 +237,25 @@
     }
 
     #chat_frame a:visited {
-        color: rgb(142,140,140);
+        color: var(--visited);
     }
 
     .nano > .pane > .slider {
         border-radius: 1px;
-        background: #008D8D;
+        background: var(--main-color);
     }
 
     .nano > .pane > .slider:hover {
-        background: #008D8D;
+        background: var(--main-color);
     }
 
     .nano:hover > .pane, .pane.active, .pane.flashed {
-        background: rgb(0,0,0);
+        background: var(--background-color);
         opacity: 1;
     }
 
     .nano > .pane.active > .slider {
-        background: #008D8D;
+        background: var(--main-color);
     }
 
     .nano>.pane {
@@ -277,50 +267,48 @@
     }
 
     a.header_row_element:hover {
-        background: rgb(0,0,0);
+        background: var(--background-color);
     }
 
     #chat_hbar, #header_row2.header_row {
-        background: rgb(0,0,0);
-        color: rgb(255,255,255);
+        background: var(--background-color);
+        color: var(--text-color);
     }
 
     .dropdown_item {
-        background: rgb(0,0,0);
-        color: rgb(255,255,255)!important;
-    }
-
-    .dropdown:hover {
-        background: rgb(0,0,0);
+        background: var(--background-color);
+        color: var(--text-color)!important;
     }
 
     .dropdown_item:hover {
-        background: rgb(0,0,0);
-        color: rgb(0,0,255);
+        background: var(--background-color);
+    }
+
+    .dopdown_item:active {
+        background: var(--background-color);
+    }
+
+    .dropdown:hover {
+        background: var(--background-color);
     }
 
     a.dropdown_hover.dropdown_option {
-        border-color: rgb(0,10,18)!important;
-        color: rgb(255,255,255);
+        color: var(--text-color);
     }
 
     .dropdown:hover:after {
-        border-color: #008D8D;
+        border-color: var(--main-color);
         background: rgb(10,20,30);
         border-width: 1px!important;
     }
 
-    .dropdown_list {
-        border-color: rgb(60,70,100);
-    }
-
     textarea, input[type="text"], input[type="password"] {
-        background: rgb(0,0,0);
+        background: var(--background-color);
     }
 
     #chat_name, #chat_input {
-        background: rgb(0,0,0);
-        color: rgb(255,255,255);
+        background: var(--background-color);
+        color: var(--text-color);
         border-color: rgb(28,32,50);
         border-width: 0px;
     }
@@ -340,7 +328,7 @@
     }
 
     a:hover {
-        color: #008D8D;
+        color: var(--main-color);
     }
 
     .header_row_element, #header_row1, #header_row2 {
@@ -348,268 +336,235 @@
     }
 
     textarea.defaultValue {
-        color: rgb(255,255,255);
+        color: var(--text-color);
     }
 
     #header_row_container a i.green-icon {
-        color: rgb(255,255,255)!important;
+        color: var(--text-color)!important;
     }
 
     #header_row_container a:hover i.green-icon {
-        color: rgb(255,255,255)!important;
+        color: var(--text-color)!important;
     }
 
     #header_row_container a:active i.green-icon {
-        color: #008D8D!important;
+        color: var(--main-color)!important;
     }
 
     #search_input.defaultValue {
-        background: rgb(0,0,0)!important;
-        color: rgb(255,255,255);
+        background: var(--background-color)!important;
+        color: var(--text-color);
     }
 
     #search_input {
-        background: rgb(0,0,0)!important;
+        background: var(--background-color)!important;
     }
 
     #toggles > .toggle:hover {
-        border-color: #008D8D;
+        border-color: var(--main-color);
         background: none !important;
     }
 
-    .header_row_element, header_row_element.nodecoration, A.nodecoration.header_row_element, SPAN.on_large_screen {
-        color: rgb(255,255,255);
+    .header_row_element, header_row_element.nodecoration, a.nodecoration.header_row_element, span.on_large_screen {
+        color: var(--text-color);
     }
 
     .button, input[type="submit"], input[type="button"] {
         color: #FFFFFF;
-        background: rgb(0,0,0);
-        margin-bottom: -10px;
+        background: var(--background-color);
+        margin-bottom: -0.1em;
     }
 
     .button:hover, input[type="submit"]:hover, input[type="button"]:hover {
-        background: rgb(0,0,0)!important;
-        color: #008D8D!important;
+        background: var(--background-color)!important;
+        color: var(--main-color)!important;
     }
 
     #uploadButton {
         border-radius: 0px;
-        color: rgb(255,255,255);
-        background: rgb(0,0,0);
+        color: var(--text-color);
+        background: var(--background-color);
     }
 
     #uploadButton:hover {
-        color: #008D8D;
-        background: rgb(0,0,0)!important;
+        color: var(--main-color);
+        background: var(--background-color)!important;
     }
 
     #uploadButton:active {
-        background: rgb(40,45,55) !important;
-        color: #008D8D!important;
-    }
-
-    #uploadIcon.icon-upload
-    #filter_reminder {
-        background: rgb(40,45,65);
-    }
-
-    #filter_reminder:hover {
-        background: rgb(50,55,75);
+        background: #212121 !important;
+        color: var(--main-color)!important;
     }
 
     .file_uploading {
-        background: rgb(28,32,50)!important;
+        background: #212121 !important;
     }
 
     #file_list.uneven .filelist_file:nth-child(2n+1) {
-        background: rgb(0,0,0);
-        color: rgb(255,255,255);
+        background: var(--background-color);
+        color: var(--text-color);
     }
 
     #file_list.even .filelist_file:nth-child(2n) {
-        background: rgb(0,0,0);
-        color: rgb(255,255,255);
+        background: var(--background-color);
+        color: var(--text-color);
     }
 
     .filelist_file {
         height: 1.4em !important;
-        background: rgb(0,0,0);
-        color: rgb(255,255,255);
+        background: var(--background-color);
+        color: var(--text-color);
     }
 
     .filelist_resize_bar {
         z-index: 1 !important;
+        margin: -2px !important;
+    }
+
+    .filelist_resize_bar.resizing {
+        background-color: #FFFFFF !important;
     }
 
     .file_icon.filetype.music_playing {
-        color: rgb(255,255,255)!important;
+        color: var(--text-color)!important;
     }
 
     #gallery_title {
-        color: rgb(255,255,255);
+        color: var(--text-color);
     }
 
     .gallery_button {
         border-radius: 1px;
         border-style: none;
-        color: rgb(255,255,255);
-        background-color: rgb(0,0,0)!important;
+        color: var(--text-color);
+        background-color: var(--background-color)!important;
     }
 
     .gallery_button:hover {
-        background-color: rgb(0,0,0);
-        color: #008D8D;
+        background-color: var(--background-color);
+        color: var(--main-color);
     }
 
     .ui_frame {
-        background: rgb(0,0,0);
-        border-color: rgb(0,0,0);
+        background: var(--background-color);
+        border-color: var(--background-color);
         border-radius: 1px;
     }
 
     a.file_name {
-        color: rgb(255,255,255);
+        color: var(--text-color);
     }
 
     a.file_name:visited {
-        color: rgb(142,140,140);
+        color: var(--visited);
     }
 
     a.file_name:hover {
-        color: #008D8D;
-    }
-
-    .file_control_icon.clickable {
-        color: rgb(180,180,180);
-    }
-
-    .file_control_icon.clickable:hover {
-        color: rgb(142,140,140);
-    }
-
-    .file_icon {
-        color: rgb(170,190,210)!important;
+        color: var(--main-color);
     }
 
     .file_tag.tag_key_user {
-        background: rgb(0,0,0);
-        color: #008D8D;
+        background: var(--background-color);
+        color: var(--main-color);
         border-radius: 1px;
         border-width: 0px 0px 0px 0px !important;
     }
 
     .file_tag.tag_key_user:hover {
-        color: #008D8D;
-        background: rgb(0,0,0);
+        color: var(--main-color);
+        background: var(--background-color);
 
     }
 
     .file_tag {
-        background: rgb(0,0,0);
+        background: var(--background-color);
         border-radius: 0px;
-        color: #008D8D;
+        color: var(--main-color);
         border-style: dashed;
         border-width: 0px 0px 0px 1px;
         padding-left: 5px;
     }
     .file_control_icon.clickable {
-        color: #008D8D !important;
+        color: var(--main-color) !important;
     }
     .file_tag:hover {
-        color: #008D8D;
-        background: rgb(0,0,0);
+        color: var(--main-color);
+        background: var(--background-color);
     }
 
     html {
-        background: rgb(0,0,0);
+        background: var(--background-color);
     }
 
     #main_logo {
-        color: #008D8D;
+        color: var(--main-color);
     }
 
     #main_logo_suffix {
-        color: rgb(255,255,255);
-    }
-
-
-    #main_new_room_button:hover {
-        background: rgb(38,42,62)!important;
-        color: rgb(140,160,220);
-    }
-
-    #main_discover_button {
-        background: rgb(0,10,18);
-        color: rgb(255,255,255);
-    }
-
-    pre {
-        color: rgb(180,180,180);
+        color: var(--text-color);
     }
 
     table {
-        border: 1px solid #008D8D;
+        border: 1px solid var(--main-color);
     }
 
     table th {
-        background: rgb(0,0,0);
-        border-color: #008D8D;
+        background: var(--background-color);
+        border-color: var(--main-color);
     }
 
     table td {
-        border-color: #008D8D;
+        border-color: var(--main-color);
+    }
+
+    .formtable td {
+        padding: 0.5em !important;
     }
 
     #radio_container {
-        background: rgb(0,0,0);
-        border-color: #008D8D;
+        background: var(--background-color);
+        border-color: var(--main-color);
         border-width: 1px!important;
         border-top-style: dashed;
     }
 
     #radio_current_song {
-        background: rgb(0,0,0);
-        border-color: rgb(120,140,200)!important;
+        background: var(--background-color);
         border-radius: 0px!important;
     }
 
     #radio_current_time, #radio_left {
-        background: rgb(0,0,0);
-        border-color: rgb(0,0,0);
+        background: var(--background-color);
+        border-color: var(--background-color);
         border-left-width: 1px!important;
     }
 
     .radio_icon {
-        color: #008D8D;
+        color: var(--main-color);
     }
 
     .toggle>span.toggle_icon {
-        color: rgb(144,144,144);
+        color: var(--visited);
     }
 
     .toggle.enabled>span.toggle_icon {
-        color: #008D8D!important;
+        color: var(--main-color)!important;
     }
 
     #radio_current {
-        border-color: rgb(0,0,0)!important;
+        border-color: var(--background-color)!important;
         border-radius: 0px;
-        border-top-color: rgb(0,0,0) !important;
+        border-top-color: var(--background-color) !important;
         border-width: 2px!important;
         border-bottom: none!important;
     }
 
     #radio_prev:hover,#radio_stop:hover,#radio_next:hover,#radio_play:hover {
-        color: #008D8D!important;
+        color: var(--main-color)!important;
     }
 
     .ui_frame_buttons > .button, .button.light {
-        background: rgb(0,0,0)!important;
-    }
-
-    .formtable tr:last-child > td, .formtable tr:last-child > th {
-            border: 0;
-            padding-bottom: 10px;
+        background: var(--background-color)!important;
     }
 
     #rename_input, #rename_room {
@@ -617,16 +572,16 @@
     }
 
     input[type="text"]::placeholder, input[type="password"]::placeholder, textarea::placeholder {
-        color: #008D8D;
+        color: var(--main-color);
     }
 
     input[type="text"]::-moz-placeholder, input[type="password"]::-moz-placeholder, textarea::-moz-placeholder {
-        color: #008D8D;
+        color: var(--main-color);
     }
 
     .button:hover {
-        background: rgb(0,0,0)!important;
-        color: #008D8D!important;
+        background: var(--background-color)!important;
+        color: var(--main-color)!important;
     }
 
     .chat_message.message_self .username {
@@ -639,7 +594,6 @@
 
     .filelist_file:hover .filetype_download:before {
         content: "DL";
-        color: #d8d8d8;
         padding-right: 4px !important;
     }
 
@@ -669,7 +623,7 @@
     }
     .icon-play:before {
         content: "⏵";
-        color: #008D8D;
+        color: var(--main-color);
     }
 
     .file_icon {
@@ -690,7 +644,7 @@
 
     .icon-volume-high:before, .icon-volume-medium:before, .icon-volume-low:before, .icon-volume-mute:before  {
         content: "Vol";
-        color: #008D8D;
+        color: var(--main-color);
     }
 
     #radio_volume_icon {
@@ -735,22 +689,18 @@
 
     a#radio_upwards.toggle.radio_toggle span.icon-reverse.radio_icon.toggle_icon:before {
         content: "⮁";
-        color: #008D8D;
     }
 
     a#radio_upwards.toggle.radio_toggle.enabled span.icon-reverse.radio_icon.toggle_icon:before {
         content: "⮁";
-        color: #F1EDED;
     }
 
     a#radio_shuffle.toggle.radio_toggle span.icon-random.radio_icon.icon-random:before {
         content: "⭾";
-        color: #008D8D;
     }
 
     a#radio_shuffle.toggle.radio_toggle.enabled span.icon-random.radio_icon.icon-random:before {
         content: "⭾";
-        color: #F1EDED;
     }
 
     .icon-times:before {
@@ -758,54 +708,54 @@
     }
 
     #radio_container {
-        background-color: #000000;
+        background-color: var(--background-color);
         border-top-style: solid;
         border-width: 1px;
     }
 
     #radio_play_progress {
-        background-color: #008D8D;
+        background-color: var(--main-color);
     }
     #clearsearch:hover {
-        color: #008D8D;
+        color: var(--main-color);
     }
     #filter_reminder, #filter_reminder:hover {
-        background: rgb(0, 0, 0);
+        background: var(--background-color) !important;
     }
     #uploadButton:active {
-        background: rgb(0, 0, 0)!important;
+        background: var(--background-color) !important;
     }
-    I#clearsearch.fa.icon-times.clickable.on_small_header.icon-times:before {
+    i#clearsearch.fa.icon-times.clickable.on_small_header.icon-times:before {
         Content: "Clear"
     }
-    I.file_icon.file_control_icon.fa.abort-upload.icon-times.clickable:before{
+    i.file_icon.file_control_icon.fa.abort-upload.icon-times.clickable:before{
         content: "Cancel";
     }
-    I.file_icon.file_control_icon.fa.abort-upload.icon-times.clickable{
+    i.file_icon.file_control_icon.fa.abort-upload.icon-times.clickable{
         padding-right: 34px
     }
-    I.file_icon.file_control_icon.fa.filetype.icon-cloud-upload.file_icon_pulsing:before{
+    i.file_icon.file_control_icon.fa.filetype.icon-cloud-upload.file_icon_pulsing:before{
         content: "UP";
     }
-    I.file_icon.file_control_icon.fa.filetype.icon-cloud-upload.file_icon_pulsing{
-        padding-right: 8px
+    i.file_icon.file_control_icon.fa.filetype.icon-cloud-upload.file_icon_pulsing{
+        padding-right: 8px;
     }
     #chat_notifier{
-        color: #008D8D
+        color: var(--main-color);
     }
     .file_tag.tag_key_user:hover {
-        background-color: #000000
+        background-color: var(--background-color);
     }
     .ui_frame_tooltip.has_thumb .ui_frame_content {
         border-left: solid 1px;
-        border-color: #008D8D
+        border-color: var(--main-color);
 
     }
     #main_new_room_button:hover {
-        background: rgb(0,0,0)!important;
+        background: var(--background-color)!important;
     }
     #radio_load_progress {
-        background-color: #000000;
+        background-color: var(--background-color);
     }
     .icon-cog:before {
         content: "";
@@ -821,22 +771,25 @@
         content: "";
     }
     .ui_frame_body_bar {
-        border-top: 3px solid #008D8D;
+        border-top: 3px solid var(--main-color);
     }
     .dropdown_list {
-        border-color: #008D8D!important;
-        color: rgb(255,255,255);
+        border-color: var(--main-color)!important;
+        color: var(--text-color);
     }
     .icon-folder-open, .icon-report, .icon-exit, .icon-upload-button, .icon-filter{
         display: none !important;
     }
 
     .file_status:before {
-        border-left: 0px solid #4a6885;
+        border-left: 0 !important;
     }
     .icon-stopwatch:before {
         content: "y";
-        font-size: 0px
+        font-size: 0px;
+    }
+    i.icon-checkmark:before {
+        content: "✔";
     }
     span#radio_close.icon-cross.clickable.radio_icon:before {
         content: "✖"
@@ -849,8 +802,7 @@
     }
     a.header_row_element_disabled, a.header_row_element_disabled:active, a.header_row_element_disabled:hover, a.header_row_element_disabled:visited {
         cursor: default;
-        color: #579;
-        background-color: #000;
+        background-color: var(--background-color);
     }
 
     .icon-angle-double-right:before {
@@ -878,13 +830,13 @@
         content: "FaceBook";
     }
     hr {
-        border: 1px solid #008D8D;
+        border: 1px solid var(--main-color);
     }
     .icon-angle-right:before {
         content: "";
     }
     .loading_indicator > .outer_indicator > .inner_indicator {
-        background-color: #008D8D
+        background-color: var(--main-color)
     }
 
     /*mod stuff*/
@@ -896,7 +848,6 @@
         display: none !important;
     }
 
-
     .file_tag.tag_key_ip {
         background-color: rgba(111, 137, 162, 0);
     }
@@ -906,7 +857,7 @@
     }
 
     .ui_frame_content {
-        border: 1px solid #008D8D;
+        border: 1px solid var(--main-color);
     }
 
     input[type="checkbox"] + span._icon::before {
@@ -918,10 +869,10 @@
     }
 
     input[type="text"], input[type="password"] {
-        border: 1px solid #008D8D;
+        border: 1px solid var(--main-color);
     }
     button, input, optgroup, select {
-        border: 1px solid #008D8D;
+        border: 1px solid var(--main-color);
     }
 
     select {
@@ -934,7 +885,7 @@
         background-color: rgba(24, 24, 24, 0) !important;
     }
     .ui_frame {
-        border: 1px solid #008D8D
+        border: 1px solid var(--main-color)
     }
 
     .icon-group::before {
@@ -943,7 +894,7 @@
 
     #chat_hbar {
         border-left: 0px solid;
-        border-top: 1px solid #008D8D;
+        border-top: 1px solid var(--main-color);
         line-height: 1
     }
     .file_tags {
@@ -952,7 +903,7 @@
     }
     #file_notifier, #filter_reminder {
         background-color: black;
-        border: #008D8D solid 1px;
+        border: var(--main-color) solid 1px;
     }
 
     #file_notifier:hover, #filter_reminder:hover {
@@ -968,11 +919,11 @@
     }
 
     .chat_message.admin .username, .chat_message.staff .username {
-        color: #ff0;
+        color: var(--mods);
     }
 
     #chat_input_container {
-        border-left: 0em solid #69849e;
+        border-left: 0 !important;
     }
 
     #chat_hbar_container {
@@ -982,7 +933,4 @@
         box-shadow: none !important;
     }
 
-    i.icon-checkmark:before {
-        content: "✔";
-    }
 }
