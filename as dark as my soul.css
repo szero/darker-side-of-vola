@@ -57,7 +57,7 @@
     }
 
     .ui_frame.thumb_loading {
-        url("data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="210" width="210"><g transform="translate(-20.254 -9.936)"><path stroke-linejoin="round" d="M81.19 14.936h31m29 0h31m29 0h24.064v25.5m0 29v31m0 29v31m0 29v25.5H201.19m-29 0h-31m-29 0h-31m-29.003 0H25.25v-25.5m0-29v-31m0-29v-31m0-29v-25.5h26.937" stroke-dashoffset="64" stroke="#008d8d" stroke-miterlimit="0" stroke-width="10" fill="none"/><rect ry="3" height="15" width="15" y="124.94" x="80.254" fill="#008d8d"/><rect ry="3" height="15" width="15" y="124.94" x="120.25" fill="#008d8d"/><rect ry="3" height="15" width="15" y="124.94" x="160.25" fill="#008d8d"/></g></svg>")
+        background-image: url("data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="210" width="210"><g transform="translate(-20.254 -9.936)"><path stroke-linejoin="round" d="M81.19 14.936h31m29 0h31m29 0h24.064v25.5m0 29v31m0 29v31m0 29v25.5H201.19m-29 0h-31m-29 0h-31m-29.003 0H25.25v-25.5m0-29v-31m0-29v-31m0-29v-25.5h26.937" stroke-dashoffset="64" stroke="#008d8d" stroke-miterlimit="0" stroke-width="10" fill="none"/><rect ry="3" height="15" width="15" y="124.94" x="80.254" fill="#008d8d"/><rect ry="3" height="15" width="15" y="124.94" x="120.25" fill="#008d8d"/><rect ry="3" height="15" width="15" y="124.94" x="160.25" fill="#008d8d"/></g></svg>");
     }
 
     /* Radio Seekbar*/
