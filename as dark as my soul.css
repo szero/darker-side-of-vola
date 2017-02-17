@@ -725,18 +725,22 @@
     }
 
     a#radio_upwards.toggle.radio_toggle span.icon-reverse.radio_icon.toggle_icon:before {
+        color: var(--main-color);
         content: "⮁";
     }
 
     a#radio_upwards.toggle.radio_toggle.enabled span.icon-reverse.radio_icon.toggle_icon:before {
+        color: var(--text-color);
         content: "⮁";
     }
 
     a#radio_shuffle.toggle.radio_toggle span.icon-random.radio_icon.icon-random:before {
+        color: var(--main-color);
         content: "⭾";
     }
 
     a#radio_shuffle.toggle.radio_toggle.enabled span.icon-random.radio_icon.icon-random:before {
+        color: var(--text-color);
         content: "⭾";
     }
 
