@@ -115,10 +115,6 @@
         background: var(--background-color);
     }
 
-    #filter_reminder {
-        background-color: var(--background-color);
-    }
-
     #file_list {
         font-size: 14px;
     }
@@ -732,6 +728,8 @@
     }
     #filter_reminder, #filter_reminder:hover {
         background: var(--background-color) !important;
+        border-top: 0 !important;
+        border-left: 0 !important;
     }
     #uploadButton:active {
         background: var(--background-color) !important;
@@ -893,7 +891,7 @@
         background-color: var(--hilight) !important;
     }
     .ui_frame {
-        border: 1px solid var(--main-color)
+        border: 1px solid var(--main-color);
     }
 
     .icon-group::before {
@@ -910,12 +908,12 @@
         vertical-align: middle;
     }
     #file_notifier, #filter_reminder {
-        background-color: black;
+        background-color: var(--background-color);
         border: var(--main-color) solid 1px;
     }
 
     #file_notifier:hover, #filter_reminder:hover {
-        background-color: black;
+        background-color: var(--background-color);
     }
 
     span.icon-folder-open, span.icon-heart, span.icon-hammer, span.icon-user, span.icon-exit, span.icon-magic-wand, span.icon-cog {
