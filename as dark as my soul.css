@@ -549,13 +549,43 @@
     .radio_icon {
         color: var(--main-color) !important;
     }
-
+    span.toggle_text.on_big_header {
+        display:none;
+    }
+    .toggle[title*="Music"] span.toggle_icon:after {
+        color:var(--text-color);
+        content:"usic";
+    }
+    .toggle[title*="Image"] span.toggle_icon:after {
+        color:var(--text-color);
+        content:"mage";
+    }
+    .toggle[title*="Video"] span.toggle_icon:after {
+        color:var(--text-color);
+        content:"ideo";
+    }
+    .toggle[title*="Other"] span.toggle_icon:after {
+        color:var(--text-color);
+        content:"ther";
+    }
+    .toggle[title*="Archive"] span.toggle_icon:after {
+        color:var(--text-color);
+        content:"rchive";
+    }
+    .toggle[title*="Document"] span.toggle_icon:after {
+        color:var(--text-color);
+        content:"ocument";
+    }
+    .toggle[title*="Other"] span.toggle_icon:after {
+        color:var(--text-color);
+        content:"ther";
+    }
     .toggle>span.toggle_icon {
-        color: var(--main-color) !important;
+        color: var(--text-color) !important;
     }
 
     .toggle.enabled>span.toggle_icon {
-        color: var(--text-color)!important;
+        color: var(--main-color)!important;
     }
 
     #radio_current {
@@ -624,6 +654,10 @@
         content: "O";
     }
 
+    .icon-image:before {
+        content: "I";
+    }
+
     .icon-play, .icon-stop {
         width: 0px;
         height: 0px;
@@ -688,10 +722,6 @@
 
     .icon-home:before {
         content: "";
-    }
-
-    .icon-image:before {
-        content: "I";
     }
 
     a#radio_upwards.toggle.radio_toggle span.icon-reverse.radio_icon.toggle_icon:before {
