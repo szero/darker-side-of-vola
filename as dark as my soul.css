@@ -440,6 +440,9 @@
         color: var(--text-color);
     }
 
+    .gallery_area {
+        width: 4em;
+    }
     .gallery_button {
         border-radius: 1px;
         border-style: none;
