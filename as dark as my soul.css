@@ -503,8 +503,11 @@
         color: var(--main-color);
         background: var(--background-color);
     }
+    .clickable:active, .clicakble:hover{
+        color: var(--text-color) !important;
+    }
 
-    html {
+    html,body {
         background: var(--background-color);
     }
 
