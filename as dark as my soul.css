@@ -482,8 +482,8 @@
         border-width: 0px 0px 0px 0px !important;
     }
 
-    .file_tag.tag_key_user:hover {
-        color: var(--main-color);
+    .file_tag:hover, .file_tag.tag_key_user:hover {
+        color: var(--text-color);
         background: var(--background-color);
 
     }
@@ -499,11 +499,10 @@
     .file_control_icon.clickable {
         color: var(--main-color) !important;
     }
-    .file_tag:hover {
-        color: var(--main-color);
-        background: var(--background-color);
-    }
     .clickable:active, .clicakble:hover{
+        color: var(--text-color) !important;
+    }
+    .radio_controls *:hover {
         color: var(--text-color) !important;
     }
 
