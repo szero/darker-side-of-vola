@@ -8,7 +8,8 @@
         --whitenames: #A9BDD0;
         --namefags: #00FF00;
         --donators: #90EE90;
-        --mods: #FFFF00;
+        --trusted-users: #FFFF00;
+        --mods: #FF6C00;
 
     }
     ._icon, [class*=" icon-"], [class^="icon-"] {
@@ -26,15 +27,7 @@
         border-top: 1px solid var(--main-color);
     }
 
-    /* Rules */
 
-    .main.text.left em,i {
-        font-style: italic
-    }
-
-    .icon-refresh:before {
-        content: "CV";
-    }
     /* those svgs are only for teal theme */
     .chat_room_url {
         background-color: var(--hilight) !important;
@@ -88,11 +81,10 @@
         background-color: var(--main-color);
     }
 
-    div#radio_volume_wrapper {
+    #radio_volume_wrapper {
         display:inline-block;
     }
 
-    /* room */
     .chat_message.message_self {
         font-style: italic
     }
@@ -131,13 +123,13 @@
         border-color: var(--background-color);
     }
 
-    div#chat_messages_frame:before {
+    #chat_messages_frame:before {
         border-left: none !important;
         background: var(--background-color);
     }
 
-    #overlay.visible {
-        background: var(--background-color);
+    #overlay {
+        background-color: #121212 !important;
     }
 
     #room_name, #room_name_container {
@@ -169,21 +161,28 @@
         border-top-color: var(--main-color);
     }
 
-    #chat_messages .chat_message a.username {
+    .chat_message .username {
         color: var(--whitenames);
         font-family: inherit !important;
     }
 
-    #chat_messages .chat_message.user a.username {
-        color: var(--namefags);
+    .chat_message.user .username {
+        color: var(--namefags) !important;
     }
 
-    #chat_messages .chat_message.donator a.username {
-        color: var(--donators);
+    .chat_message.donator .username {
+        color: var(--donators) !important;
     }
 
-    #chat_messages .chat_message.staff a.username, #chat_messages .chat_message staff admin user profile {
-        color: var(--mods);
+    .chat_message.staff .username {
+        color: var(--trusted-users) !important;
+    }
+
+    .chat_message.staff:not(.user) .username {
+        color: #D808D8 !important;
+    }
+    .chat_message.admin .username {
+       color: var(--mods) !important;
     }
 
     .chat_message.highlight.admin {
@@ -373,12 +372,12 @@
         background: none !important;
     }
 
-    .header_row_element, header_row_element.nodecoration, a.nodecoration.header_row_element, span.on_large_screen {
+    .header_row_element, .header_row_element.nodecoration, a.nodecoration.header_row_element, span.on_large_screen {
         color: var(--text-color);
     }
 
     .button, input[type="submit"], input[type="button"] {
-        color: #FFFFFF;
+        color: var(--text-color);
         background: var(--background-color);
         margin-bottom: -0.1em;
     }
@@ -534,6 +533,9 @@
     .formtable td {
         padding: 0.5em !important;
     }
+    .ui_frame_table {
+        border: none !important;
+    }
 
     #radio_container {
         background: var(--background-color);
@@ -632,13 +634,11 @@
         font-style: italic;
     }
 
+    .icon-refresh:before {
+        content: "CV";
+    }
     .icon-picture-o:before {
         content: "P";
-    }
-
-    .filelist_file:hover .filetype_download:before {
-        content: "DL";
-        padding-right: 4px !important;
     }
 
     .icon-film:before {
@@ -665,6 +665,9 @@
         content: "I";
     }
 
+    .filelist_file:hover>.file_left_part>.file_control>.filetype_download:before {
+        content: "DL";
+    }
     .icon-play, .icon-stop {
         width: 0px;
         height: 0px;
@@ -708,28 +711,9 @@
     }
 
     i#chat_notifier.fa.icon-arrow-down:before {
-        content: "New Messages Posted";
+        content: "New Messages Posted ↓";
     }
 
-    .icon-upload:before {
-        content: "";
-    }
-
-    .icon-heart:before {
-        content: "";
-    }
-
-    .icon-user:before {
-        content: "";
-    }
-
-    .icon-edit:before {
-        content: "";
-    }
-
-    .icon-home:before {
-        content: "";
-    }
 
     a#radio_upwards.toggle.radio_toggle span.icon-reverse.radio_icon.toggle_icon:before {
         color: var(--main-color);
@@ -807,19 +791,6 @@
     #radio_load_progress {
         background-color: var(--background-color);
     }
-    .icon-cog:before {
-        content: "";
-    }
-    .icon-minus-circle:before {
-        content: "";
-    }
-
-    .icon-exclamation-circle:before {
-        content: "";
-    }
-    .icon-magic:before {
-        content: "";
-    }
     .ui_frame_body_bar {
         border-top: 3px solid var(--main-color);
     }
@@ -827,10 +798,12 @@
         border-color: var(--main-color)!important;
         color: var(--text-color);
     }
-    .icon-folder-open, .icon-report, .icon-exit, .icon-upload-button, .icon-filter{
+    .icon-magic, .icon-folder-open, .icon-heart, .icon-hammer, .icon-user, .icon-exit,
+    .icon-magic-wand, .icon-cog, .icon-report, .icon-upload-button, .icon-filter,
+    .icon-minus-circle, .icon-exclamation-circle,.icon-angle-right, .icon-edit,
+    .icon-upload, .icon-home {
         display: none !important;
     }
-
     .file_status:before {
         border-left: 0 !important;
     }
@@ -867,7 +840,7 @@
     .icon-arrow-down:before {
         content: "v";
     }
-    i.file_icon.file_control_icon.abort-upload.icon-cross.clickable:before {
+    .file_icon.file_control_icon.abort-upload.icon-cross.clickable:before {
         content: "Abort"
     }
     .icon-uploading:before {
@@ -881,9 +854,6 @@
     }
     hr {
         border: 1px solid var(--main-color);
-    }
-    .icon-angle-right:before {
-        content: "";
     }
     .loading_indicator > .outer_indicator > .inner_indicator {
         background-color: var(--main-color)
@@ -957,13 +927,6 @@
         background-color: var(--background-color);
     }
 
-    span.icon-folder-open, span.icon-heart, span.icon-hammer, span.icon-user, span.icon-exit, span.icon-magic-wand, span.icon-cog {
-        display: none !important;
-    }
-
-    .filelist_file:hover>.file_left_part>.file_control>.filetype_download:before {
-        content: "DL";
-    }
 
     .chat_message.admin .username, .chat_message.staff .username {
         color: var(--mods);
