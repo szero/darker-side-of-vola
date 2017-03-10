@@ -339,7 +339,7 @@
     }
 
     .header_row_element, #header_row1, #header_row2 {
-        border-color: transparent;
+        border: none !important;
     }
 
     textarea.defaultValue {
@@ -558,34 +558,34 @@
     .radio_icon {
         color: var(--main-color) !important;
     }
-    span.toggle_text.on_big_header {
+    .toggle_text.on_big_header {
         display:none;
     }
-    .toggle[title*="Music"] span.toggle_icon:after {
+    .toggle[title*="Music"] .toggle_icon:after {
         color:var(--text-color);
         content:"usic";
     }
-    .toggle[title*="Image"] span.toggle_icon:after {
+    .toggle[title*="Image"] .toggle_icon:after {
         color:var(--text-color);
         content:"mage";
     }
-    .toggle[title*="Video"] span.toggle_icon:after {
+    .toggle[title*="Video"] .toggle_icon:after {
         color:var(--text-color);
         content:"ideo";
     }
-    .toggle[title*="Other"] span.toggle_icon:after {
+    .toggle[title*="Other"] .toggle_icon:after {
         color:var(--text-color);
         content:"ther";
     }
-    .toggle[title*="Archive"] span.toggle_icon:after {
+    .toggle[title*="Archive"] .toggle_icon:after {
         color:var(--text-color);
         content:"rchive";
     }
-    .toggle[title*="Document"] span.toggle_icon:after {
+    .toggle[title*="Document"] .toggle_icon:after {
         color:var(--text-color);
         content:"ocument";
     }
-    .toggle[title*="Other"] span.toggle_icon:after {
+    .toggle[title*="Other"] .toggle_icon:after {
         color:var(--text-color);
         content:"ther";
     }
@@ -710,11 +710,6 @@
         content: "⏭";
     }
 
-    i#chat_notifier.fa.icon-arrow-down:before {
-        content: "New Messages Posted ↓";
-    }
-
-
     a#radio_upwards.toggle.radio_toggle span.icon-reverse.radio_icon.toggle_icon:before {
         color: var(--main-color);
         content: "⮁";
@@ -801,9 +796,11 @@
     .icon-magic, .icon-folder-open, .icon-heart, .icon-hammer, .icon-user, .icon-exit,
     .icon-magic-wand, .icon-cog, .icon-report, .icon-upload-button, .icon-filter,
     .icon-minus-circle, .icon-exclamation-circle,.icon-angle-right, .icon-edit,
-    .icon-upload, .icon-home {
+    .icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-trash, .icon-logicon-upload,
+    .icon-home, .icon-list{
         display: none !important;
     }
+
     .file_status:before {
         border-left: 0 !important;
     }
@@ -811,19 +808,19 @@
         content: "y";
         font-size: 0px;
     }
-    i.icon-checkmark:before {
+    .icon-checkmark:before {
         content: "✔";
     }
-    span#radio_close.icon-cross.clickable.radio_icon:before {
+    #radio_close.icon-cross.clickable.radio_icon:before {
         content: "✖"
     }
-    span#clearsearch.icon-cross.clickable.on_small_header:before {
+    #clearsearch.icon-cross.clickable.on_small_header:before {
         content: "Clear"
     }
-    span#chat_notifier.icon-arrow-down.clickable:before {
-        content: "New Messages Posted";
+    #chat_notifier.icon-arrow-down.clickable:before {
+        content: "New Messages Posted ↓";
     }
-    a.header_row_element_disabled, a.header_row_element_disabled:active, a.header_row_element_disabled:hover, a.header_row_element_disabled:visited {
+    .header_row_element_disabled, .header_row_element_disabled:active, .header_row_element_disabled:hover, .header_row_element_disabled:visited {
         cursor: default;
         background-color: var(--background-color);
     }
@@ -862,10 +859,6 @@
     /*mod stuff*/
     .icon-wrench::before {
         content: "Settings";
-    }
-
-    .icon-hammer, .icon-list, .icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-trash, .icon-log{
-        display: none !important;
     }
 
     .file_tag.tag_key_ip {
