@@ -11,7 +11,7 @@ Only layout change for now is making top bar smaller and fitting all the buttons
 Installation
 ------------
 
-Go to extension folder, open the `darker.user.js` file and click the Raw button. Greasemonkey will do the rest.
+Just click [this.](https://github.com/Szero/darker-side-of-vola/raw/master/extension/darker.user.js)
 
 Thanks
 ------
