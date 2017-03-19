@@ -32,8 +32,7 @@ for i,d in enumerate(data):
             else:
                 cssList.append(padding+'"'+l.rstrip("\n")+' "\n')
         cssList.append(padding+'].join("\\n");\n')
-        data[i] = data[i][:-len(stuff.group(1))-1]
-        data[i] = data[i] + "[\n"
+        data[i] = data[i][:-len(stuff.group(1))-1] + "[\n"
         data[i+1:i+1] = cssList
 
 with open(sys.argv[2],"w") as kek:
