@@ -10,6 +10,7 @@
         --donators: #90EE90;
         --trusted-users: #FFFF00;
         --mods: #FF6C00;
+        --system: #D808D8;
 
     }
     ._icon, [class*=" icon-"], [class^="icon-"] {
@@ -159,6 +160,7 @@
     #files_frame {
         z-index: 1 !important;
         border-top-color: var(--main-color);
+        border-color: var(--main-color);
     }
 
     .chat_message .username {
@@ -179,7 +181,7 @@
     }
 
     .chat_message.staff:not(.user) .username {
-        color: #D808D8 !important;
+        color: var(--system) !important;
     }
     .chat_message.admin .username {
        color: var(--mods) !important;
@@ -305,6 +307,7 @@
 
     textarea, input[type="text"], input[type="password"] {
         background: var(--background-color);
+        border: 1px solid var(--main-color);
     }
 
     #chat_name, #chat_input {
@@ -668,7 +671,7 @@
     .filelist_file:hover>.file_left_part>.file_control>.filetype_download:before {
         content: "DL";
     }
-    .icon-play, .icon-stop {
+    .icon-play, .icon-stop, .icon-pause {
         width: 0px;
         height: 0px;
     }
@@ -880,10 +883,6 @@
     input[type="checkbox"]:checked + span._icon::before {
         content: "YES";
     }
-
-    input[type="text"], input[type="password"] {
-        border: 1px solid var(--main-color);
-    }
     button, input, optgroup, select {
         border: 1px solid var(--main-color);
     }
@@ -920,13 +919,8 @@
         background-color: var(--background-color);
     }
 
-
-    .chat_message.admin .username, .chat_message.staff .username {
-        color: var(--mods);
-    }
-
     #chat_input_container {
-        border-left: 0 !important;
+        border-left: none !important;
     }
 
     #chat_hbar_container {

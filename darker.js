@@ -52,10 +52,14 @@
     }
     } catch (err) { console.log("this is just for pages other than vola rooms") }
     //GM will do this: http://unixpapa.com/js/dyna.html
-    let newLink = document.createElement("link");
-    newLink.rel = "stylesheet";
-    newLink.type = "text/css";
-    newLink.href = "https://rawgit.com/Szero/darker-side-of-vola/master/as%20dark%20as%20my%20soul.css";
+    let css = stuff2str("as dark as my soul.css");
+    let newStyle = document.createElement("style");
+    newStyle.type = "text/css";
+    newStyle.appendChild(document.createTextNode(css));
+    //let newLink = document.createElement("link");
+    //newLink.rel = "stylesheet";
+    //newLink.type = "text/css";
+    //newLink.href = "https://rawgit.com/Szero/darker-side-of-vola/master/as%20dark%20as%20my%20soul.css";
     let head = document.head || document.getElementsByTagName("head")[0];
-    head.appendChild(newLink);
+    head.appendChild(newStyle);
 }) ();
