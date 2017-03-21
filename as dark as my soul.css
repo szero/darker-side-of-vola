@@ -323,7 +323,7 @@
         border-radius: 0 !important;
     }
     .file_right_part {
-        line-height: 1em !important;
+        line-height: 1.4em !important;
     }
     .file_right_part>.hover_show {
         display: inline !important;
@@ -413,11 +413,13 @@
     #file_list.uneven .filelist_file:nth-child(2n+1) {
         background: var(--background-color);
         color: var(--text-color);
+        height: 1.4em !important;
     }
 
     #file_list.even .filelist_file:nth-child(2n) {
         background: var(--background-color);
         color: var(--text-color);
+        height: 1.4em !important;
     }
 
     .filelist_file {
