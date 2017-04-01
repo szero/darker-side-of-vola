@@ -14,7 +14,7 @@
     GM_addStyle(stuff2str("as dark as my soul.css"));
     try {
         var UI,header,frame,bottomBar;
-        function bigRes() {
+        let bigRes = () => {
             UI = document.getElementById("show_search_ui");
             let roomSh = document.getElementById("room_search");
             let topBar = document.getElementById("header_row1");
@@ -35,12 +35,12 @@
         }
         if (screen.width < 1650) {
             bigRes();
-            function close() {
+            let close = () => {
                 bottomBar.style.display = "none";
                 frame.style.top = "1.8em";
                 header.style.height = "1.5em";
             }
-            function filter() {
+            let filter = () => {
                 bottomBar.style.display = "block";
                 frame.style.top = "3.5em";
                 header.style.height = "3.5em";
@@ -51,5 +51,5 @@
         } else {
             bigRes();
         }
-    } catch (err) { console.log("doot diddly dong") }
+    } catch (err) { console.log(err + "\nThrowing an error if we are somewhere else than in a room.") }
 }) ();
