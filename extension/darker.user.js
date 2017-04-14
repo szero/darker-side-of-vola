@@ -566,7 +566,7 @@
         "        content: \"DL\"; ",
         "    } ",
         "    .filelist_file:hover:before { ",
-        "        color: var(--main-color); ",
+        "        border-color: var(--main-color); ",
         "    } ",
         "    .icon-play, .icon-stop, .icon-pause { ",
         "        width: 0px; ",
