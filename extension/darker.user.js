@@ -563,7 +563,7 @@
         "        content: \"I\"; ",
         "    } ",
         "    .filetype_download:after { ",
-        "        color: var(--text-color); !important; ",
+        "        color: var(--text-color) !important; ",
         "        content: \"DL\"; ",
         "    } ",
         "    .filelist_file:hover:before { ",
