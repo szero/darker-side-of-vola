@@ -546,7 +546,8 @@
     .icon-image:before {
         content: "I";
     }
-    .filelist_file:hover>.file_left_part>.file_control>.filetype_download:before {
+    .filetype_download:after {
+        color: var(--text-color); !important;
         content: "DL";
     }
     .filelist_file:hover:before {
