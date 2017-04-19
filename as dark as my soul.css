@@ -133,11 +133,9 @@
     }
     .chat_message > .username {
         font-family: inherit !important;
-        font-weight: 400 !important;
-    }
-    .chat_message .username {
-        color: var(--whitenames);
         font-family: inherit !important;
+        font-weight: 400 !important;
+        color: var(--whitenames);
     }
     .chat_message.user .username {
         color: var(--namefags) !important;
@@ -324,8 +322,8 @@
         margin-bottom: -0.1em;
     }
     .button:hover, input[type="submit"]:hover, input[type="button"]:hover {
-        background: var(--background-color)!important;
-        color: var(--main-color)!important;
+        background: var(--background-color);
+        color: var(--main-color);
     }
     #uploadButton {
         border-radius: 0px;
@@ -376,13 +374,13 @@
         width: 3.6em !important;
     }
     .gallery_button {
-        border-radius: 1px;
+        border-radius: 15px;
         border-style: none;
         color: var(--text-color);
-        background-color: var(--background-color)!important;
+        background-color: rgba(0,0,0,0.7) !important;
     }
     .gallery_button:hover {
-        background-color: var(--background-color);
+        background-color: rgba(0,0,0,0.7) !important;
         color: var(--main-color);
     }
     .ui_frame {
@@ -552,6 +550,9 @@
     }
     .icon-star:before {
         content: "✡" !important;
+    }
+    .icon-download:before {
+        content: "DL" !important;
     }
     .filetype_download:after {
         color: var(--text-color) !important;

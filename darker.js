@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      0.7
+// @version      0.8
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://volafile.io/*
@@ -18,16 +18,16 @@
         var UI,header,frame,bottomBar;
         let bigRes = () => {
             UI = document.getElementById("show_search_ui");
-            let roomSh = document.getElementById("room_search");
             let topBar = document.getElementById("header_row1");
             bottomBar = document.getElementById("header_row2");
-            let uploadBt = document.getElementById("upload_container");
             topBar.appendChild(bottomBar.removeChild(UI));
             if (screen.width > 1650) {
-                let filters = document.getElementById("room_filters");
+                let filters = document.getElementById("toggles");
                 topBar.appendChild(bottomBar.removeChild(filters));
             }
+            let roomSh = document.getElementById("room_search");
             topBar.appendChild(bottomBar.removeChild(roomSh));
+            let uploadBt = document.getElementById("upload_container");
             topBar.appendChild(bottomBar.removeChild(uploadBt));
             header = document.getElementById("header");
             frame = document.getElementById("files_frame");
