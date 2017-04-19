@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      0.7
+// @version      0.8
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://volafile.io/*
@@ -149,11 +149,9 @@
         "    } ",
         "    .chat_message > .username { ",
         "        font-family: inherit !important; ",
-        "        font-weight: 400 !important; ",
-        "    } ",
-        "    .chat_message .username { ",
-        "        color: var(--whitenames); ",
         "        font-family: inherit !important; ",
+        "        font-weight: 400 !important; ",
+        "        color: var(--whitenames); ",
         "    } ",
         "    .chat_message.user .username { ",
         "        color: var(--namefags) !important; ",
@@ -340,8 +338,8 @@
         "        margin-bottom: -0.1em; ",
         "    } ",
         "    .button:hover, input[type=\"submit\"]:hover, input[type=\"button\"]:hover { ",
-        "        background: var(--background-color)!important; ",
-        "        color: var(--main-color)!important; ",
+        "        background: var(--background-color); ",
+        "        color: var(--main-color); ",
         "    } ",
         "    #uploadButton { ",
         "        border-radius: 0px; ",
@@ -392,13 +390,13 @@
         "        width: 3.6em !important; ",
         "    } ",
         "    .gallery_button { ",
-        "        border-radius: 1px; ",
+        "        border-radius: 15px; ",
         "        border-style: none; ",
         "        color: var(--text-color); ",
-        "        background-color: var(--background-color)!important; ",
+        "        background-color: rgba(0,0,0,0.7) !important; ",
         "    } ",
         "    .gallery_button:hover { ",
-        "        background-color: var(--background-color); ",
+        "        background-color: rgba(0,0,0,0.7) !important; ",
         "        color: var(--main-color); ",
         "    } ",
         "    .ui_frame { ",
@@ -568,6 +566,9 @@
         "    } ",
         "    .icon-star:before { ",
         "        content: \"✡\" !important; ",
+        "    } ",
+        "    .icon-download:before { ",
+        "        content: \"DL\" !important; ",
         "    } ",
         "    .filetype_download:after { ",
         "        color: var(--text-color) !important; ",
@@ -807,16 +808,16 @@
         var UI,header,frame,bottomBar;
         let bigRes = () => {
             UI = document.getElementById("show_search_ui");
-            let roomSh = document.getElementById("room_search");
             let topBar = document.getElementById("header_row1");
             bottomBar = document.getElementById("header_row2");
-            let uploadBt = document.getElementById("upload_container");
             topBar.appendChild(bottomBar.removeChild(UI));
             if (screen.width > 1650) {
-                let filters = document.getElementById("room_filters");
+                let filters = document.getElementById("toggles");
                 topBar.appendChild(bottomBar.removeChild(filters));
             }
+            let roomSh = document.getElementById("room_search");
             topBar.appendChild(bottomBar.removeChild(roomSh));
+            let uploadBt = document.getElementById("upload_container");
             topBar.appendChild(bottomBar.removeChild(uploadBt));
             header = document.getElementById("header");
             frame = document.getElementById("files_frame");
