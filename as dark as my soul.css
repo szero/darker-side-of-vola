@@ -59,11 +59,10 @@
     }
     #radio_volume_bar {
         background-color: var(--background-color);
-        border-style: solid;
-        border-width: 1px;
-        border-color: var(--main-color);
+        border: 1px solid var(--main-color);
     }
     #radio_volume_slider {
+        height: 0.95em !important
         background-color: var(--main-color);
     }
     #radio_volume_wrapper {
@@ -370,7 +369,7 @@
         color: var(--text-color);
     }
     .gallery_area {
-        z-index: -1 !important;
+        z-index: 1 !important;
         width: 3.6em !important;
     }
     .gallery_button {
@@ -558,16 +557,21 @@
         color: var(--text-color) !important;
         content: "DL";
     }
-    .filelist_file:hover:before {
+    .filelist_file:hover {
         border-color: var(--main-color);
     }
     .icon-play, .icon-stop, .icon-pause {
         width: 0px;
         height: 0px;
     }
-    .icon-play.radio_icon, .icon-stop.radio_icon, .icon-pause.radio_icon {
+    .icon-play.radio_icon,.icon-play.chat_file_icon
+    .icon-stop.radio_icon, .icon-stop.chat_file_icon
+    .icon-pause.radio_icon {
         width: 20px;
-        height:10px;
+        height:20px;
+    }
+    .chat_file_icon:last-child {
+        padding-right: 0 !important;
     }
     .icon-play:before {
         content: "⏵";
@@ -704,11 +708,17 @@
         cursor: default;
         background-color: var(--background-color);
     }
+    .icon-spinner:before {
+        content:":^)"
+    }
+    .icon-cross:before {
+        content:"✖";
+    }
     .icon-angle-double-right:before {
-        content: ">>";
+        content: ">";
     }
     .icon-angle-double-left:before {
-        content: "<<";
+        content: "<";
     }
     .icon-arrow-up:before {
         content: "^";
