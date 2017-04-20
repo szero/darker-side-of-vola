@@ -580,7 +580,7 @@
         "        width: 0px; ",
         "        height: 0px; ",
         "    } ",
-        "    .chat_file_icon, radio_icon { ",
+        "    .chat_file_icon, .radio_icon { ",
         "        width: 20px; ",
         "        height:20px; ",
         "    } ",
