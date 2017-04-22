@@ -75,6 +75,10 @@
         color: var(--main-color);
         padding-right: 0 !important;
     }
+    .scroller-slider {
+        background: var(--main-color);
+        border-radius: 0;
+    }
     #files_scroller {
         background: var(--background-color);
     }
