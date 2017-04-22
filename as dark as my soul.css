@@ -79,6 +79,9 @@
         background: var(--main-color);
         border-radius: 0;
     }
+    .scroller-pane {
+        opacity: 0;
+    }
     #files_scroller {
         background: var(--background-color);
     }
@@ -241,6 +244,9 @@
     }
     a.dropdown_hover.dropdown_option {
         color: var(--text-color);
+    }
+    .dropdown_option:hover, #show_search_ui:hover {
+        color: var(--main-color) !important;
     }
     .dropdown:hover:after {
         border-color: var(--main-color);
