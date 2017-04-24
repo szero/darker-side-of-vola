@@ -586,7 +586,7 @@
         "        color: var(--main-color) !important; ",
         "        content: \"DL\" !important; ",
         "    } ",
-        "    .icon-download:before:hover { ",
+        "    .icon-download:hover:before { ",
         "        color: var(--text-color) !important; ",
         "    } ",
         "    .filetype_download:after { ",
