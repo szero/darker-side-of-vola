@@ -158,7 +158,7 @@
     .chat_message.admin .username {
         color: var(--mods) !important;
     }
-    .chat_message.highlight .username {
+    .chat_message.highlight:not(.user) .username {
         color: var(--system) !important;
     }
     .chat_message.highlight.admin {
