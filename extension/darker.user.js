@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.0.1
+// @version      1.0.3
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://volafile.org/*
@@ -27,6 +27,9 @@
         "        --trusted-users: #FFFF00; ",
         "        --mods: #FF6C00; ",
         "        --system: #D808D8; ",
+        "    } ",
+        "    body { ",
+        "        background: var(--background-color); ",
         "    } ",
         "    ._icon, [class*=\" icon-\"], [class^=\"icon-\"] { ",
         "        font-family: inherit !important; ",
@@ -173,9 +176,6 @@
         "    } ",
         "    .chat_message.admin .username { ",
         "        color: var(--mods) !important; ",
-        "    } ",
-        "    .chat_message.highlight:not(.user) .username { ",
-        "        color: var(--system) !important; ",
         "    } ",
         "    .chat_message.highlight { ",
         "        background: var(--hilight); ",
@@ -414,7 +414,7 @@
         "        border-radius: 1px; ",
         "        border-width: 0px 0px 0px 0px !important; ",
         "    } ",
-        "    .file_tag:hover, .file_tag.tag_key_user:hover { ",
+        "    .file_tag:hover { ",
         "        color: var(--text-color); ",
         "    } ",
         "    .file_tag { ",
@@ -425,6 +425,14 @@
         "        border-width: 0px 0px 0px 1px; ",
         "        padding-left: 5px; ",
         "    } ",
+        "    .file_button { ",
+        "        color: var(--text-color) !important; ",
+        "        background-color: rgba(0,0,0,0) !important; ",
+        "    } ",
+        "    .file_button:hover { ",
+        "        color: var(--main-color) !important; ",
+        "        background-color: rgba(0,0,0,0) !important; ",
+        "    } ",
         "    .file_control_icon.clickable { ",
         "        color: var(--main-color) !important; ",
         "    } ",
@@ -433,9 +441,6 @@
         "    } ",
         "    .radio_controls *:hover { ",
         "        color: var(--text-color) !important; ",
-        "    } ",
-        "    html,body { ",
-        "        background: var(--background-color); ",
         "    } ",
         "    #main_logo { ",
         "        color: var(--main-color); ",
@@ -798,10 +803,6 @@
         "        border-left: 0px solid; ",
         "        border-top: 1px solid var(--main-color); ",
         "        line-height: 1 ",
-        "    } ",
-        "    .file_tags { ",
-        "        line-height: 2em; ",
-        "        vertical-align: middle; ",
         "    } ",
         "    #file_notifier, #filter_reminder { ",
         "        background-color: var(--background-color); ",
