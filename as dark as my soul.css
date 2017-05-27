@@ -1,5 +1,5 @@
 @-moz-document domain("volafile.org") {
-    html {
+    :root {
         --main-color: teal;
         --background-color: #000000;
         --text-color: #FFFFFF;
@@ -12,7 +12,7 @@
         --mods: #FF6C00;
         --system: #D808D8;
     }
-    body {
+    html, body {
         background: var(--background-color);
     }
     ._icon, [class*=" icon-"], [class^="icon-"] {

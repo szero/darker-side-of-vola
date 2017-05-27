@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.0.3
+// @version      1.0.4
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://volafile.org/*
@@ -15,7 +15,7 @@
     "use strict";
     GM_addStyle([
         "@-moz-document domain(\"volafile.org\") { ",
-        "    html { ",
+        "    :root { ",
         "        --main-color: teal; ",
         "        --background-color: #000000; ",
         "        --text-color: #FFFFFF; ",
@@ -28,7 +28,7 @@
         "        --mods: #FF6C00; ",
         "        --system: #D808D8; ",
         "    } ",
-        "    body { ",
+        "    html, body { ",
         "        background: var(--background-color); ",
         "    } ",
         "    ._icon, [class*=\" icon-\"], [class^=\"icon-\"] { ",
