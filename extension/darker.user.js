@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.0.4
+// @version      1.0.5
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://volafile.org/*
@@ -271,23 +271,14 @@
         "        border-right: 1px solid var(--main-color) !important; ",
         "        border-radius: 0 !important; ",
         "    } ",
+        "    .filelist_file:hover > .file_left_part > .file_name { ",
+        "        color: var(--main-color) !important; ",
+        "    } ",
+        "    .file_left_part:visited, .file_name:visited{ ",
+        "        color: var(--visited); ",
+        "    } ",
         "    .file_right_part { ",
         "        line-height: 1.4em !important; ",
-        "    } ",
-        "    .file_right_part>.hover_show { ",
-        "        display: inline !important; ",
-        "    } ",
-        "    .file_right_part>.hover_show:after { ",
-        "        content: \" - \"; ",
-        "    } ",
-        "    .file_right_part:hover>.hover_hide { ",
-        "        display: inline !important; ",
-        "    } ",
-        "    a:hover, .file_name:hover { ",
-        "        color: var(--main-color); ",
-        "    } ",
-        "    a:visited, .file_name:visited{ ",
-        "        color: var(--visited); ",
         "    } ",
         "    a[rel*=\"noopener\"][rel*=\"noreferrer\"] { ",
         "        color: var(--main-color) !important; ",
