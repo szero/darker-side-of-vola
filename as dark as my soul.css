@@ -674,17 +674,23 @@
         border-top: 3px solid var(--main-color);
     }
     .dropdown_list {
-        border-color: var(--main-color)!important;
+        border-color: var(--main-color) !important;
         color: var(--text-color);
     }
-    .icon-magic, .icon-folder-open, .icon-heart, .icon-hammer, .icon-user, .icon-exit,
+    .icon-magic, .icon-folder-open, .icon-heart, .icon-user, .icon-exit,
     .icon-magic-wand, .icon-cog, .icon-report, .icon-upload-button, .icon-filter,
     .icon-minus-circle, .icon-exclamation-circle,.icon-angle-right, .icon-edit,
-    .icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-trash, .icon-logicon-upload,
+    .icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-logicon-upload,
     .icon-home, .icon-list, .file_clock {
         display: none !important;
     }
-    .file_status:before {
+    .icon-hammer:before {
+        content: "🔨";
+    }
+    .icon-trash:before {
+        content: "🗑";
+    }
+    .file_status:before , .file_buttons:before {
         border-left: 0 !important;
     }
     .icon-stopwatch:before {
