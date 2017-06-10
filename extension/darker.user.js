@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.0.7
+// @version      1.0.8
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://volafile.org/*
@@ -279,6 +279,7 @@
         "    } ",
         "    .file_right_part { ",
         "        line-height: 1.4em !important; ",
+        "        display: flex; ",
         "    } ",
         "    a[rel*=\"noopener\"][rel*=\"noreferrer\"] { ",
         "        color: var(--main-color) !important; ",
@@ -419,6 +420,7 @@
         "    .file_button { ",
         "        color: var(--text-color) !important; ",
         "        background-color: rgba(0,0,0,0) !important; ",
+        "        line-height: 1.4em !important; ",
         "    } ",
         "    .file_button:hover { ",
         "        color: var(--main-color) !important; ",

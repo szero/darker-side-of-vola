@@ -263,6 +263,7 @@
     }
     .file_right_part {
         line-height: 1.4em !important;
+        display: flex;
     }
     a[rel*="noopener"][rel*="noreferrer"] {
         color: var(--main-color) !important;
@@ -403,6 +404,7 @@
     .file_button {
         color: var(--text-color) !important;
         background-color: rgba(0,0,0,0) !important;
+        line-height: 1.4em !important;
     }
     .file_button:hover {
         color: var(--main-color) !important;
