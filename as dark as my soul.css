@@ -683,7 +683,7 @@
     .icon-magic-wand, .icon-cog, .icon-report, .icon-upload-button, .icon-filter,
     .icon-minus-circle, .icon-exclamation-circle,.icon-angle-right, .icon-edit,
     .icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-logicon-upload,
-    .icon-home, .icon-list, .file_clock {
+    .icon-home, .icon-list, .file_clock, .dropdown_icon {
         display: none !important;
     }
     .icon-hammer:before {

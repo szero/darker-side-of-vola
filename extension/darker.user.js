@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.0.8
+// @version      1.0.9
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://volafile.org/*
@@ -699,7 +699,7 @@
         "    .icon-magic-wand, .icon-cog, .icon-report, .icon-upload-button, .icon-filter, ",
         "    .icon-minus-circle, .icon-exclamation-circle,.icon-angle-right, .icon-edit, ",
         "    .icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-logicon-upload, ",
-        "    .icon-home, .icon-list, .file_clock { ",
+        "    .icon-home, .icon-list, .file_clock, .dropdown_icon { ",
         "        display: none !important; ",
         "    } ",
         "    .icon-hammer:before { ",
