@@ -12,7 +12,7 @@ addon="./extension/darker.user.js"
 meta="./extension/darker.meta.js"
 
 bump_version() {
-    sed -i -r "$(sed -n "/$look_after/=" "$2")s/^([\/]+\s+@$look_after\s+).*$/\1$1/" "$2"
+    sed -i -r "$(sed -n "/$look_after/=" "$2")s/^([\/]+\s*@$look_after\s+).*$/\1$1/" "$2"
 }
 
 bump_version "$2" "$raw_addon"

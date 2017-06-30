@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.0.9
+// @version      1.1.0
 // @description  More contrasty volafile experience.
 // @author       Your mom
-// @match        https://volafile.org/*
+// @match        https://*.volafile.org/*
 // @grant        GM_addStyle
 // @updateURL    https://rawgit.com/Szero/darker-side-of-vola/master/extension/darker.meta.js
 // @downloadURL  https://rawgit.com/Szero/darker-side-of-vola/master/extension/darker.user.js
