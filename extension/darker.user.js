@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.1.0
+// @version      1.1.1
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -52,9 +52,6 @@
         "    } ",
         "    .upload_icon { ",
         "        background-image: url(\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+Cjxzdmcgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogPGc+CiAgPHRpdGxlPkxheWVyIDE8L3RpdGxlPgogIDxwYXRoIGlkPSJzdmdfMSIgZmlsbD0iIzAwOGQ4ZCIgc3Ryb2tlLXdpZHRoPSIwIiBkPSJtNDMuNzU5OTk4LDIzLjQ1OGwwLC0yMC44NXEwLjkzOTk5OSwwLjYxOCAxLjUzNzk5OCwxLjIzN2wxNy40MzUwMDEsMTguMDIzMDAycTAuNTk4OTk5LDAuNjE3OTk4IDEuMTk2OTk5LDEuNTg5OTk4bC0yMC4xNjk5OTgsMHptLTUuNDcwMDAxLDEuNDEzcTAsMS43NjcgMS4xOTYwMDMsMy4wMDQwMDJ0Mi45MDU5OTgsMS4yMzdsMjMuMjQ4MDAxLDBsMCw0Ni42NDcwMDFxMCwxLjc2Njk5OCAtMS4xOTY5OTksMy4wMDM5OTh0LTIuOTA2MDAyLDEuMjM3bC01Ny40MzM5OTksMHEtMS43MSwwIC0yLjkwNiwtMS4yMzd0LTEuMTk3LC0zLjAwMzk5OGwwLC03MC42NzkwMDNxMCwtMS43NjcgMS4xOTcsLTMuMDA0dDIuOTA2LC0xLjIzNmwzNC4xODcwMDEsMGwwLDI0LjAzMWwtMC4wMDAwMDQsMHoiLz4KICA8cGF0aCBpZD0ic3ZnXzIiIGZpbGw9IiNGQUY4RjgiIHN0cm9rZS13aWR0aD0iOTcuMDQ2IiBkPSJtNTcuOTc3MDAxLDM5LjM0MTk5OWwtMTcuOTQxMDAyLDE1LjQxbDguMDQwMDAxLDBsMCwxOS40MDU5OThsMTkuODAwOTk5LDBsMCwtMTkuNDA0OTk5bDguMDQyLDBsLTE3Ljk0MTk5OCwtMTUuNDEwOTk5eiIvPgogPC9nPgo8L3N2Zz4=\"); ",
-        "    } ",
-        "    .url_bar_icon { ",
-        "        background-color: var(--main-color) !important; ",
         "    } ",
         "    .ui_frame_left.thumb_loading { ",
         "        background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjEwIiB3aWR0aD0iMjEwIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAuMjU0IC05LjkzNikiPjxwYXRoIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik04MS4xOSAxNC45MzZoMzFtMjkgMGgzMW0yOSAwaDI0LjA2NHYyNS41bTAgMjl2MzFtMCAyOXYzMW0wIDI5djI1LjVIMjAxLjE5bS0yOSAwaC0zMW0tMjkgMGgtMzFtLTI5LjAwMyAwSDI1LjI1di0yNS41bTAtMjl2LTMxbTAtMjl2LTMxbTAtMjl2LTI1LjVoMjYuOTM3IiBzdHJva2UtZGFzaG9mZnNldD0iNjQiIHN0cm9rZT0iIzAwOGQ4ZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjAiIHN0cm9rZS13aWR0aD0iMTAiIGZpbGw9Im5vbmUiLz48cmVjdCByeT0iMyIgaGVpZ2h0PSIxNSIgd2lkdGg9IjE1IiB5PSIxMjQuOTQiIHg9IjgwLjI1NCIgZmlsbD0iIzAwOGQ4ZCIvPjxyZWN0IHJ5PSIzIiBoZWlnaHQ9IjE1IiB3aWR0aD0iMTUiIHk9IjEyNC45NCIgeD0iMTIwLjI1IiBmaWxsPSIjMDA4ZDhkIi8+PHJlY3Qgcnk9IjMiIGhlaWdodD0iMTUiIHdpZHRoPSIxNSIgeT0iMTI0Ljk0IiB4PSIxNjAuMjUiIGZpbGw9IiMwMDhkOGQiLz48L2c+PC9zdmc+DQo=\") !important; ",
@@ -173,6 +170,9 @@
         "        color: var(--trusted-users) !important; ",
         "    } ",
         "    .chat_message.staff:not(.user) .username { ",
+        "        color: var(--system) !important; ",
+        "    } ",
+        "    .chat_message.admin:not(.staff):not(.user) .username { ",
         "        color: var(--system) !important; ",
         "    } ",
         "    .chat_message.admin .username { ",
@@ -567,7 +567,10 @@
         "        content: \"I\"; ",
         "    } ",
         "    .icon-star:before { ",
-        "        content: \"✡\" !important; ",
+        "        content: \"★\" !important; ",
+        "    } ",
+        "    .icon-king:before { ",
+        "        content: \"✦\" !important; ",
         "    } ",
         "    .icon-download:before { ",
         "        color: var(--main-color) !important; ",
@@ -592,7 +595,7 @@
         "        height:20px; ",
         "    } ",
         "    .icon-play:before { ",
-        "        content: \"⏵\"; ",
+        "        content: \"▶️\"; ",
         "        color: var(--main-color); ",
         "    } ",
         "    .file_icon { ",
