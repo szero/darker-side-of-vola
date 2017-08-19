@@ -58,6 +58,13 @@
     .icon-volume-up:before {
         color: var(--main-color);
     }
+    /* old file links hover, thanks Dodos!*/
+    .file_left_part {
+        pointer-events: none;
+    }
+    div.filelist_file > a > span {
+        pointer-events: auto !important;
+    }
     #radio_volume_bar {
         background-color: var(--background-color);
         border: 1px solid var(--main-color);
@@ -698,10 +705,6 @@
     }
     .file_status:before , .file_buttons:before {
         border-left: 0 !important;
-    }
-    .icon-stopwatch:before {
-        content: "y";
-        font-size: 0px;
     }
     .icon-checkmark:before {
         content: "✔";

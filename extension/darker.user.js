@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.1.1
+// @version      1.1.2
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -73,6 +73,13 @@
         "    /* Chromium need this for the maximum volume icon to be green, dunno why. firefox works without it*/ ",
         "    .icon-volume-up:before { ",
         "        color: var(--main-color); ",
+        "    } ",
+        "    /* old file links hover, thanks Dodos!*/ ",
+        "    .file_left_part { ",
+        "        pointer-events: none; ",
+        "    } ",
+        "    div.filelist_file > a > span { ",
+        "        pointer-events: auto !important; ",
         "    } ",
         "    #radio_volume_bar { ",
         "        background-color: var(--background-color); ",
@@ -714,10 +721,6 @@
         "    } ",
         "    .file_status:before , .file_buttons:before { ",
         "        border-left: 0 !important; ",
-        "    } ",
-        "    .icon-stopwatch:before { ",
-        "        content: \"y\"; ",
-        "        font-size: 0px; ",
         "    } ",
         "    .icon-checkmark:before { ",
         "        content: \"✔\"; ",
