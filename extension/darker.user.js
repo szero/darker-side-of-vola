@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.3.0
+// @version      1.3.1
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -397,6 +397,12 @@
         "        border-color: var(--background-color); ",
         "        border-radius: 1px; ",
         "    } ",
+        "    .file_control_icon.clickable { ",
+        "        color: var(--main-color) !important; ",
+        "    } ",
+        "    .clickable:active, .clickable:hover{ ",
+        "        color: var(--text-color) !important; ",
+        "    } ",
         "    .file_tag.tag_key_user { ",
         "        background-color: rgba(0,0,0,0) !important; ",
         "        color: var(--main-color); ",
@@ -422,12 +428,6 @@
         "    .file_button:hover { ",
         "        color: var(--main-color) !important; ",
         "        background-color: rgba(0,0,0,0) !important; ",
-        "    } ",
-        "    .file_control_icon.clickable { ",
-        "        color: var(--main-color) !important; ",
-        "    } ",
-        "    .clickable:active, .clickable:hover{ ",
-        "        color: var(--text-color) !important; ",
         "    } ",
         "    #main_logo { ",
         "        color: var(--main-color); ",
@@ -466,7 +466,7 @@
         "        border-color: var(--background-color); ",
         "        border-left-width: 1px!important; ",
         "    } ",
-        "    .radio_controls:hover { ",
+        "    .radio_toggle:hover { ",
         "        color: var(--text-color) !important; ",
         "    } ",
         "    .radio_icon { ",

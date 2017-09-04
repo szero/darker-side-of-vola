@@ -11,7 +11,7 @@
         --trusted-users: #FFFF00;
         --mods: #FF6C00;
         --system: #D808D8;
-        --font: 'Open Sans',sans-serif;
+        --font: "Open Sans",sans-serif;
     }
     html, body {
         background: var(--background-color);
@@ -91,7 +91,7 @@
         background-color: var(--background-color)!important;
         color: var(--main-color);
     }
-    .top_nav_item, #top_navigation_contents, .top_nav_item[href='/donate'] {
+    .top_nav_item, #top_navigation_contents, .top_nav_item[href="/donate"] {
         border-color: var(--background-color);
     }
     #chat_messages_frame:before {
@@ -381,6 +381,12 @@
         border-color: var(--background-color);
         border-radius: 1px;
     }
+    .file_control_icon.clickable {
+        color: var(--main-color) !important;
+    }
+    .clickable:active, .clickable:hover{
+        color: var(--text-color) !important;
+    }
     .file_tag.tag_key_user {
         background-color: rgba(0,0,0,0) !important;
         color: var(--main-color);
@@ -406,12 +412,6 @@
     .file_button:hover {
         color: var(--main-color) !important;
         background-color: rgba(0,0,0,0) !important;
-    }
-    .file_control_icon.clickable {
-        color: var(--main-color) !important;
-    }
-    .clickable:active, .clickable:hover{
-        color: var(--text-color) !important;
     }
     #main_logo {
         color: var(--main-color);
@@ -450,7 +450,7 @@
         border-color: var(--background-color);
         border-left-width: 1px!important;
     }
-    .radio_controls:hover {
+    .radio_toggle:hover {
         color: var(--text-color) !important;
     }
     .radio_icon {
