@@ -553,25 +553,15 @@
     .icon-king:before {
         content: "✦" !important;
     }
-    .icon-download {
-        font-family: var(--font) !important;
-    }
-    .icon-download:before {
-        color: var(--main-color) !important;
-        content: "DL" !important;
-    }
-    .icon-download:hover:before {
-        color: var(--text-color) !important;
-    }
     .filetype_download {
          font-family: var(--font) !important;
     }
-    .filetype_download:after {
-        color: var(--text-color) !important;
-        content: "DL";
-    }
     .filelist_file:hover {
         border-color: var(--main-color);
+    }
+    .filelist_file:hover > .file_left_part > .file_control > .filetype_download::before {
+        color: var(--text-color) !important;
+        content: "DL" !important;
     }
     .icon-play, .icon-stop, .icon-pause {
         width: 0px;
@@ -602,7 +592,7 @@
         border-width: 1px;
     }
     #clearsearch:hover {
-        color: var(--main-color);
+        color: var(--main-color) !important;
     }
     #filter_reminder, #filter_reminder:hover {
         background: var(--background-color) !important;
@@ -653,7 +643,7 @@
     .icon-magic-wand, .icon-cog, .icon-report, .icon-upload-button, .icon-filter,
     .icon-minus-circle, .icon-exclamation-circle,.icon-angle-right, .icon-edit,
     .icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-logicon-upload,
-    .icon-home, .icon-list, .file_clock, .dropdown_icon {
+    .icon-home, .icon-list, .icon-download, .file_clock, .dropdown_icon {
         display: none !important;
     }
     .file_status:before , .file_buttons:before {
@@ -726,9 +716,7 @@
         content: "Users Online" !important;
     }
     #chat_hbar {
-        border-left: 0px solid;
-        border-top: 1px solid var(--main-color);
-        line-height: 1
+        border-left: none !important;
     }
     #file_notifier, #filter_reminder {
         background-color: var(--background-color);
@@ -742,7 +730,7 @@
     }
     #chat_hbar_container {
         padding-top: 0 !important;
-        border-top: none !important;
+        border-top: 1px solid var(--main-color) !important;
         border-left: none !important;
         box-shadow: none !important;
     }
