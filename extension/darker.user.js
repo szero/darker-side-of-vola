@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.4.0
+// @version      1.4.1
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -344,8 +344,13 @@
         "        background: #212121 !important; ",
         "        color: var(--main-color)!important; ",
         "    } ",
-        "    .file_uploading { ",
-        "        background: #212121 !important; ",
+        "    .file_uploading, .file_uploading:after { ",
+        "        background-color: #212121 !important; ",
+        "        background-image: none !important; ",
+        "    } ",
+        "    .file_uploading:before { ",
+        "        background-color: var(--background-color) !important; ",
+        "        background-image: none !important; ",
         "    } ",
         "    #file_list { ",
         "        font-size: 14px; ",
@@ -659,7 +664,7 @@
         "    .icon-magic-wand, .icon-cog, .icon-report, .icon-upload-button, .icon-filter, ",
         "    .icon-minus-circle, .icon-exclamation-circle,.icon-angle-right, .icon-edit, ",
         "    .icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-logicon-upload, ",
-        "    .icon-home, .icon-list, .icon-download, .file_clock, .dropdown_icon { ",
+        "    .icon-home, .icon-list, .file_clock, .dropdown_icon { ",
         "        display: none !important; ",
         "    } ",
         "    .file_status:before , .file_buttons:before { ",
@@ -698,6 +703,10 @@
         "    .icon-uploading:before { ",
         "        font-family: var(--font) !important; ",
         "        content: \"UP\"; ",
+        "    } ",
+        "    .icon-download:before { ",
+        "        font-family: var(--font) !important; ",
+        "        content: \"DL\"; ",
         "    } ",
         "    hr { ",
         "        border: 1px solid var(--main-color); ",
