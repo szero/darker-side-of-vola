@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.4.1
+// @version      1.5.0
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -125,9 +125,6 @@
         "    #header_row1.header_row { ",
         "        background: var(--background-color); ",
         "    } ",
-        "    #chat_frame { ",
-        "        border-color: var(--main-color); ",
-        "    } ",
         "    .file_queued { ",
         "        background-color: var(--hilight) !important; ",
         "    } ",
@@ -144,12 +141,20 @@
         "        line-height: 1.6em !important; ",
         "    } ",
         "    #room_name_container { ",
-        "        border-right-color: var(--main-color); ",
+        "        border-right: 1px solid var(--main-color) !important; ",
+        "        right: 1px !important; ",
         "    } ",
         "    #files_frame { ",
+        "        margin-left: -1px !important; ",
+        "    } ",
+        "    #chat_frame, #files_frame { ",
         "        z-index: 1 !important; ",
-        "        border-top-color: var(--main-color); ",
         "        border-color: var(--main-color); ",
+        "        border-top: 1px solid var(--main-color); ",
+        "    } ",
+        "    #chat_frame:after { ",
+        "        border-right: 1px solid var(--main-color) !important; ",
+        "        margin-right: 1px !important; ",
         "    } ",
         "    .chat_message > .username { ",
         "        font-family: inherit !important; ",
@@ -222,8 +227,8 @@
         "    .nano:hover>.pane,.pane.active,.pane.flashed { ",
         "        opacity: 1 !important; ",
         "    } ",
-        "    a.header_row_element:hover { ",
-        "        background: var(--background-color); ",
+        "    .header_row_element:hover { ",
+        "        background: var(--background-color) !important; ",
         "    } ",
         "    #chat_hbar, #header_row2.header_row { ",
         "        background: var(--background-color); ",
@@ -233,19 +238,13 @@
         "        background: var(--background-color); ",
         "        color: var(--text-color)!important; ",
         "    } ",
-        "    .dropdown_item:hover { ",
-        "        background: var(--background-color); ",
-        "    } ",
-        "    .dopdown_item:active { ",
-        "        background: var(--background-color); ",
-        "    } ",
-        "    .dropdown:hover { ",
+        "    .dropdown_item:hover, .dopdown_item:active, .dropdown:hover, #header{ ",
         "        background: var(--background-color); ",
         "    } ",
         "    a.dropdown_hover.dropdown_option { ",
         "        color: var(--text-color); ",
         "    } ",
-        "    .dropdown_option:hover, #show_search_ui:hover { ",
+        "    .dropdown_option:hover, #show_search_ui:hover, #report_button:hover{ ",
         "        color: var(--main-color) !important; ",
         "    } ",
         "    .dropdown:hover:after { ",
@@ -315,6 +314,7 @@
         "    } ",
         "    #search_input { ",
         "        background: var(--background-color)!important; ",
+        "        height: 80% !important; ",
         "    } ",
         "    #toggles > .toggle:hover { ",
         "        background: none !important; ",
@@ -326,6 +326,7 @@
         "        color: var(--text-color); ",
         "        background: var(--background-color); ",
         "        margin-bottom: -0.1em; ",
+        "        line-height: 1.4em !important; ",
         "    } ",
         "    .button:hover, input[type=\"submit\"]:hover, input[type=\"button\"]:hover { ",
         "        background: var(--background-color); ",
@@ -672,7 +673,8 @@
         "    } ",
         "    #clearsearch.icon-cross.clickable.on_small_header:before { ",
         "        font-family: var(--font) !important; ",
-        "        content: \"Clear\" ",
+        "        content: \"Clear\"; ",
+        "        margin-left: 0.3em !important; ",
         "    } ",
         "    #chat_notifier.icon-arrow-down.clickable:before { ",
         "        content: \"New Messages Posted ↓\"; ",
@@ -761,23 +763,24 @@
         "    } ",
         "} "
     ].join("\n"));
+    const $ = (element) => document.getElementById(element);
     try {
         var UI,header,frame,bottomBar;
         let bigRes = () => {
-            UI = document.getElementById("show_search_ui");
-            let topBar = document.getElementById("header_row1");
-            bottomBar = document.getElementById("header_row2");
+            UI = $("show_search_ui");
+            let topBar = $("header_row1");
+            bottomBar = $("header_row2");
             topBar.appendChild(bottomBar.removeChild(UI));
             if (screen.width > 1650) {
-                let filters = document.getElementById("toggles");
+                let filters = $("toggles");
                 topBar.appendChild(bottomBar.removeChild(filters));
             }
-            let roomSh = document.getElementById("room_search");
+            let roomSh = $("room_search");
             topBar.appendChild(bottomBar.removeChild(roomSh));
-            let uploadBt = document.getElementById("upload_container");
+            let uploadBt = $("upload_container");
             topBar.appendChild(bottomBar.removeChild(uploadBt));
-            header = document.getElementById("header");
-            frame = document.getElementById("files_frame");
+            header = $("header");
+            frame = $("files_frame");
             bottomBar.style.display = "none";
             header.style.height = "1.5em";
             frame.style.top = "1.8em";
@@ -794,7 +797,7 @@
                 frame.style.top = "3.5em";
                 header.style.height = "3.5em";
             }
-            let clear = document.getElementById("clearsearch");
+            let clear = $("clearsearch");
             clear.addEventListener("click", close);
             UI.addEventListener("click", filter);
         } else {

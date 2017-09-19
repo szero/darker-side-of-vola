@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.4.1
+// @version      1.5.0
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -14,23 +14,24 @@
 (function () {
     "use strict";
     GM_addStyle(stuff2str("as dark as my soul.css"));
+    const $ = (element) => document.getElementById(element);
     try {
         var UI,header,frame,bottomBar;
         let bigRes = () => {
-            UI = document.getElementById("show_search_ui");
-            let topBar = document.getElementById("header_row1");
-            bottomBar = document.getElementById("header_row2");
+            UI = $("show_search_ui");
+            let topBar = $("header_row1");
+            bottomBar = $("header_row2");
             topBar.appendChild(bottomBar.removeChild(UI));
             if (screen.width > 1650) {
-                let filters = document.getElementById("toggles");
+                let filters = $("toggles");
                 topBar.appendChild(bottomBar.removeChild(filters));
             }
-            let roomSh = document.getElementById("room_search");
+            let roomSh = $("room_search");
             topBar.appendChild(bottomBar.removeChild(roomSh));
-            let uploadBt = document.getElementById("upload_container");
+            let uploadBt = $("upload_container");
             topBar.appendChild(bottomBar.removeChild(uploadBt));
-            header = document.getElementById("header");
-            frame = document.getElementById("files_frame");
+            header = $("header");
+            frame = $("files_frame");
             bottomBar.style.display = "none";
             header.style.height = "1.5em";
             frame.style.top = "1.8em";
@@ -47,7 +48,7 @@
                 frame.style.top = "3.5em";
                 header.style.height = "3.5em";
             }
-            let clear = document.getElementById("clearsearch");
+            let clear = $("clearsearch");
             clear.addEventListener("click", close);
             UI.addEventListener("click", filter);
         } else {
