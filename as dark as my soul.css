@@ -22,6 +22,9 @@
         background-color: var(--background-color);
         border-top: 1px solid var(--main-color);
     }
+    #main_small_links_content {
+        background-color: var(--background-color) !important;
+    }
     .chat_room_url {
         background-color: var(--hilight) !important;
     }
