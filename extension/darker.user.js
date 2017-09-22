@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.6.3
+// @version      1.6.4
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -34,18 +34,10 @@
         "        color: var(--text-color); ",
         "    } ",
         "    /* Main Page */ ",
-        "    #main_small_links { ",
-        "        background-color: var(--background-color); ",
-        "        border-top: 1px solid var(--main-color); ",
-        "    } ",
-        "    #main_small_links_content, .backgroundCloud { ",
-        "        background-color: var(--background-color) !important; ",
-        "        fill: var(--background-color) !important; ",
-        "    } ",
         "    .chat_room_url { ",
         "        background-color: var(--hilight) !important; ",
         "    } ",
-        "    .room_svg, .room_area, .room_title, .room_chat, .room_files { ",
+        "    .room_svg, .room_area, .room_title, .room_chat, .room_files, .backgroundCloud { ",
         "        fill: var(--background-color) !important; ",
         "    } ",
         "    .room_title_area, .room_chat_area, .room_files_area, rect.file { ",
@@ -54,8 +46,7 @@
         "    .ui_frame_left.thumb_loading { ",
         "        background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjEwIiB3aWR0aD0iMjEwIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjAuMjU0IC05LjkzNikiPjxwYXRoIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGQ9Ik04MS4xOSAxNC45MzZoMzFtMjkgMGgzMW0yOSAwaDI0LjA2NHYyNS41bTAgMjl2MzFtMCAyOXYzMW0wIDI5djI1LjVIMjAxLjE5bS0yOSAwaC0zMW0tMjkgMGgtMzFtLTI5LjAwMyAwSDI1LjI1di0yNS41bTAtMjl2LTMxbTAtMjl2LTMxbTAtMjl2LTI1LjVoMjYuOTM3IiBzdHJva2UtZGFzaG9mZnNldD0iNjQiIHN0cm9rZT0iIzAwOGQ4ZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjAiIHN0cm9rZS13aWR0aD0iMTAiIGZpbGw9Im5vbmUiLz48cmVjdCByeT0iMyIgaGVpZ2h0PSIxNSIgd2lkdGg9IjE1IiB5PSIxMjQuOTQiIHg9IjgwLjI1NCIgZmlsbD0iIzAwOGQ4ZCIvPjxyZWN0IHJ5PSIzIiBoZWlnaHQ9IjE1IiB3aWR0aD0iMTUiIHk9IjEyNC45NCIgeD0iMTIwLjI1IiBmaWxsPSIjMDA4ZDhkIi8+PHJlY3Qgcnk9IjMiIGhlaWdodD0iMTUiIHdpZHRoPSIxNSIgeT0iMTI0Ljk0IiB4PSIxNjAuMjUiIGZpbGw9IiMwMDhkOGQiLz48L2c+PC9zdmc+DQo=\") !important; ",
         "    } ",
-        "    /* Radio Seekbar*/ ",
-        "    #radio_load_progress, #radio_progress { ",
+        "    #radio_load_progress, #radio_progress , #bottom_navigation_content { ",
         "        background-color: var(--background-color); ",
         "    } ",
         "    #radio_play_progress { ",
