@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.6.2
+// @version      1.6.3
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -40,18 +40,15 @@
         "    } ",
         "    #main_small_links_content, .backgroundCloud { ",
         "        background-color: var(--background-color) !important; ",
+        "        fill: var(--background-color) !important; ",
         "    } ",
         "    .chat_room_url { ",
         "        background-color: var(--hilight) !important; ",
         "    } ",
         "    .room_svg, .room_area, .room_title, .room_chat, .room_files { ",
-        "        fill: var(--main-color) !important; ",
-        "        stroke: var(--main-color) !important; ",
+        "        fill: var(--background-color) !important; ",
         "    } ",
-        "    .room_title_area, .room_chat_area, .room_files_area { ",
-        "        fill: var(--text-color) !important; ",
-        "    } ",
-        "    rect.file { ",
+        "    .room_title_area, .room_chat_area, .room_files_area, rect.file { ",
         "        fill: var(--main-color) !important; ",
         "    } ",
         "    .ui_frame_left.thumb_loading { ",
