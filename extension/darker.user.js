@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.6.5
+// @version      1.7.0
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -65,7 +65,7 @@
         "    } ",
         "    #radio_volume_slider { ",
         "        height: 0.95em !important; ",
-        "        background-color: var(--main-color); ",
+        "        background-color: var(--main-color) !important; ",
         "    } ",
         "    #radio_volume_wrapper { ",
         "        display:inline-block; ",
@@ -148,7 +148,6 @@
         "        margin-right: 1px !important; ",
         "    } ",
         "    .chat_message > .username { ",
-        "        font-family: inherit !important; ",
         "        font-family: inherit !important; ",
         "        font-weight: 400 !important; ",
         "        color: var(--whitenames); ",
@@ -287,6 +286,11 @@
         "    .header_row_element, #header_row1, #header_row2 { ",
         "        border: none !important; ",
         "    } ",
+        "    #header_row2:after { ",
+        "        left: -1px; ",
+        "        top: -1px; ",
+        "        border-bottom: 1px solid var(--main-color); ",
+        "    } ",
         "    .defaultValue { ",
         "        color: var(--text-color); ",
         "    } ",
@@ -326,11 +330,11 @@
         "    #uploadButton { ",
         "        border-radius: 0px; ",
         "        color: var(--text-color); ",
-        "        background: var(--background-color); ",
+        "        background-color: rgba(0,0,0,0) !important; ",
         "    } ",
         "    #uploadButton:hover { ",
         "        color: var(--main-color); ",
-        "        background: var(--background-color)!important; ",
+        "        background-color: rgba(0,0,0,0) !important; ",
         "    } ",
         "    #uploadButton:active { ",
         "        background: #212121 !important; ",
@@ -467,6 +471,7 @@
         "        color: var(--text-color) !important; ",
         "    } ",
         "    .radio_icon { ",
+        "        width: 1.4em !important; ",
         "        color: var(--main-color) !important; ",
         "    } ",
         "    .toggle_text.on_big_header { ",
@@ -516,6 +521,7 @@
         "        border-top-color: var(--background-color) !important; ",
         "        border-width: 2px!important; ",
         "        border-bottom: none!important; ",
+        "        background-color: var(--main-color); ",
         "    } ",
         "    .ui_frame_buttons > .button, .button.light { ",
         "        background: var(--background-color)!important; ",
@@ -589,10 +595,6 @@
         "    .icon-play, .icon-stop, .icon-pause { ",
         "        width: 0px; ",
         "        height: 0px; ",
-        "    } ",
-        "    .chat_file_icon, .radio_icon { ",
-        "        width: 20px; ",
-        "        height:20px; ",
         "    } ",
         "    .file_icon { ",
         "        padding-right: 25px; ",
