@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.7.0
+// @version      1.7.1
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -72,10 +72,6 @@
         "    } ",
         "    .chat_message.message_self, .chat_message.message_self.highlight { ",
         "        font-style: italic; ",
-        "    } ",
-        "    .file_control { ",
-        "        color: var(--main-color); ",
-        "        padding-right: 0 !important; ",
         "    } ",
         "    .scroller-slider { ",
         "        background: var(--main-color); ",
@@ -591,16 +587,6 @@
         "        font-family: var(--font) !important; ",
         "        color: var(--text-color) !important; ",
         "        content: \"DL\" !important; ",
-        "    } ",
-        "    .icon-play, .icon-stop, .icon-pause { ",
-        "        width: 0px; ",
-        "        height: 0px; ",
-        "    } ",
-        "    .file_icon { ",
-        "        padding-right: 25px; ",
-        "    } ",
-        "    .file_control_icon.filetype { ",
-        "        padding-right: 0.5em; ",
         "    } ",
         "    #radio_volume_icon { ",
         "        width: 1.5em; ",
