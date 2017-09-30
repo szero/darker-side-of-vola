@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.7.1
+// @version      1.8.0
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -394,6 +394,13 @@
         "        border-color: var(--background-color); ",
         "        border-radius: 1px; ",
         "    } ",
+        "    .ui_frame_contextmenu_button_icon { ",
+        "        display: none !important; ",
+        "    } ",
+        "    .ui_frame_contextmenu_button { ",
+        "        padding-left: .5em !important; ",
+        "        padding-right: .5em !important; ",
+        "    } ",
         "    .file_control_icon.clickable { ",
         "        color: var(--main-color) !important; ",
         "    } ",
@@ -679,10 +686,6 @@
         "    .icon-angle-double-left:before { ",
         "        content: \"<\"; ",
         "    } ",
-        "    .file_icon.file_control_icon.abort-upload.icon-cross.clickable:before { ",
-        "        font-family: var(--font) !important; ",
-        "        content: \"Abort\" ",
-        "    } ",
         "    .icon-uploading:before { ",
         "        font-family: var(--font) !important; ",
         "        content: \"UP\"; ",
@@ -748,6 +751,9 @@
     try {
         var UI,header,frame,bottomBar;
         let bigRes = () => {
+            let RN = $("room_name");
+            RN.style.overflow = "visible";
+            RN.style.margin = ".5em";
             UI = $("show_search_ui");
             let topBar = $("header_row1");
             bottomBar = $("header_row2");
