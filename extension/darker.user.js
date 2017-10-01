@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.1.0
+// @version      2.1.1
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -134,6 +134,9 @@
         "} ",
         "#chat_frame { ",
         "    padding-right: 1px !important; ",
+        "} ",
+        "#volafile_icon_svg #v_stroke { ",
+        "    stroke: var(--main-color) !important; ",
         "} ",
         "#chat_header, #chat_frame:after, #volafile_icon_svg { ",
         "    border-right: 1px solid var(--main-color) !important; ",
