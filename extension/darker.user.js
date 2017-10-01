@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.8.0
+// @version      1.9.0
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -16,7 +16,7 @@
     GM_addStyle([
         "@-moz-document domain(\"volafile.org\") { ",
         "    :root { ",
-        "        --main-color: teal; ",
+        "        --main-color: #008D8D; ",
         "        --background-color: #000000; ",
         "        --text-color: #FFFFFF; ",
         "        --visited: #8C8C8C; ",
@@ -109,9 +109,6 @@
         "        background: var(--background-color); ",
         "        color: var(--text-color); ",
         "    } ",
-        "    #header_row1.header_row { ",
-        "        background: var(--background-color); ",
-        "    } ",
         "    .file_queued { ",
         "        background-color: var(--hilight) !important; ",
         "    } ",
@@ -131,17 +128,19 @@
         "        border-right: 1px solid var(--main-color) !important; ",
         "        right: 1px !important; ",
         "    } ",
-        "    #files_frame { ",
-        "        margin-left: -1px !important; ",
-        "    } ",
         "    #chat_frame, #files_frame { ",
         "        z-index: 1 !important; ",
         "        border-color: var(--main-color); ",
         "        border-top: 1px solid var(--main-color); ",
         "    } ",
-        "    #chat_frame:after { ",
+        "    .toggle_text.on_big_header { ",
+        "        display: none !important; ",
+        "    } ",
+        "    #chat_frame { ",
+        "        padding-right: 1px !important; ",
+        "    } ",
+        "    #chat_header, #chat_frame:after, #volafile_icon_svg { ",
         "        border-right: 1px solid var(--main-color) !important; ",
-        "        margin-right: 1px !important; ",
         "    } ",
         "    .chat_message > .username { ",
         "        font-family: inherit !important; ",
@@ -216,11 +215,7 @@
         "    .header_row_element:hover { ",
         "        background: var(--background-color) !important; ",
         "    } ",
-        "    #chat_hbar, #header_row2.header_row { ",
-        "        background: var(--background-color); ",
-        "        color: var(--text-color); ",
-        "    } ",
-        "    .dropdown_item { ",
+        "    #files_header_row, .dropdown_item, #chat_hbar{ ",
         "        background: var(--background-color); ",
         "        color: var(--text-color)!important; ",
         "    } ",
@@ -254,6 +249,16 @@
         "        border-right: 1px solid var(--main-color) !important; ",
         "        border-radius: 0 !important; ",
         "    } ",
+        "    #chat_name_container { ",
+        "        border-bottom: none !important; ",
+        "        background-color: var(--background-color) !important; ",
+        "    } ",
+        "    #chat_user_angle_up { ",
+        "        margin-left: .5em !important; ",
+        "    } ",
+        "    #files_header_row { ",
+        "        background-color: var(--background-color) !important; ",
+        "    } ",
         "    .file_name:hover { ",
         "        color: var(--main-color) !important; ",
         "    } ",
@@ -279,25 +284,8 @@
         "    a[href^=\"/r/\"]:visited{ ",
         "        color: var(--visited) ; ",
         "    } ",
-        "    .header_row_element, #header_row1, #header_row2 { ",
-        "        border: none !important; ",
-        "    } ",
-        "    #header_row2:after { ",
-        "        left: -1px; ",
-        "        top: -1px; ",
-        "        border-bottom: 1px solid var(--main-color); ",
-        "    } ",
         "    .defaultValue { ",
         "        color: var(--text-color); ",
-        "    } ",
-        "    #header_row_container a i.green-icon { ",
-        "        color: var(--text-color)!important; ",
-        "    } ",
-        "    #header_row_container a:hover i.green-icon { ",
-        "        color: var(--text-color)!important; ",
-        "    } ",
-        "    #header_row_container a:active i.green-icon { ",
-        "        color: var(--main-color)!important; ",
         "    } ",
         "    #search_input.defaultValue { ",
         "        background: var(--background-color)!important; ",
@@ -307,21 +295,22 @@
         "        background: var(--background-color)!important; ",
         "        height: 80% !important; ",
         "    } ",
-        "    #toggles > .toggle:hover { ",
+        "     #toggles > .toggle:hover { ",
         "        background: none !important; ",
         "    } ",
         "    .header_row_element, .header_row_element.nodecoration, a.nodecoration.header_row_element, span.on_large_screen { ",
         "        color: var(--text-color); ",
         "    } ",
         "    .button, input[type=\"submit\"], input[type=\"button\"] { ",
-        "        color: var(--text-color); ",
         "        background: var(--background-color); ",
-        "        margin-bottom: -0.1em; ",
-        "        line-height: 1.4em !important; ",
+        "        color: var(--text-color); ",
         "    } ",
         "    .button:hover, input[type=\"submit\"]:hover, input[type=\"button\"]:hover { ",
         "        background: var(--background-color); ",
         "        color: var(--main-color); ",
+        "    } ",
+        "    #uploadContainer { ",
+        "        line-height: 2.5em !important; ",
         "    } ",
         "    #uploadButton { ",
         "        border-radius: 0px; ",
@@ -452,7 +441,7 @@
         "    .formtable td { ",
         "        padding: 0.5em !important; ",
         "    } ",
-        "    .ui_frame_table { ",
+        "    .header_row_element, .ui_frame_table { ",
         "        border: none !important; ",
         "    } ",
         "    #radio_container { ",
@@ -476,9 +465,6 @@
         "    .radio_icon { ",
         "        width: 1.4em !important; ",
         "        color: var(--main-color) !important; ",
-        "    } ",
-        "    .toggle_text.on_big_header { ",
-        "        display:none; ",
         "    } ",
         "    .toggle_icon { ",
         "        font-family: var(--font) !important; ",
@@ -512,10 +498,7 @@
         "        color:var(--text-color); ",
         "        content:\"ther\"; ",
         "    } ",
-        "    .toggle>span.toggle_icon { ",
-        "        color: var(--text-color) !important; ",
-        "    } ",
-        "    .toggle.enabled>span.toggle_icon { ",
+        "    .toggle.:not(.enabled)>span.toggle_container>span.toggle_icon { ",
         "        color: var(--main-color)!important; ",
         "    } ",
         "    #radio_current { ",
@@ -747,48 +730,15 @@
         "    } ",
         "} "
     ].join("\n"));
-    const $ = (element) => document.getElementById(element);
+    function shadeColor(color, percent) {
+        const f=parseInt(color.replace(/ /g,'').slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
+        return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
+    }
+    const $ = (sel) => document.getElementById(sel).style;
+    const cssvar = (sel) => getComputedStyle(document.querySelector(":root")).getPropertyValue(sel);
     try {
-        var UI,header,frame,bottomBar;
-        let bigRes = () => {
-            let RN = $("room_name");
-            RN.style.overflow = "visible";
-            RN.style.margin = ".5em";
-            UI = $("show_search_ui");
-            let topBar = $("header_row1");
-            bottomBar = $("header_row2");
-            topBar.appendChild(bottomBar.removeChild(UI));
-            if (screen.width > 1650) {
-                let filters = $("toggles");
-                topBar.appendChild(bottomBar.removeChild(filters));
-            }
-            let roomSh = $("room_search");
-            topBar.appendChild(bottomBar.removeChild(roomSh));
-            let uploadBt = $("upload_container");
-            topBar.appendChild(bottomBar.removeChild(uploadBt));
-            header = $("header");
-            frame = $("files_frame");
-            bottomBar.style.display = "none";
-            header.style.height = "1.5em";
-            frame.style.top = "1.8em";
-        }
-        if (screen.width < 1650) {
-            bigRes();
-            let close = () => {
-                bottomBar.style.display = "none";
-                frame.style.top = "1.8em";
-                header.style.height = "1.5em";
-            }
-            let filter = () => {
-                bottomBar.style.display = "block";
-                frame.style.top = "3.5em";
-                header.style.height = "3.5em";
-            }
-            let clear = $("clearsearch");
-            clear.addEventListener("click", close);
-            UI.addEventListener("click", filter);
-        } else {
-            bigRes();
-        }
-    } catch (err) { console.log(err + "\nThrowing an error if we are somewhere else than in a room.") }
+        const main_color = cssvar("--main-color");
+        $("v_gradient_stop1").setProperty("stop-color", main_color);
+        $("v_gradient_stop2").setProperty("stop-color", shadeColor(main_color, -0.5));
+    } catch (err) { console.log(err + "\nADAMS loaded not in a room.") }
 }) ();

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      1.8.0
+// @version      1.9.0
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -14,48 +14,15 @@
 (function () {
     "use strict";
     GM_addStyle(stuff2str("as dark as my soul.css"));
-    const $ = (element) => document.getElementById(element);
+    function shadeColor(color, percent) {
+        const f=parseInt(color.replace(/ /g,'').slice(1),16),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=f>>16,G=f>>8&0x00FF,B=f&0x0000FF;
+        return "#"+(0x1000000+(Math.round((t-R)*p)+R)*0x10000+(Math.round((t-G)*p)+G)*0x100+(Math.round((t-B)*p)+B)).toString(16).slice(1);
+    }
+    const $ = (sel) => document.getElementById(sel).style;
+    const cssvar = (sel) => getComputedStyle(document.querySelector(":root")).getPropertyValue(sel);
     try {
-        var UI,header,frame,bottomBar;
-        let bigRes = () => {
-            let RN = $("room_name");
-            RN.style.overflow = "visible";
-            RN.style.margin = ".5em";
-            UI = $("show_search_ui");
-            let topBar = $("header_row1");
-            bottomBar = $("header_row2");
-            topBar.appendChild(bottomBar.removeChild(UI));
-            if (screen.width > 1650) {
-                let filters = $("toggles");
-                topBar.appendChild(bottomBar.removeChild(filters));
-            }
-            let roomSh = $("room_search");
-            topBar.appendChild(bottomBar.removeChild(roomSh));
-            let uploadBt = $("upload_container");
-            topBar.appendChild(bottomBar.removeChild(uploadBt));
-            header = $("header");
-            frame = $("files_frame");
-            bottomBar.style.display = "none";
-            header.style.height = "1.5em";
-            frame.style.top = "1.8em";
-        }
-        if (screen.width < 1650) {
-            bigRes();
-            let close = () => {
-                bottomBar.style.display = "none";
-                frame.style.top = "1.8em";
-                header.style.height = "1.5em";
-            }
-            let filter = () => {
-                bottomBar.style.display = "block";
-                frame.style.top = "3.5em";
-                header.style.height = "3.5em";
-            }
-            let clear = $("clearsearch");
-            clear.addEventListener("click", close);
-            UI.addEventListener("click", filter);
-        } else {
-            bigRes();
-        }
-    } catch (err) { console.log(err + "\nThrowing an error if we are somewhere else than in a room.") }
+        const main_color = cssvar("--main-color");
+        $("v_gradient_stop1").setProperty("stop-color", main_color);
+        $("v_gradient_stop2").setProperty("stop-color", shadeColor(main_color, -0.5));
+    } catch (err) { console.log(err + "\nADAMS loaded not in a room.") }
 }) ();
