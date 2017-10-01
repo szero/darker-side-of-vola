@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.0.0
+// @version      2.1.0
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -241,7 +241,7 @@
         "#chat_input { ",
         "    border-top: 1px solid var(--main-color) !important; ",
         "} ",
-        "#chat_name { ",
+        "#chat_name, #rename_input { ",
         "    border-right: 1px solid var(--main-color) !important; ",
         "    border-radius: 0 !important; ",
         "} ",
@@ -252,7 +252,7 @@
         "#chat_user_angle_up { ",
         "    margin-left: .5em !important; ",
         "} ",
-        "#files_header_row { ",
+        "#files_header_row, #rename_container { ",
         "    background-color: var(--background-color) !important; ",
         "} ",
         ".file_name:hover { ",
@@ -393,6 +393,8 @@
         ".ui_frame_content { ",
         "    border: 1px solid var(--main-color); ",
         "} ",
+        ".ui_frame_table_centered, ",
+        ".ui_frame_table_centered>tr>td>input, ",
         ".ui_frame_table_centered>tr>td>textarea { ",
         "    width: 95%; ",
         "} ",

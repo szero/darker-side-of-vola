@@ -11,8 +11,8 @@ Only layout change for now is making top bar smaller and fitting all the buttons
 Installation
 ------------
 
-Get [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) if you are on Firefox.
-Get [Tampermonkey](https://tampermonkey.net/) if you are on Chrome/Chromium.
+Get [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) if you are on 
+Firefox or get [Tampermonkey](https://tampermonkey.net/) if you are on Chrome/Chromium.
 
 After getting it, just click [this.](https://github.com/Szero/darker-side-of-vola/raw/master/extension/darker.user.js)
 

@@ -225,7 +225,7 @@ textarea, input[type="text"], input[type="password"] {
 #chat_input {
     border-top: 1px solid var(--main-color) !important;
 }
-#chat_name {
+#chat_name, #rename_input {
     border-right: 1px solid var(--main-color) !important;
     border-radius: 0 !important;
 }
@@ -236,7 +236,7 @@ textarea, input[type="text"], input[type="password"] {
 #chat_user_angle_up {
     margin-left: .5em !important;
 }
-#files_header_row {
+#files_header_row, #rename_container {
     background-color: var(--background-color) !important;
 }
 .file_name:hover {
@@ -377,6 +377,8 @@ a[href^="/r/"]:visited{
 .ui_frame_content {
     border: 1px solid var(--main-color);
 }
+.ui_frame_table_centered,
+.ui_frame_table_centered>tr>td>input,
 .ui_frame_table_centered>tr>td>textarea {
     width: 95%;
 }
