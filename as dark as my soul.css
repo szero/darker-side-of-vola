@@ -178,26 +178,6 @@ div.filelist_file > a > span {
 .chat_file_play {
     float: none !important;
 }
-.nano > .pane > .slider {
-    border-radius: 1px;
-    background: var(--main-color);
-}
-.nano > .pane > .slider:hover {
-    background: var(--main-color);
-}
-.nano:hover > .pane, .pane.active, .pane.flashed {
-    background: var(--background-color);
-    opacity: 1;
-}
-.nano > .pane.active > .slider {
-    background: var(--main-color);
-}
-.nano>.pane {
-    opacity: 0 !important;
-}
-.nano:hover>.pane,.pane.active,.pane.flashed {
-    opacity: 1 !important;
-}
 .header_row_element:hover {
     background: var(--background-color) !important;
 }
@@ -271,13 +251,6 @@ a[href^="/r/"]{
 a[href^="/r/"]:visited{
     color: var(--visited) ;
 }
-.defaultValue {
-    color: var(--text-color);
-}
-#search_input.defaultValue {
-    background: var(--background-color)!important;
-    color: var(--text-color);
-}
 #search_input {
     background: var(--background-color) !important;
     border-top: none;
@@ -298,21 +271,8 @@ a.nodecoration.header_row_element, span.on_large_screen {
     background: var(--background-color);
     color: var(--main-color);
 }
-#uploadContainer {
+#upload_container {
     line-height: 2.5em !important;
-}
-#uploadButton {
-    border-radius: 0px;
-    color: var(--text-color);
-    background-color: rgba(0,0,0,0) !important;
-}
-#uploadButton:hover {
-    color: var(--main-color);
-    background-color: rgba(0,0,0,0) !important;
-}
-#uploadButton:active {
-    background: #212121 !important;
-    color: var(--main-color)!important;
 }
 .file_uploading, .file_uploading:after {
     background-color: #212121 !important;
@@ -521,7 +481,7 @@ table td {
 input[type="text"]::placeholder, input[type="password"]::placeholder, textarea::placeholder {
     color: var(--main-color);
 }
-.button:hover, .icon-angle-up-medium {
+.button:hover, .icon-angle-up-medium:hover {
     background: var(--background-color)!important;
     color: var(--main-color)!important;
 }
@@ -603,9 +563,6 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, textarea::
     border-top: 0 !important;
     border-left: 0 !important;
 }
-#uploadButton:active {
-    background: var(--background-color) !important;
-}
 #clearsearch.fa.icon-times.clickable.on_small_header.icon-times:before {
     Content: "Clear"
 };
@@ -647,7 +604,7 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, textarea::
 .icon-magic-wand, .icon-cog, .icon-report, .icon-upload-button, .icon-filter,
 .icon-minus-circle, .icon-exclamation-circle,.icon-angle-right, .icon-edit,
 .icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-logicon-upload,
-.icon-home, .icon-list, .file_clock, .icon-anonymous, .dropdown_icon {
+.icon-home, .icon-list, .file_clock, .icon-anonymous, .icon-checkmark, .dropdown_icon {
     display: none !important;
 }
 .file_status:before , .file_buttons:before {
@@ -723,6 +680,7 @@ select, .file_selected {
     border-left: none !important;
     box-shadow: none !important;
 }
-#room_content_fixed > div.ui_frame_container > div > div.ui_frame_body.ui_frame_body_bar > div > table > tr:nth-child(1) > td:nth-child(2) > textarea {
+#room_content_fixed > div.ui_frame_container > div > div.ui_frame_body.ui_frame_body_bar
+> div > table > tr:nth-child(1) > td:nth-child(2) > textarea {
     resize: auto;
 }
