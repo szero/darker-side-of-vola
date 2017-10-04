@@ -26,8 +26,11 @@ html, body {
 .room_title_area, .room_chat_area, .room_files_area, rect.file {
     fill: var(--main-color) !important;
 }
-#radio_load_progress, #radio_progress , #bottom_navigation_content {
+#radio_load_progress, #radio_progress , #bottom_navigation_content, #loading_frame {
     background-color: var(--background-color);
+}
+#loading_text {
+    color: var(--text-color) !important;
 }
 #radio_play_progress {
     background-color: var(--main-color);
@@ -119,10 +122,10 @@ div.filelist_file > a > span {
 #chat_frame {
     padding-right: 1px !important;
 }
-#volafile_icon_svg #v_stroke {
+.volafile_icon_svg .v_stroke {
     stroke: var(--main-color) !important;
 }
-#chat_header, #chat_frame:after, #volafile_icon_svg {
+#chat_header, #chat_frame:after, #home_button {
     border-right: 1px solid var(--main-color) !important;
 }
 .chat_message > .username {
@@ -235,6 +238,7 @@ textarea, input[type="text"], input[type="password"] {
 #chat_name_container {
     border-bottom: none !important;
     background-color: var(--background-color) !important;
+    padding-left: 0 !important;
 }
 #chat_user_angle_up {
     margin-left: .5em !important;
@@ -282,7 +286,8 @@ a[href^="/r/"]:visited{
  #toggles > .toggle:hover {
     background: none !important;
 }
-.header_row_element, .header_row_element.nodecoration, a.nodecoration.header_row_element, span.on_large_screen {
+.defaultValue, .header_row_element, .header_row_element.nodecoration,
+a.nodecoration.header_row_element, span.on_large_screen {
     color: var(--text-color);
 }
 .button, input[type="submit"], input[type="button"] {
@@ -423,7 +428,7 @@ a[href^="/r/"]:visited{
 #main_logo_suffix {
     color: var(--text-color);
 }
-table {
+table, hr {
     border: 1px solid var(--main-color);
 }
 table th {
@@ -516,10 +521,7 @@ table td {
 input[type="text"]::placeholder, input[type="password"]::placeholder, textarea::placeholder {
     color: var(--main-color);
 }
-input[type="text"]::-moz-placeholder, input[type="password"]::-moz-placeholder, textarea::-moz-placeholder {
-    color: var(--main-color);
-}
-.button:hover {
+.button:hover, .icon-angle-up-medium {
     background: var(--background-color)!important;
     color: var(--main-color)!important;
 }
@@ -569,6 +571,9 @@ input[type="text"]::-moz-placeholder, input[type="password"]::-moz-placeholder, 
 }
 .filelist_file:hover {
     border-color: var(--main-color);
+}
+.chat_file_icon:not(.icon-play):not(.icon-stop) {
+    line-height: 1.4em !important;
 }
 .chat_file:hover > .chat_file_icon.chat_file_icon_download::before,
 .filelist_file:hover > .file_left_part > .file_control > .filetype_download::before {
@@ -674,9 +679,6 @@ input[type="text"]::-moz-placeholder, input[type="password"]::-moz-placeholder, 
 .icon-download:before {
     font-family: var(--font) !important;
     content: "DL";
-}
-hr {
-    border: 1px solid var(--main-color);
 }
 .loading_indicator > .outer_indicator > .inner_indicator, .url_bar_icon {
     background-color: var(--main-color) !important;
