@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.3.0
+// @version      2.3.1
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://volafile.org/*
