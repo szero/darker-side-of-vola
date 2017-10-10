@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.3.1
+// @version      2.3.2
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -239,9 +239,6 @@
     "    padding-left: 0 !important; ",
     "    border-radius: 0 !important; ",
     "} ",
-    "#chat_user_angle_up { ",
-    "    margin-left: .5em !important; ",
-    "} ",
     "#files_header_row, #rename_container { ",
     "    background-color: var(--background-color) !important; ",
     "} ",
@@ -360,9 +357,6 @@
     "    padding-left: .5em !important; ",
     "    padding-right: .5em !important; ",
     "} ",
-    ".ui_frame_content { ",
-    "    border: 1px solid var(--main-color); ",
-    "} ",
     ".ui_frame_table_centered, ",
     ".ui_frame_table_centered>tr>td>input, ",
     ".ui_frame_table_centered>tr>td>textarea { ",
@@ -406,8 +400,8 @@
     "#main_logo_suffix { ",
     "    color: var(--text-color); ",
     "} ",
-    "table, hr { ",
-    "    border: 1px solid var(--main-color); ",
+    "table, hr, .ui_frame_contextmenu_table td { ",
+    "    border: 1px solid var(--main-color) !important; ",
     "} ",
     "table th { ",
     "    background: var(--background-color); ",
@@ -499,7 +493,7 @@
     "input[type=\"text\"]::placeholder, input[type=\"password\"]::placeholder, textarea::placeholder { ",
     "    color: var(--main-color); ",
     "} ",
-    ".button:hover, .icon-angle-up-medium:hover { ",
+    ".button:hover { ",
     "    background: var(--background-color)!important; ",
     "    color: var(--main-color)!important; ",
     "} ",
