@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.3.2
+// @version      2.3.3
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -140,7 +140,7 @@
     "#chat_frame { ",
     "    padding-right: 1px !important; ",
     "} ",
-    ".volafile_icon_svg .v_stroke { ",
+    ".volafile_icon_svg .v_stroke, .drag_here_svg .drag_here_rect { ",
     "    stroke: var(--main-color) !important; ",
     "} ",
     "#chat_header, #chat_frame:after, #home_button { ",
@@ -196,8 +196,11 @@
     ".chat_file_play { ",
     "    float: none !important; ",
     "} ",
-    ".header_row_element:hover { ",
+    ".header_row_element:hover, #call_to_action_container:before { ",
     "    background: var(--background-color) !important; ",
+    "} ",
+    "#call_to_action { ",
+    "    color: var(--main-color) !important; ",
     "} ",
     "#files_header_row, .dropdown_item, #chat_hbar{ ",
     "    background: var(--background-color); ",
@@ -328,9 +331,6 @@
     "} ",
     "#gallery_title { ",
     "    color: var(--text-color); ",
-    "} ",
-    ".gallery_area { ",
-    "    width: 3.6em !important; ",
     "} ",
     ".gallery_button { ",
     "    border-radius: 15px; ",
@@ -541,8 +541,8 @@
     ".filetype_download { ",
     "    font-family: var(--font) !important; ",
     "} ",
-    ".filelist_file:hover { ",
-    "    border-color: var(--main-color); ",
+    ".filelist_file:hover, .ui_frame_tooltip_thumb_generic_placeholder { ",
+    "    border-color: var(--main-color) !important; ",
     "} ",
     ".chat_file_icon:not(.icon-play):not(.icon-stop) { ",
     "    line-height: 1.4em !important; ",
