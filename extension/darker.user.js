@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.3.3
+// @version      2.3.4
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -696,6 +696,15 @@
     "> div > table > tr:nth-child(1) > td:nth-child(2) > textarea { ",
     "    resize: auto; ",
     "} "
+    "#call_to_action_container:before {",
+      "background-color: #000000;",
+    "}",
+    " #call_to_action_container.active #call_to_action {",
+      "color: white;",
+    "}",
+    "#call_to_action_container.active .drag_here_rect {",
+      "stroke: var(--main-color);",
+    "}"
   ].join("\n");
   if (typeof GM_addStyle != "undefined") {
     GM_addStyle(css);
