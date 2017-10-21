@@ -275,8 +275,17 @@
     "    border-top: none; ",
     "    border-bottom: none; ",
     "} ",
-    " #toggles > .toggle:hover { ",
+    "#toggles { ",
+    "    line-height: 2.4em !important; ",
+    "} ",
+    "#toggles > .toggle:hover { ",
     "    background: none !important; ",
+    "} ",
+    "#toggles span.toggle_icon { ",
+    "    color: var(--text-color); ",
+    "} ",
+    "#toggles .toggle.enabled span.toggle_icon { ",
+    "    color: var(--main-color) !important; ",
     "} ",
     ".defaultValue, .header_row_element, .header_row_element.nodecoration, ",
     "a.nodecoration.header_row_element, span.on_large_screen { ",
@@ -469,12 +478,6 @@
     ".toggle[title*=\"Other\"] .toggle_icon:after { ",
     "    color:var(--text-color); ",
     "    content:\"ther\"; ",
-    "} ",
-    "#toggles span.toggle_icon { ",
-    "    color: var(--text-color); ",
-    "} ",
-    "#toggles .toggle.enabled span.toggle_icon { ",
-    "    color: var(--main-color) !important; ",
     "} ",
     "#radio_current { ",
     "    border-color: var(--background-color)!important; ",
@@ -721,9 +724,10 @@
   }
   // const $ = (sel) => document.getElementById(sel).style;
   const $$ = (sel, prop, new_val) => {
-    for (const el of document.getElementsByClassName(sel)) {
+    const elements = document.getElementsByClassName(sel);
+    [...elements].forEach((el) => {
       el.style.setProperty(prop, new_val)
-    }
+    })
   }
   const cssvar = (sel) => getComputedStyle(document.querySelector(":root")).getPropertyValue(sel);
   try {

@@ -40,9 +40,10 @@
   }
   // const $ = (sel) => document.getElementById(sel).style;
   const $$ = (sel, prop, new_val) => {
-    for (const el of document.getElementsByClassName(sel)) {
+    const elements = document.getElementsByClassName(sel);
+    [...elements].forEach((el) => {
       el.style.setProperty(prop, new_val)
-    }
+    })
   }
   const cssvar = (sel) => getComputedStyle(document.querySelector(":root")).getPropertyValue(sel);
   try {
