@@ -695,7 +695,7 @@
     "#room_content_fixed > div.ui_frame_container > div > div.ui_frame_body.ui_frame_body_bar ",
     "> div > table > tr:nth-child(1) > td:nth-child(2) > textarea { ",
     "    resize: auto; ",
-    "} "
+    "} ",
     "#call_to_action_container:before {",
       "background-color: #000000;",
     "}",
