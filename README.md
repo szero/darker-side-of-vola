@@ -14,7 +14,19 @@ Get [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
 Firefox or get [Tampermonkey](https://tampermonkey.net/) if you are on Chrome/Chromium.
 
 After getting it, just click
-[this.](https://github.com/Szero/darker-side-of/vola/raw/master/extension/darker.user.js)
+[this.](https://github.com/Szero/darker-side-of-vola/raw/master/extension/darker.user.js)
+
+Contributing
+------------
+
+In order to contribute you need to install [this](https://github.com/Szero/stuff2str)
+program first. You will want to modify only to the css and darker.js file.
+After you are done with the changes, invoke the build_addon.sh script like so:
+
+```sh
+./build_addon.sh version <version_number_above_the_current_one>
+```
+This will build the addon and metadata file in extension folder. And you are ready to commit.
 
 Thanks
 ------
