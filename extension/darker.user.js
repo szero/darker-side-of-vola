@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.3.4
+// @version      2.3.5
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -212,8 +212,12 @@
     "#call_to_action_container.active .drag_here_rect { ",
     "    stroke: var(--main-color); ",
     "} ",
+    "#files_header { ",
+    "    line-height: 2.5em !important; ",
+    "    background-color: var(--background-color) !important; ",
+    "} ",
     "#files_header_row, .dropdown_item, #chat_hbar{ ",
-    "    background: var(--background-color); ",
+    "    background-color: var(--background-color); ",
     "    color: var(--text-color)!important; ",
     "} ",
     ".dropdown_item:hover, .dopdown_item:active, .dropdown:hover, #header{ ",
@@ -285,10 +289,7 @@
     "    border-top: none; ",
     "    border-bottom: none; ",
     "} ",
-    "#toggles { ",
-    "    line-height: 2.4em !important; ",
-    "} ",
-    "#toggles > .toggle:hover { ",
+    "#toggles > .toggle:hover, #toggles > .toggle:active { ",
     "    background: none !important; ",
     "} ",
     "#toggles span.toggle_icon { ",
@@ -301,9 +302,10 @@
     "a.nodecoration.header_row_element, span.on_large_screen { ",
     "    color: var(--text-color); ",
     "} ",
+    ".button:active, input[type=button]:active, input[type=submit]:active, ",
     ".button, input[type=\"submit\"], input[type=\"button\"] { ",
-    "    background: var(--background-color); ",
-    "    color: var(--text-color); ",
+    "    background-color: var(--background-color) !important; ",
+    "    color: var(--text-color) !important; ",
     "} ",
     ".button:hover, input[type=\"submit\"]:hover, input[type=\"button\"]:hover { ",
     "    background: var(--background-color); ",
@@ -492,9 +494,7 @@
     "#radio_current { ",
     "    border-color: var(--background-color)!important; ",
     "    border-radius: 0px; ",
-    "    border-top-color: var(--background-color) !important; ",
     "    border-width: 2px!important; ",
-    "    border-bottom: none!important; ",
     "    background-color: var(--main-color); ",
     "} ",
     ".ui_frame_buttons > .button, .button.light { ",
