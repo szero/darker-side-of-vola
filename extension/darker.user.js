@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.3.5
+// @version      2.3.6
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -710,9 +710,7 @@
     "    resize: auto; ",
     "} "
   ].join("\n");
-  if (typeof GM_addStyle != "undefined") {
-    GM_addStyle(css);
-  } else if (typeof PRO_addStyle != "undefined") {
+  if (typeof PRO_addStyle != "undefined") {
     PRO_addStyle(css);
   } else if (typeof addStyle != "undefined") {
     addStyle(css);

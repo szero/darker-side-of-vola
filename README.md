@@ -14,7 +14,7 @@ Get [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/)
 Firefox or get [Tampermonkey](https://tampermonkey.net/) if you are on Chrome/Chromium.
 
 After getting it, just click
-[this.](https://github.com/Szero/darker-side-of-vola/raw/master/extension/darker.user.js)
+[this.](https://rawgit.com/Szero/darker-side-of-vola/master/extension/darker.user.js)
 
 Contributing
 ------------
