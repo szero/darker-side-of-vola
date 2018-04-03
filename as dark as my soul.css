@@ -29,10 +29,11 @@ html, body {
 #radio_load_progress, #radio_progress , #bottom_navigation_content, #loading_frame {
     background-color: var(--background-color);
 }
-#loading_text {
+#loading_text, #chat_connection {
     color: var(--text-color) !important;
 }
-#radio_play_progress {
+/* Redirect button color */
+#radio_play_progress, .page_hotlink .download-filename {
     background-color: var(--main-color);
 }
 /* old file links hover, thanks Dodos!*/
@@ -161,11 +162,10 @@ div.filelist_file > a > span {
 .chat_file {
     border-radius: 1px;
     background: var(--background-color) !important;;
-    border-color: var(--main-color) !important;
     color: var(--text-color) !important;
     text-align: center;
     border-style: dashed;
-    border-color: var(--main-color);
+    border-color: var(--main-color) !important;
 }
 .chat_file:hover {
     background: var(--background-color) !important;
