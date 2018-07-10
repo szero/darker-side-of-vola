@@ -673,7 +673,7 @@ select, .file_selected {
     background-color: var(--background-color);
 }
 button, input, optgroup, select {
-    border: 1px solid var(--main-color) !important;
+    border: 1px solid var(--main-color);
 }
 /*mod stuff*/
 #admin_button {

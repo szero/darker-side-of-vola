@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.4.1
+// @version      2.4.2
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -693,7 +693,7 @@
     "    background-color: var(--background-color); ",
     "} ",
     "button, input, optgroup, select { ",
-    "    border: 1px solid var(--main-color) !important; ",
+    "    border: 1px solid var(--main-color); ",
     "} ",
     "/*mod stuff*/ ",
     "#admin_button { ",
