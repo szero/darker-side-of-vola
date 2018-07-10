@@ -143,9 +143,7 @@ div.filelist_file > a > span {
 .chat_message.staff .username {
     color: var(--trusted-users) !important;
 }
-.chat_message.staff:not(.user) .username {
-    color: var(--system) !important;
-}
+.chat_message.staff:not(.user) .username,
 .chat_message.admin:not(.staff):not(.user) .username {
     color: var(--system) !important;
 }
@@ -647,21 +645,11 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, textarea::
 .loading_indicator > .outer_indicator > .inner_indicator, .url_bar_icon {
     background-color: var(--main-color) !important;
 }
-/*mod stuff*/
-.icon-wrench::before {
-    content: "Settings";
-}
-.file_tag.tag_key_ip {
-    background-color: rgba(111, 137, 162, 0);
-}
-.file_tag.tag_key_ip:hover {
-    background-color: rgba(111, 137, 162, 0);
-}
-button, input, optgroup, select {
-    border: 1px solid var(--main-color);
-}
-select, .file_selected {
-    background-color: var(--hilight) !important;
+#chat_hbar_container {
+    padding-top: 0 !important;
+    border-top: 1px solid var(--main-color) !important;
+    border-left: none !important;
+    box-shadow: none !important;
 }
 .icon-group::before {
     font-family: var(--font) !important;
@@ -675,19 +663,19 @@ select, .file_selected {
     border: none;
     border-bottom: 1px solid var(--main-color) !important;
 }
-#file_notifier:hover, #filter_reminder:hover {
-    background-color: var(--background-color);
-}
 #chat_input_container {
     border-left: none !important;
 }
-#chat_hbar_container {
-    padding-top: 0 !important;
-    border-top: 1px solid var(--main-color) !important;
-    border-left: none !important;
-    box-shadow: none !important;
+select, .file_selected {
+    background-color: var(--hilight) !important;
 }
-#room_content_fixed > div.ui_frame_container > div > div.ui_frame_body.ui_frame_body_bar
-> div > table > tr:nth-child(1) > td:nth-child(2) > textarea {
-    resize: auto;
+#file_notifier:hover, #filter_reminder:hover {
+    background-color: var(--background-color);
+}
+button, input, optgroup, select {
+    border: 1px solid var(--main-color) !important;
+}
+/*mod stuff*/
+#admin_button {
+    border-left: 1px solid var(--main-color) !important;
 }
