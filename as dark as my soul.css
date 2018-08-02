@@ -105,7 +105,7 @@ div.filelist_file > a > span {
     border-left-width: 6px;
     border-color: var(--background-color);
 }
-.chat_status_text {
+.chat_status_text, .chat_status_group {
     line-height: 1.6em !important;
 }
 #room_name_container {
@@ -233,7 +233,6 @@ textarea, input[type="text"], input[type="password"] {
 #chat_name_container {
     border-bottom: none !important;
     background-color: var(--background-color) !important;
-    padding-left: 0 !important;
     border-radius: 0 !important;
 }
 #files_header_row, #rename_container {
@@ -608,7 +607,7 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, textarea::
 .icon-magic, .icon-folder-open, .icon-heart, .icon-user, .icon-exit,
 .icon-magic-wand, .icon-cog, .icon-report, .icon-upload-button, .icon-filter,
 .icon-minus-circle, .icon-exclamation-circle,.icon-angle-right, .icon-edit,
-.icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-logicon-upload,
+.icon-unlock, .icon-plus, .icon-logicon-upload,
 .icon-home, .icon-list, .file_clock, .icon-anonymous, .icon-checkmark, .dropdown_icon {
     display: none !important;
 }
@@ -678,4 +677,10 @@ button, input, optgroup, select {
 /*mod stuff*/
 #admin_button {
     border-left: 1px solid var(--main-color) !important;
+}
+.main.table {
+    margin-bottom: 1.6em;
+}
+.chat_status_icon.icon-group + a:hover {
+    color: var(--main-color);
 }

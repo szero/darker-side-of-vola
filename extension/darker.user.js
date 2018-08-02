@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.4.2
+// @version      2.4.3
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -125,7 +125,7 @@
     "    border-left-width: 6px; ",
     "    border-color: var(--background-color); ",
     "} ",
-    ".chat_status_text { ",
+    ".chat_status_text, .chat_status_group { ",
     "    line-height: 1.6em !important; ",
     "} ",
     "#room_name_container { ",
@@ -253,7 +253,6 @@
     "#chat_name_container { ",
     "    border-bottom: none !important; ",
     "    background-color: var(--background-color) !important; ",
-    "    padding-left: 0 !important; ",
     "    border-radius: 0 !important; ",
     "} ",
     "#files_header_row, #rename_container { ",
@@ -628,7 +627,7 @@
     ".icon-magic, .icon-folder-open, .icon-heart, .icon-user, .icon-exit, ",
     ".icon-magic-wand, .icon-cog, .icon-report, .icon-upload-button, .icon-filter, ",
     ".icon-minus-circle, .icon-exclamation-circle,.icon-angle-right, .icon-edit, ",
-    ".icon-lock, .icon-unlock, .icon-plus, .icon-minus, .icon-logicon-upload, ",
+    ".icon-unlock, .icon-plus, .icon-logicon-upload, ",
     ".icon-home, .icon-list, .file_clock, .icon-anonymous, .icon-checkmark, .dropdown_icon { ",
     "    display: none !important; ",
     "} ",
@@ -698,6 +697,12 @@
     "/*mod stuff*/ ",
     "#admin_button { ",
     "    border-left: 1px solid var(--main-color) !important; ",
+    "} ",
+    ".main.table { ",
+    "    margin-bottom: 1.6em; ",
+    "} ",
+    ".chat_status_icon.icon-group + a:hover { ",
+    "    color: var(--main-color); ",
     "} "
   ].join("\n");
   const re = /volafile\.(?:org|io)\/r/;
