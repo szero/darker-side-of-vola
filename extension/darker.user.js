@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.4.3
+// @version      2.4.4
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -122,7 +122,7 @@
     "    background: var(--background-color); ",
     "    color: var(--text-color); ",
     "    border-left-style: solid; ",
-    "    border-left-width: 6px; ",
+    "    border-left-width: 0px !important; ",
     "    border-color: var(--background-color); ",
     "} ",
     ".chat_status_text, .chat_status_group { ",
@@ -174,7 +174,6 @@
     "    background: var(--hilight); ",
     "    border-color: var(--background-color)!important; ",
     "    color: var(--text-color); ",
-    "    border-left-width: 6px!important; ",
     "    border-left-style: solid!important; ",
     "} ",
     ".chat_file { ",
@@ -362,7 +361,11 @@
     "    background-color: rgba(0,0,0,0.7) !important; ",
     "    color: var(--main-color); ",
     "} ",
+    ".ui_frame_table td { ",
+    "  border-color: rgba(0,0,0,0) !important; ",
+    "} ",
     ".ui_frame { ",
+    "    color: var(--text-color) !important; ",
     "    background: var(--background-color); ",
     "    border-radius: 0px !important; ",
     "    border: 1px solid var(--main-color) !important; ",
@@ -703,6 +706,29 @@
     "} ",
     ".chat_status_icon.icon-group + a:hover { ",
     "    color: var(--main-color); ",
+    "} ",
+    "/*fixed modlog, thanks again, RealDodos!*/ ",
+    ".page_admin_reports table, .page_admin_modlog table { ",
+    "    table-layout: fixed; ",
+    "    width: 100%; ",
+    "} ",
+    ".page_admin_modlog table th:nth-child(1) { ",
+    "    max-width: 15%; ",
+    "} ",
+    ".page_admin_modlog table th:nth-child(3) { ",
+    "    width: 56%; ",
+    "} ",
+    ".page_admin_modlog table th:nth-child(4) { ",
+    "    width: 7ex; ",
+    "} ",
+    ".page_admin_reports table th:nth-child(1) { ",
+    "    max-width: 9%; ",
+    "} ",
+    ".page_admin_reports table th:nth-child(4) { ",
+    "    width: 10%; ",
+    "} ",
+    ".page_admin_reports table th:nth-child(3) { ",
+    "    width: 53%; ",
     "} "
   ].join("\n");
   const re = /volafile\.(?:org|io)\/r/;
