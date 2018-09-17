@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.4.4
+// @version      2.4.5
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -39,6 +39,15 @@
     "/* Main Page */ ",
     ".chat_room_url { ",
     "    background-color: var(--hilight) !important; ",
+    "} ",
+    ".chat_room::after { ",
+    "    background-color: rgba(0,0,0,0) !important; ",
+    "} ",
+    ".chat_room::before { ",
+    "    color: var(--main-color) !important; ",
+    "} ",
+    ".chat_room:active::before, .chat_room:hover::before { ",
+    "    color: var(--text-color) !important; ",
     "} ",
     ".room_svg, .room_area, .room_title, .room_chat, .room_files, .backgroundCloud { ",
     "    fill: var(--background-color) !important; ",
@@ -706,6 +715,12 @@
     "} ",
     ".chat_status_icon.icon-group + a:hover { ",
     "    color: var(--main-color); ",
+    "} ",
+    "input[type=\"radio\"]:disabled + span._icon::before, ",
+    "input[type=\"checkbox\"]:disabled + span._icon::before, ",
+    "textarea[disabled], select[disabled], ",
+    "input[type=\"text\"][disabled], input[type=\"password\"][disabled] { ",
+    "    color: var(--visited) !important; ",
     "} ",
     "/*fixed modlog, thanks again, RealDodos!*/ ",
     ".page_admin_reports table, .page_admin_modlog table { ",
