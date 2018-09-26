@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.4.5
+// @version      2.4.6
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -601,7 +601,7 @@
     "} ",
     "#clearsearch.fa.icon-times.clickable.on_small_header.icon-times:before { ",
     "    Content: \"Clear\" ",
-    "}; ",
+    "} ",
     ".file_icon.file_control_icon.fa.abort-upload.icon-times.clickable:before{ ",
     "    content: \"Cancel\"; ",
     "} ",
@@ -744,6 +744,17 @@
     "} ",
     ".page_admin_reports table th:nth-child(3) { ",
     "    width: 53%; ",
+    "} ",
+    ".ui_frame_disabled { ",
+    "  color: var(--visited); ",
+    "  background: var(--background-color); ",
+    "  border-color: var(--visited) !important; ",
+    "} ",
+    ".ui_frame_disabled .ui_frame_body_bar { ",
+    "  border-top-color: var(--visited) !important; ",
+    "} ",
+    ".ui_frame_disabled .ui_frame_table td { ",
+    "  border-color: var(--visited) !important; ",
     "} "
   ].join("\n");
   const re = /volafile\.(?:org|io)\/r/;
