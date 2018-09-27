@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.4.6
+// @version      2.4.7
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -754,7 +754,7 @@
     "  border-top-color: var(--visited) !important; ",
     "} ",
     ".ui_frame_disabled .ui_frame_table td { ",
-    "  border-color: var(--visited) !important; ",
+    "  border-color: rgba(0,0,0,0) !important; ",
     "} "
   ].join("\n");
   const re = /volafile\.(?:org|io)\/r/;

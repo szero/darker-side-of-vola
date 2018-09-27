@@ -735,5 +735,5 @@ input[type="text"][disabled], input[type="password"][disabled] {
   border-top-color: var(--visited) !important;
 }
 .ui_frame_disabled .ui_frame_table td {
-  border-color: var(--visited) !important;
+  border-color: rgba(0,0,0,0) !important;
 }
