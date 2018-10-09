@@ -31,5 +31,5 @@ This will build the addon and metadata file in extension folder. And you are rea
 Thanks
 ------
 
-- To dad for creating [css](https://userstyles.org/styles/103946/as-dark-as-my-soul) as
+- To [dad](https://github.com/voladad) for creating [css](https://userstyles.org/styles/103946/as-dark-as-my-soul) as
 a base for it.

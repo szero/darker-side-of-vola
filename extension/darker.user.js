@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.4.7
+// @version      2.4.8
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -433,7 +433,7 @@
     "    color: var(--text-color); ",
     "} ",
     "table, hr, .ui_frame_contextmenu_table td { ",
-    "    border: 1px solid var(--main-color) !important; ",
+    "    border: 1px solid var(--main-color); ",
     "} ",
     "table th { ",
     "    background: var(--background-color); ",
@@ -652,7 +652,7 @@
     "    margin-left: 0.3em !important; ",
     "} ",
     "#chat_notifier.icon-arrow-down.clickable:before { ",
-    "    content: \"New Messages Posted ↓\"; ",
+    "    content: \"New Messages ↓\"; ",
     "} ",
     ".header_row_element_disabled, .header_row_element_disabled:active, .header_row_element_disabled:hover, .header_row_element_disabled:visited { ",
     "    cursor: default; ",
