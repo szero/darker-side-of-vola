@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.4.8
+// @version      2.4.9
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -639,8 +639,8 @@
     ".icon-magic, .icon-folder-open, .icon-heart, .icon-user, .icon-exit, ",
     ".icon-magic-wand, .icon-cog, .icon-report, .icon-upload-button, .icon-filter, ",
     ".icon-minus-circle, .icon-exclamation-circle,.icon-angle-right, .icon-edit, ",
-    ".icon-unlock, .icon-plus, .icon-logicon-upload, ",
-    ".icon-home, .icon-list, .file_clock, .icon-anonymous, .icon-checkmark, .dropdown_icon { ",
+    ".icon-unlock, .icon-logicon-upload, .icon-home, .icon-list, .file_clock, ",
+    ".icon-anonymous, .icon-checkmark, .dropdown_icon { ",
     "    display: none !important; ",
     "} ",
     ".file_status:before , .file_buttons:before { ",
@@ -755,6 +755,11 @@
     "} ",
     ".ui_frame_disabled .ui_frame_table td { ",
     "  border-color: rgba(0,0,0,0) !important; ",
+    "} ",
+    "/* fix for volanail */ ",
+    ".volanail-button[active] { ",
+    "    box-shadow: none !important; ",
+    "    color: var(--main-color) !important; ",
     "} "
   ].join("\n");
   const re = /volafile\.(?:org|io)\/r/;
