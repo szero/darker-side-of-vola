@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.4.9
+// @version      2.5.0
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -31,6 +31,7 @@
     "    --mods: #FF6C00; ",
     "    --system: #D808D8; ",
     "    --font: \"Open Sans\",sans-serif; ",
+    "    --volanail-color: rgba(0,128,128,0.15); ",
     "} ",
     "html, body { ",
     "    background: var(--background-color); ",
@@ -746,17 +747,24 @@
     "    width: 53%; ",
     "} ",
     ".ui_frame_disabled { ",
-    "  color: var(--visited); ",
-    "  background: var(--background-color); ",
-    "  border-color: var(--visited) !important; ",
+    "    color: var(--visited); ",
+    "    background: var(--background-color); ",
+    "    border-color: var(--visited) !important; ",
     "} ",
     ".ui_frame_disabled .ui_frame_body_bar { ",
-    "  border-top-color: var(--visited) !important; ",
+    "    border-top-color: var(--visited) !important; ",
     "} ",
     ".ui_frame_disabled .ui_frame_table td { ",
-    "  border-color: rgba(0,0,0,0) !important; ",
+    "    border-color: rgba(0,0,0,0) !important; ",
     "} ",
     "/* fix for volanail */ ",
+    ".volanail-thumb { ",
+    "    background: var(--volanail-color); ",
+    "    border: none; ",
+    "} ",
+    ".volanail-video { ",
+    "    background: var(--volanail-color); ",
+    "} ",
     ".volanail-button[active] { ",
     "    box-shadow: none !important; ",
     "    color: var(--main-color) !important; ",
