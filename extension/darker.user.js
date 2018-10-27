@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.5.1
+// @version      2.5.2
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -23,7 +23,7 @@
     "    --background-color: #000000; ",
     "    --text-color: #FFFFFF; ",
     "    --visited: #8C8C8C; ",
-    "    --hilight: #181818; ",
+    "    --hilight: rgba(0,128,128,0.15); ",
     "    --whitenames: #A9BDD0; ",
     "    --namefags: #00FF00; ",
     "    --donators: #90EE90; ",
@@ -765,7 +765,7 @@
     "#volanail-list .volanail-video { ",
     "    background: var(--volanail-color) !important; ",
     "} ",
-    "#volanail-list .volanail-button[active] { ",
+    ".volanail-button[active] { ",
     "    box-shadow: none !important; ",
     "    color: var(--main-color) !important; ",
     "} ",
