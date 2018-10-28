@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.5.2
+// @version      2.5.3
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -23,7 +23,8 @@
     "    --background-color: #000000; ",
     "    --text-color: #FFFFFF; ",
     "    --visited: #8C8C8C; ",
-    "    --hilight: rgba(0,128,128,0.15); ",
+    "    --chat-file-hilight: rgba(0,128,128,0.15); ",
+    "    --upload-hilight: rgba(0,128,128,0.3); ",
     "    --whitenames: #A9BDD0; ",
     "    --namefags: #00FF00; ",
     "    --donators: #90EE90; ",
@@ -31,7 +32,6 @@
     "    --mods: #FF6C00; ",
     "    --system: #D808D8; ",
     "    --font: \"Open Sans\",sans-serif; ",
-    "    --volanail-color: rgba(0,128,128,0.15); ",
     "} ",
     "html, body { ",
     "    background: var(--background-color); ",
@@ -39,7 +39,7 @@
     "} ",
     "/* Main Page */ ",
     ".chat_room_url { ",
-    "    background-color: var(--hilight) !important; ",
+    "    background-color: var(--chat-file-hilight) !important; ",
     "} ",
     ".chat_room::after { ",
     "    background-color: rgba(0,0,0,0) !important; ",
@@ -124,7 +124,7 @@
     "    color: var(--text-color); ",
     "} ",
     ".file_queued { ",
-    "    background-color: var(--hilight) !important; ",
+    "    background-color: var(--upload-hilight) !important; ",
     "} ",
     ".chat_message { ",
     "    margin-left: 0 !important; ",
@@ -181,7 +181,7 @@
     "    color: var(--mods) !important; ",
     "} ",
     ".chat_message.highlight { ",
-    "    background: var(--hilight); ",
+    "    background: var(--chat-file-hilight); ",
     "    border-color: var(--background-color)!important; ",
     "    color: var(--text-color); ",
     "    border-left-style: solid!important; ",
@@ -323,7 +323,7 @@
     "    line-height: 2.5em !important; ",
     "} ",
     ".file_uploading, .file_uploading:after { ",
-    "    background-color: #212121 !important; ",
+    "    background-color: var(--upload-hilight) !important; ",
     "    background-image: none !important; ",
     "} ",
     ".file_uploading:before { ",
@@ -699,7 +699,7 @@
     "    border-left: none !important; ",
     "} ",
     "select, .file_selected { ",
-    "    background-color: var(--hilight) !important; ",
+    "    background-color: var(--chat-file-hilight) !important; ",
     "} ",
     "#file_notifier:hover, #filter_reminder:hover { ",
     "    background-color: var(--background-color); ",
@@ -759,11 +759,11 @@
     "} ",
     "/* fix for volanail */ ",
     "#volanail-list .volanail-thumb { ",
-    "    background: var(--volanail-color) !important; ",
+    "    background: var(--chat-file-hilight) !important; ",
     "    border: 2px solid rgba(0,0,0,0) !important; ",
     "} ",
     "#volanail-list .volanail-video { ",
-    "    background: var(--volanail-color) !important; ",
+    "    background: var(--chat-file-hilight) !important; ",
     "} ",
     ".volanail-button[active] { ",
     "    box-shadow: none !important; ",
