@@ -486,8 +486,7 @@ table td {
 #radio_current {
     border-color: var(--background-color)!important;
     border-radius: 0px;
-    border-width: 2px!important;
-    background-color: var(--main-color);
+    background-color: rgba(0,0,0,0);
 }
 .ui_frame_buttons > .button, .button.light {
     background: var(--background-color)!important;

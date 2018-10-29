@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.5.3
+// @version      2.5.4
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -506,8 +506,7 @@
     "#radio_current { ",
     "    border-color: var(--background-color)!important; ",
     "    border-radius: 0px; ",
-    "    border-width: 2px!important; ",
-    "    background-color: var(--main-color); ",
+    "    background-color: rgba(0,0,0,0); ",
     "} ",
     ".ui_frame_buttons > .button, .button.light { ",
     "    background: var(--background-color)!important; ",
