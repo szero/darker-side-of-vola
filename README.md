@@ -10,11 +10,10 @@ shit when antialiasing comes into play so I decided to leave it with default fon
 Installation
 ------------
 
-Get [Greasemonkey](https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/) if you are on
-Firefox or get [Tampermonkey](https://tampermonkey.net/) if you are on Chrome/Chromium.
+Install [Tampermonkey](https://tampermonkey.net/) extension first.
 
-After getting it, just click
-[this.](https://rawgit.com/Szero/darker-side-of-vola/master/extension/darker.user.js)
+After installing it, just click this
+[this.](https://github.com/szero/darker-side-of-vola/raw/master/extension/darker.user.js)
 
 Contributing
 ------------
