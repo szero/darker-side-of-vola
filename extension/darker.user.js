@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.5.5
+// @version      2.5.6
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -23,7 +23,7 @@
     "    --background-color: #000000; ",
     "    --text-color: #FFFFFF; ",
     "    --visited: #8C8C8C; ",
-    "    --chat-file-hilight: rgba(0,128,128,0.15); ",
+    "    --chat-file-hilight: rgba(0,128,128,0.2); ",
     "    --upload-hilight: rgba(0,128,128,0.3); ",
     "    --whitenames: #A9BDD0; ",
     "    --namefags: #00FF00; ",
