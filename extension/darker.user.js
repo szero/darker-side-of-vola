@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.5.6
+// @version      2.5.7
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -23,8 +23,8 @@
     "    --background-color: #000000; ",
     "    --text-color: #FFFFFF; ",
     "    --visited: #8C8C8C; ",
-    "    --chat-file-hilight: rgba(0,128,128,0.2); ",
-    "    --upload-hilight: rgba(0,128,128,0.3); ",
+    "    --chat-file-hilight: rgba(0,128,128,0.18); ",
+    "    --upload-hilight: rgba(0,128,128,0.2); ",
     "    --whitenames: #A9BDD0; ",
     "    --namefags: #00FF00; ",
     "    --donators: #90EE90; ",
@@ -770,6 +770,10 @@
     "} ",
     "#volanail-list .volanail-checked { ",
     "    border: 2px solid var(--text-color) !important; ",
+    "} ",
+    ".volanail-media > span { ",
+    "    position: relative; ",
+    "    bottom: 0.18em; ",
     "} "
   ].join("\n");
   const re = /volafile\.(?:org|io)\/r/;
