@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.5.8
+// @version      2.5.9
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -511,8 +511,9 @@
     "#rename_input, #rename_room { ",
     "    color: #FFFFFF; ",
     "} ",
-    "input::placeholder, textarea::placeholder { ",
-    "    color: var(--main-color); ",
+    "input[type=\"password\"]::placeholder, ",
+    "input[type=\"text\"]::placeholder, textarea::placeholder { ",
+    "    color: var(--main-color) !important; ",
     "} ",
     "textarea[name=\"motd\"] { ",
     "    width: 24em; ",

@@ -494,8 +494,9 @@ table td {
 #rename_input, #rename_room {
     color: #FFFFFF;
 }
-input::placeholder, textarea::placeholder {
-    color: var(--main-color);
+input[type="password"]::placeholder,
+input[type="text"]::placeholder, textarea::placeholder {
+    color: var(--main-color) !important;
 }
 textarea[name="motd"] {
     width: 24em;
