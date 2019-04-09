@@ -494,8 +494,15 @@ table td {
 #rename_input, #rename_room {
     color: #FFFFFF;
 }
-input[type="text"]::placeholder, input[type="password"]::placeholder, textarea::placeholder {
+input::placeholder, textarea::placeholder {
     color: var(--main-color);
+}
+textarea[name="motd"] {
+    width: 24em;
+    height: 10em;
+}
+input[placeholder="File TTL (hours)"] {
+    width: 24em;
 }
 .button:hover {
     background: var(--background-color)!important;
