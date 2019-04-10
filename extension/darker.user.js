@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Darker Side of Volafile
 // @namespace    i have none
-// @version      2.5.9
+// @version      2.5.10
 // @description  More contrasty volafile experience.
 // @author       Your mom
 // @match        https://*.volafile.org/*
@@ -330,17 +330,9 @@
     "#file_list { ",
     "    font-size: 14px; ",
     "} ",
-    "#file_list.uneven .filelist_file:nth-child(2n+1) { ",
-    "    background: var(--background-color); ",
-    "    color: var(--text-color); ",
-    "    height: 1.4em !important; ",
-    "} ",
+    ".filelist_file, ",
+    "#file_list.uneven .filelist_file:nth-child(2n+1), ",
     "#file_list.even .filelist_file:nth-child(2n) { ",
-    "    background: var(--background-color); ",
-    "    color: var(--text-color); ",
-    "    height: 1.4em !important; ",
-    "} ",
-    ".filelist_file { ",
     "    height: 1.4em !important; ",
     "    background: var(--background-color); ",
     "    color: var(--text-color); ",
@@ -513,7 +505,7 @@
     "} ",
     "input[type=\"password\"]::placeholder, ",
     "input[type=\"text\"]::placeholder, textarea::placeholder { ",
-    "    color: var(--main-color) !important; ",
+    "    color: var(--text-color) !important; ",
     "} ",
     "textarea[name=\"motd\"] { ",
     "    width: 24em; ",
